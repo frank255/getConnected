@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/ilunga/learning/remixjs/getConnected/app/routes/index.jsx?browser", "../../../app/routes/index.jsx"],
+  "sourcesContent": ["export { default } from \"/home/ilunga/learning/remixjs/getConnected/app/routes/index.jsx\";", "export default function Index() {\n  return <h1 className=\"text-red-500\">Hello world!</h1>;\n}\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AAAe,iBAAiB;AAC9B,SAAO,oCAAC,MAAD;AAAA,IAAI,WAAU;AAAA,KAAe;AAAA;",
+  "names": []
+}

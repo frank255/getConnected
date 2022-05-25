@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/ilunga/learning/remixjs/getConnected/app/routes/index.jsx?browser", "../../../app/routes/index.jsx"],
+  "sourcesContent": ["export { default } from \"/home/ilunga/learning/remixjs/getConnected/app/routes/index.jsx\";", "export default function Index() {\n  return <div>\n     <h1>Tailwind CSS \u2764</h1>\n  <p>\n    Tailwind CSS is basically a utility-first CSS framework for\n    rapidly building custom user interfaces. It is a highly\n    customizable, low-level CSS framework that gives you all of the\n    building blocks you need to build bespoke designs.\n  </p>\n  </div>\n}\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AAAe,iBAAiB;AAC9B,SAAO,oCAAC,OAAD,MACJ,oCAAC,MAAD,MAAI,wBACP,oCAAC,KAAD,MAAG;AAAA;",
+  "names": []
+}
