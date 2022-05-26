@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["browser-route-module:/home/ilunga/learning/remixjs/getConnected/app/routes/index.jsx?browser", "../../../app/routes/index.jsx"],
-  "sourcesContent": ["export { default } from \"/home/ilunga/learning/remixjs/getConnected/app/routes/index.jsx\";", "export default function Index() {\n  return (\n    <main class=\"m-4 sm:flex flex-row items-center \">\n    <img src=\"https://cdn.wallpapersafari.com/21/76/v26KTO.jpg\" alt=\"RDJ\"\n      class=\"rounded-2xl transition-all duration-200 sm:w-60 h-72 hover:scale-110\" />\n    <section>\n      <p class=\"font-bold my-3 p-4 fon\">Robert Downey Jr. is an American actor and producer. His career\n        has been characterized by critical and popular success in his youth, followed by a period of substance abuse and\n        legal troubles, before a resurgence of commercial success later in his career.</p>\n      <button class=\"bg-black text-yellow-300 py-2 px-4 rounded-md font-bold transition-all duration-300\">Visit\n        Instagram</button>\n    </section>\n  </main>\n  );\n}\n"],
-  "mappings": ";;;;;;AAAA;;;ACAA;AAAe,iBAAiB;AAC9B,SACE,oCAAC,QAAD;AAAA,IAAM,OAAM;AAAA,KACZ,oCAAC,OAAD;AAAA,IAAK,KAAI;AAAA,IAAmD,KAAI;AAAA,IAC9D,OAAM;AAAA,MACR,oCAAC,WAAD,MACE,oCAAC,KAAD;AAAA,IAAG,OAAM;AAAA,KAAyB,oQAGlC,oCAAC,UAAD;AAAA,IAAQ,OAAM;AAAA,KAAsF;AAAA;",
-  "names": []
-}
