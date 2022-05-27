@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/ilunga/learning/remixjs/getConnected/app/routes/index.jsx?browser", "../../../app/routes/index.jsx"],
+  "sourcesContent": ["export { default } from \"/home/ilunga/learning/remixjs/getConnected/app/routes/index.jsx\";", "export default function Index() {\n  return (\n    <h1 className=\"\">mambo</h1>\n  );\n}\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AAAe,iBAAiB;AAC9B,SACE,oCAAC,MAAD;AAAA,IAAI,WAAU;AAAA,KAAG;AAAA;",
+  "names": []
+}

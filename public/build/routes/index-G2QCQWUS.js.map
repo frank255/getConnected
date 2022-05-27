@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/ilunga/learning/remixjs/getConnected/app/routes/index.jsx?browser", "../../../app/routes/index.jsx", "../../../app/components/Footer.jsx", "../../../app/components/Hero.jsx", "../../../app/components/Navbar.jsx"],
+  "sourcesContent": ["export { default } from \"/home/ilunga/learning/remixjs/getConnected/app/routes/index.jsx\";", "import Footer from \"~/components/Footer\"\nimport Hero from \"~/components/Hero\"\nimport Navbar from \"~/components/Navbar\"\nexport default function Index() {\n  return <>  \n  <Navbar/>\n  <Hero/>\n  <Footer/>\n  </>\n\n}\n", "import React from \"react\";\n\nfunction Footer() {\n  return <div className=\"text-yellow-300\">Footer</div>;\n}\n\nexport default Footer;\n", "import React from \"react\";\n\nfunction Hero() {\n  return <div className=\"text-orange-300\">Hero</div>;\n}\n\nexport default Hero;\n", "import React from \"react\";\n\nfunction Navbar() {\n  return <div className=\"text-red-700\">Navbar</div>;\n}\n\nexport default Navbar;\n"],
+  "mappings": ";;;;;;;;AAAA;;;ACAA;;;ACAA;AAAA,mBAAkB;AAElB,kBAAkB;AAChB,SAAO,mDAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KAAkB;AAAA;AAG1C,IAAO,iBAAQ;;;ACNf;AAAA,oBAAkB;AAElB,gBAAgB;AACd,SAAO,oDAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KAAkB;AAAA;AAG1C,IAAO,eAAQ;;;ACNf;AAAA,oBAAkB;AAElB,kBAAkB;AAChB,SAAO,oDAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KAAe;AAAA;AAGvC,IAAO,iBAAQ;;;AHHA,iBAAiB;AAC9B,SAAO,0DACP,oCAAC,gBAAD,OACA,oCAAC,cAAD,OACA,oCAAC,gBAAD;AAAA;",
+  "names": []
+}

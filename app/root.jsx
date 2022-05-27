@@ -1,3 +1,9 @@
+import styles from "./styles/app.css";
+
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
+}
+
 import {
   Links,
   LiveReload,
@@ -9,7 +15,7 @@ import {
 
 export const meta = () => ({
   charset: "utf-8",
-  title: "New Remix App",
+  title: "getConnected",
   viewport: "width=device-width,initial-scale=1",
 });
 
