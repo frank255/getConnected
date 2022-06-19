@@ -65,7 +65,7 @@ __export(root_exports, {
 });
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-X4JNM2UH.css";
+var app_default = "/build/_assets/app-PDNBBEVS.css";
 
 // route:/home/ilunga/learning/remix/getConnected/app/root.jsx
 var import_react2 = require("@remix-run/react");
@@ -210,7 +210,7 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { "version": "233858e8", "entry": { "module": "/build/entry.client-2XCMPGQO.js", "imports": ["/build/_shared/chunk-QPZC4VH7.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-IY3HBQ6X.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-JWBR4CHV.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-233858E8.js" };
+var assets_manifest_default = { "version": "96531ab2", "entry": { "module": "/build/entry.client-J6JNJTZX.js", "imports": ["/build/_shared/chunk-TTUNBVHV.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-72RFNNYL.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-L6AIZCP3.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-96531AB2.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };
