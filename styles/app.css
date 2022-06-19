@@ -2,13 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.navstyles {
-  @apply md:flex  md:items-center  md:justify-between  md:w-full md:top-0 md:z-10 md:h-[2.4rem] md:p-[2.2rem] md:bg-green-500;
+/* .navstyles {
+  @apply md: flex md:items-center md:justify-between md:w-full md:top-0 md:z-10 md:h-[2.4rem] md:p-[2.2rem] md:bg-green-500;
 }
 
 .navlinks {
-  @apply text-lg font-semibold mx-[0.1rem] px-[0.8rem] py-[0.4rem] rounded-[0.8rem] bg-transparent hover:bg-yellow-300;
-}
-.btn-nav {
-  @apply text-lg font-semibold mx-[0.1rem] px-[0.9rem] bg-yellow-300 rounded-[0.8rem];
-}
+  @apply text-lg font-semibold mx-[0.1rem] px-[0.8rem] py-[0.4rem] rounded-[0.8rem] bg-transparent hover: bg-yellow-300;
+} */
+
+.btn {
+  @apply shadow py-3 px-6 rounded-md transition duration-300 bg-teal-900 text-white  my-6;
+} 
