@@ -7,3 +7,7 @@
 .btn {
   @apply shadow py-3 px-6 mx-52 rounded-md transition duration-300 bg-teal-900 text-white  my-6 w-52;
 } 
+
+.btn-service {
+  @apply shadow py-3 px-3  rounded-md transition duration-300 bg-teal-900 text-white  my-6 w-28;
+} 
