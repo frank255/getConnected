@@ -1,21 +1,20 @@
 import React, { useEffect } from "react";
 
 function Navbar() {
-  useEffect(()=>{
-    const navBtn = document.querySelector('#menu');
+  useEffect(() => {
+    const navBtn = document.querySelector("#menu");
     const menuBar = document.querySelector('[role="menubar"]');
-  
-    navBtn.addEventListener('click',()=>{
-      const isExpanded = JSON.parse(navBtn.getAttribute('aria-expanded'));
-      navBtn.setAttribute('aria-expanded', !isExpanded);
-      menuBar.classList.toggle('hidden');
-      menuBar.classList.toggle('flex');
+
+    navBtn.addEventListener("click", () => {
+      const isExpanded = JSON.parse(navBtn.getAttribute("aria-expanded"));
+      navBtn.setAttribute("aria-expanded", !isExpanded);
+      menuBar.classList.toggle("hidden");
+      menuBar.classList.toggle("flex");
     });
-  })
- 
+  });
 
   return (
-    <>    
+    <>
       <nav className="mx-auto p-4 bg-amber-400">
         <div className="container mx-auto flex items-center justify-between">
           <a
@@ -35,10 +34,10 @@ function Navbar() {
         z-50"
           >
             <img
-              src=""
+              src="logo.svg"
               alt="getConnected logo"
               width="200"
-              className="W-48 md:w-64 lg:w-72 ml-[-0.5]"
+              className="W-48 md:w-64 lg:w-72 lg:mr-28"
             />
           </a>
           <button
@@ -51,8 +50,8 @@ function Navbar() {
         rounded-sm
         ring-offset-4
         ring-offset-amber-400"
-        aria-expanded="false"
-        aria-label="Open Menu"
+            aria-expanded="false"
+            aria-label="Open Menu"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +66,9 @@ function Navbar() {
               />
             </svg>
           </button>
-          <div role="menubar" className="
+          <div
+            role="menubar"
+            className="
           hidden
           flex-col
           gap-4
@@ -87,59 +88,89 @@ function Navbar() {
           lg:shadow-none
           lg:justify-between
           lg:w-full
-          ">
-          <a role="menuitem" href="/" className="
+          z-10
+          "
+          >
+            <a
+              role="menuitem"
+              href="/"
+              className="
           py-1
           px-6
-          dark:text-neutral-900">
-            Home
-          </a>
-          <a role="menuitem" href="/" className="
+          dark:text-neutral-900"
+            >
+              Home
+            </a>
+            <a
+              role="menuitem"
+              href="/"
+              className="
           py-1
           px-6
-          dark:text-neutral-900">
-            Services
-          </a>
-          <a role="menuitem" href="/" className="
+          dark:text-neutral-900"
+            >
+              Services
+            </a>
+            <a
+              role="menuitem"
+              href="/"
+              className="
           py-1
           px-6
-          dark:text-neutral-900">
-            Learning
-          </a>
-          <a role="menuitem" href="/" className="
+          dark:text-neutral-900"
+            >
+              Learning
+            </a>
+            <a
+              role="menuitem"
+              href="/"
+              className="
           py-1
           px-6
           dark:text-neutral-900
-          lg:ml-auto">
-            About us
-          </a>
-          <a role="menuitem" href="/" className="
+          lg:ml-auto"
+            >
+              About us
+            </a>
+            <a
+              role="menuitem"
+              href="/"
+              className="
           py-1
           px-6
-          dark:text-neutral-900">
-            Contacts
-          </a>
-          <a role="menuitem" href="/" className="
+          dark:text-neutral-900"
+            >
+              Contacts
+            </a>
+            <a
+              role="menuitem"
+              href="/"
+              className="
           py-1
           px-6
           bg-teal-900
           text-white
           rounded-lg
-          ">
-            Login
-          </a>
-          <a role="menuitem" href="/" className="
+          "
+            >
+              Login
+            </a>
+            <a
+              role="menuitem"
+              href="/"
+              className="
           py-1
           px-6
           bg-teal-900
           text-white
           rounded-lg
-          ">
-            Join us
-          </a>
+          "
+            >
+              Join us
+            </a>
           </div>
         </div>
-       </nav>
+      </nav>
     </>
   );
 }
