@@ -45,7 +45,7 @@ function Hero() {
       </section>
 
        {/* services */}
-       <section className="py-20 px-2 mt-12 bg-slate-200">
+       <section className="py-20 px-2 mt-12 bg-slate-300">
         <div className="sm:w-3/4 lg:w-5/12 mx-auto">
           <h1 className="text-3xl text-center">Services</h1>
           <p className="text-center mt-4">
@@ -56,7 +56,7 @@ function Hero() {
       </section>
 
       {/* about us */}
-      <section className="py-20 px-2 mt-0 bg-slate-300">
+      <section className="py-20 px-2 mt-0 bg-slate-200">
         <div className="sm:w-3/4 lg:w-5/12 mx-auto">
           <h1 className="text-3xl text-center">About us</h1>
           <p className="text-center mt-4">
