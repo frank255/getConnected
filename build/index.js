@@ -415,7 +415,7 @@ function Hero() {
     alt: ""
   }), /* @__PURE__ */ import_react4.default.createElement("h3", {
     className: "mt-5 mb-2 text-lg"
-  }, "John Doe"), /* @__PURE__ */ import_react4.default.createElement("p", {
+  }, "Mark Doe"), /* @__PURE__ */ import_react4.default.createElement("p", {
     className: "mb-2 font-light items-center "
   }, "Manager "), /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
@@ -504,7 +504,7 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { "version": "df74cc9a", "entry": { "module": "/build/entry.client-IOTD4R6O.js", "imports": ["/build/_shared/chunk-JKFTLV6S.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-D5YYYMEK.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-J7VLIJUE.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-DF74CC9A.js" };
+var assets_manifest_default = { "version": "bd0ca879", "entry": { "module": "/build/entry.client-IOTD4R6O.js", "imports": ["/build/_shared/chunk-JKFTLV6S.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-D5YYYMEK.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-JUJ7BENJ.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-BD0CA879.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };

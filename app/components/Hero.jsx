@@ -175,7 +175,7 @@ function Hero() {
           <div className="flex flex-col rounded-md  shadow-md">
             <div className="p-6 flex flex-col items-center">
               <img className="h-3/5 w-3/5 md:w-full md:h-full" src="avator.svg" alt="" />
-              <h3 className="mt-5 mb-2 text-lg">John Doe</h3>
+              <h3 className="mt-5 mb-2 text-lg">Mark Doe</h3>
               <p className="mb-2 font-light items-center ">Manager </p>
               <div className="flex flex-1 justify-center flex-wrap  items-center">
                      {/* links to social media */}
