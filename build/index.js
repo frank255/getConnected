@@ -65,7 +65,7 @@ __export(root_exports, {
 });
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-PDNBBEVS.css";
+var app_default = "/build/_assets/app-6UG6ZXQJ.css";
 
 // route:/home/ilunga/learning/remix/getConnected/app/root.jsx
 var import_react2 = require("@remix-run/react");
@@ -81,7 +81,7 @@ function App() {
   return /* @__PURE__ */ React.createElement("html", {
     lang: "en"
   }, /* @__PURE__ */ React.createElement("head", null, /* @__PURE__ */ React.createElement(import_react2.Meta, null), /* @__PURE__ */ React.createElement(import_react2.Links, null)), /* @__PURE__ */ React.createElement("body", {
-    className: "max-w-[2000px] \n       mx-auto\n       text-neutral-900\n       dark:text-neutral-200\n       bg-white\n       dark:bg-neutral-800"
+    className: "max-w-[2000px] \n       mx-auto\n       text-neutral-900\n       dark:text-neutral-200\n        bg-transparent\n       dark:bg-neutral-800"
   }, /* @__PURE__ */ React.createElement(import_react2.Outlet, null), /* @__PURE__ */ React.createElement(import_react2.ScrollRestoration, null), /* @__PURE__ */ React.createElement(import_react2.Scripts, null), /* @__PURE__ */ React.createElement(import_react2.LiveReload, null)));
 }
 
@@ -94,9 +94,39 @@ __export(routes_exports, {
 // app/components/Footer.jsx
 var import_react3 = __toESM(require("react"));
 function Footer() {
-  return /* @__PURE__ */ import_react3.default.createElement("div", {
-    className: "text-yellow-300"
-  }, "Footer");
+  return /* @__PURE__ */ import_react3.default.createElement(import_react3.default.Fragment, null, /* @__PURE__ */ import_react3.default.createElement("footer", {
+    className: "flex flex-col bg-gray-800 px-6 py-6  text-white items-center overflow-hidden  bottom-0 w-full mt-0"
+  }, /* @__PURE__ */ import_react3.default.createElement("div", {
+    className: "inline-flex gap-2 px-2 py-2"
+  }, /* @__PURE__ */ import_react3.default.createElement("a", {
+    href: "#"
+  }, /* @__PURE__ */ import_react3.default.createElement("i", {
+    class: "fa fa-facebook"
+  })), /* @__PURE__ */ import_react3.default.createElement("a", {
+    href: "#"
+  }, /* @__PURE__ */ import_react3.default.createElement("i", {
+    class: "fa fa-instagram"
+  })), /* @__PURE__ */ import_react3.default.createElement("a", {
+    href: "#"
+  }, /* @__PURE__ */ import_react3.default.createElement("i", {
+    class: "fa fa-youtube"
+  })), /* @__PURE__ */ import_react3.default.createElement("a", {
+    href: "#"
+  }, /* @__PURE__ */ import_react3.default.createElement("i", {
+    class: "fa fa-twitter"
+  }))), /* @__PURE__ */ import_react3.default.createElement("div", {
+    className: "inline-flex gap-2 px-2 py-2"
+  }, /* @__PURE__ */ import_react3.default.createElement("div", null, " ", /* @__PURE__ */ import_react3.default.createElement("a", {
+    href: "#"
+  }, "Home")), /* @__PURE__ */ import_react3.default.createElement("div", null, " ", /* @__PURE__ */ import_react3.default.createElement("a", {
+    href: "#"
+  }, "Services")), /* @__PURE__ */ import_react3.default.createElement("div", null, " ", /* @__PURE__ */ import_react3.default.createElement("a", {
+    href: "#"
+  }, "Learning")), /* @__PURE__ */ import_react3.default.createElement("div", null, " ", /* @__PURE__ */ import_react3.default.createElement("a", {
+    href: "#"
+  }, "About us"))), /* @__PURE__ */ import_react3.default.createElement("div", {
+    className: "row"
+  }, "Copyright \xA9 2022 Designed By: Ilunga")));
 }
 var Footer_default = Footer;
 
@@ -104,28 +134,56 @@ var Footer_default = Footer;
 var import_react4 = __toESM(require("react"));
 function Hero() {
   return /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("section", {
-    className: "relative"
+    className: "relative overflow-hidden"
   }, /* @__PURE__ */ import_react4.default.createElement("div", {
-    className: "container \n    flex\n    flex-col-reverse\n    lg:flex-row\n    items-center\n    gap-12\n    mt-14\n    lg:mt-28"
+    className: "container \n    flex\n    flex-col-reverse\n    lg:flex-row\n    items-center\n    gap-12\n    lg:mt-20\n    mt-6\n    mx-auto"
   }, /* @__PURE__ */ import_react4.default.createElement("div", {
-    className: "flex flex-1 flex-col items-center lg:items-start"
+    className: "flex flex-auto w-full md:w-full flex-col items-center lg:items-start"
   }, /* @__PURE__ */ import_react4.default.createElement("h2", {
-    className: "text-black text-3xl md:text-5xl text-center lg:text-left mb-6"
-  }, "We Connect you to the World!"), /* @__PURE__ */ import_react4.default.createElement("p", {
-    className: "text-lg text-center lg:items-start mx-auto"
-  }, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, amet eaque obcaecati velit voluptatibus maxime."), /* @__PURE__ */ import_react4.default.createElement("div", {
-    className: "flex justify-center flex-wrap gap-8"
-  }, /* @__PURE__ */ import_react4.default.createElement("button", {
-    className: "btn"
-  }, "get Started"), /* @__PURE__ */ import_react4.default.createElement("button", {
-    className: "btn"
-  }, "get Started")))), /* @__PURE__ */ import_react4.default.createElement("div", {
-    className: "flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0 z-10"
+    className: "text-black text-2xl italic font-bold md:text-5xl text-center items-start mb-6"
+  }, "We Connect you to the World of Opportunities!"), /* @__PURE__ */ import_react4.default.createElement("div", {
+    className: "flex justify-center flex-auto mb-10 md:mb-16 lg:mb-0  md:hidden"
   }, /* @__PURE__ */ import_react4.default.createElement("img", {
     src: "world.svg",
     alt: "world",
-    className: "w-5/6 h-5/6"
-  }))));
+    className: "w-5/6 h-5/6 sm:h-3/4 md:w-full md:h-full"
+  })), /* @__PURE__ */ import_react4.default.createElement("p", {
+    className: "text-lg text-center lg:items-start mx-auto"
+  }, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, amet eaque obcaecati velit voluptatibus maxime."), /* @__PURE__ */ import_react4.default.createElement("div", {
+    className: "flex justify-center flex-wrap gap-8 items-center"
+  }, /* @__PURE__ */ import_react4.default.createElement("button", {
+    className: "btn"
+  }, "get Started"))), /* @__PURE__ */ import_react4.default.createElement("div", {
+    className: "flex justify-center flex-auto mb-10 md:mb-16 lg:mb-0  hidden md:block"
+  }, /* @__PURE__ */ import_react4.default.createElement("img", {
+    src: "world.svg",
+    alt: "world",
+    className: "w-5/6 h-5/6 sm:h-3/4 md:w-full md:h-full"
+  })))), /* @__PURE__ */ import_react4.default.createElement("section", {
+    className: "py-20 px-2 mt-12 bg-slate-200"
+  }, /* @__PURE__ */ import_react4.default.createElement("div", {
+    className: "sm:w-3/4 lg:w-5/12 mx-auto"
+  }, /* @__PURE__ */ import_react4.default.createElement("h1", {
+    className: "text-3xl text-center"
+  }, "Services"), /* @__PURE__ */ import_react4.default.createElement("p", {
+    className: "text-center mt-4"
+  }, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, amet eaque obcaecati velit voluptatibus maxime."))), /* @__PURE__ */ import_react4.default.createElement("section", {
+    className: "py-20 px-2 mt-0 bg-slate-300"
+  }, /* @__PURE__ */ import_react4.default.createElement("div", {
+    className: "sm:w-3/4 lg:w-5/12 mx-auto"
+  }, /* @__PURE__ */ import_react4.default.createElement("h1", {
+    className: "text-3xl text-center"
+  }, "About us"), /* @__PURE__ */ import_react4.default.createElement("p", {
+    className: "text-center mt-4"
+  }, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, amet eaque obcaecati velit voluptatibus maxime."))), /* @__PURE__ */ import_react4.default.createElement("section", {
+    className: "py-20 px-2 mt-0  bg-slate-100"
+  }, /* @__PURE__ */ import_react4.default.createElement("div", {
+    className: "sm:w-3/4 lg:w-5/12 mx-auto"
+  }, /* @__PURE__ */ import_react4.default.createElement("h1", {
+    className: "text-3xl text-center"
+  }, "Our Team"), /* @__PURE__ */ import_react4.default.createElement("p", {
+    className: "text-center mt-4"
+  }, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, amet eaque obcaecati velit voluptatibus maxime."))));
 }
 var Hero_default = Hero;
 
@@ -151,10 +209,10 @@ function Navbar() {
     "aria-label": "Go to home page",
     className: "\n        focus:outline-none\n        focus-visible:ring-4\n        ring-neutral-900\n        rounded-sm\n        ring-offset-4\n        ring-offset-amber-400\n        lg:absolute\n        lg:left-1/2\n        lg:-translate-x-1/2\n        lg:top-9\n        z-50"
   }, /* @__PURE__ */ import_react5.default.createElement("img", {
-    src: "",
+    src: "logo.svg",
     alt: "getConnected logo",
     width: "200",
-    className: "W-48 md:w-64 lg:w-72 ml-[-0.5]"
+    className: "W-48 md:w-64 lg:w-72 lg:mr-28"
   })), /* @__PURE__ */ import_react5.default.createElement("button", {
     id: "menu",
     className: "\n          lg:hidden\n          focus:outline-none\n        focus-visible:ring-4\n        ring-neutral-900\n        rounded-sm\n        ring-offset-4\n        ring-offset-amber-400",
@@ -171,7 +229,7 @@ function Navbar() {
     "clip-rule": "evenodd"
   }))), /* @__PURE__ */ import_react5.default.createElement("div", {
     role: "menubar",
-    className: "\n          hidden\n          flex-col\n          gap-4\n          absolute\n          right-0\n          left-0\n          top-16\n          bg-amber-400\n          shadow-xl\n          text-center\n          text-lg\n          p-6 \n          items-center \n          lg:flex\n          lg:flex-row\n          lg:static\n          lg:shadow-none\n          lg:justify-between\n          lg:w-full\n          "
+    className: "\n          hidden\n          flex-col\n          gap-4\n          absolute\n          right-0\n          left-0\n          top-16\n          bg-amber-400\n          shadow-xl\n          text-center\n          text-lg\n          p-6 \n          items-center \n          lg:flex\n          lg:flex-row\n          lg:static\n          lg:shadow-none\n          lg:justify-between\n          lg:w-full\n          z-10\n          "
   }, /* @__PURE__ */ import_react5.default.createElement("a", {
     role: "menuitem",
     href: "/",
@@ -210,7 +268,7 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { "version": "96531ab2", "entry": { "module": "/build/entry.client-J6JNJTZX.js", "imports": ["/build/_shared/chunk-TTUNBVHV.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-72RFNNYL.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-L6AIZCP3.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-96531AB2.js" };
+var assets_manifest_default = { "version": "ddf2d8ee", "entry": { "module": "/build/entry.client-CZFHDGD6.js", "imports": ["/build/_shared/chunk-HOHKZSH4.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-GSD3BUWU.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-KRU5X77V.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-DDF2D8EE.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };

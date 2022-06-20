@@ -30,7 +30,7 @@ export default function App() {
        mx-auto
        text-neutral-900
        dark:text-neutral-200
-       bg-white
+        bg-transparent
        dark:bg-neutral-800">
         <Outlet />
         <ScrollRestoration />
