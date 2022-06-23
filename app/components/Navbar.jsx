@@ -15,7 +15,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="mx-auto p-4 bg-amber-400">
+      <nav className="mx-auto p-4 bg-amber-300">
         <div className="container mx-auto flex items-center justify-between">
           <a
             href="/"
@@ -26,7 +26,7 @@ function Navbar() {
         ring-neutral-900
         rounded-sm
         ring-offset-4
-        ring-offset-amber-400
+        ring-offset-amber-300
         lg:absolute
         lg:left-1/2
         lg:-translate-x-1/2
@@ -49,7 +49,7 @@ function Navbar() {
         ring-neutral-900
         rounded-sm
         ring-offset-4
-        ring-offset-amber-400"
+        ring-offset-amber-300"
             aria-expanded="false"
             aria-label="Open Menu"
           >
@@ -76,7 +76,7 @@ function Navbar() {
           right-0
           left-0
           top-16
-          bg-amber-400
+          bg-amber-300
           shadow-xl
           text-center
           text-lg

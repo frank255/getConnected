@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/ilunga/learning/remix/getConnected/app/routes/login.jsx?browser", "../../../app/routes/login.jsx"],
+  "sourcesContent": ["export { default } from \"/home/ilunga/learning/remix/getConnected/app/routes/login.jsx\";", "\nexport default function login() {\n  return (\n    <div>login</div>\n  )\n}\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AACe,iBAAiB;AAC9B,SACE,oCAAC,OAAD,MAAK;AAAA;",
+  "names": []
+}

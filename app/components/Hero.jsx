@@ -75,7 +75,7 @@ function Hero() {
                 src="scholarship.svg"
                 alt=""
               />
-              <h3 className="mt-5 mb-2 text-lg">Scholarships</h3>
+              <h3 className="mt-12 md:mt-20 mb-2 text-lg">Scholarships</h3>
               <p className="mb-2 font-light items-center ">
                 {" "}
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem
@@ -93,7 +93,7 @@ function Hero() {
                 src="job.svg"
                 alt=""
               />
-              <h3 className="mt-5 mb-2 text-lg">Job Opportunities</h3>
+              <h3 className="mt-5 md:mt-[3rem] mb-2 text-lg">Job Opportunities</h3>
               <p className="mb-2 font-light items-center ">
                 {" "}
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem
