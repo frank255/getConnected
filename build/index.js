@@ -65,7 +65,7 @@ __export(root_exports, {
 });
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-4W7NA6ID.css";
+var app_default = "/build/_assets/app-2DMUPFKA.css";
 
 // route:/home/ilunga/learning/remix/getConnected/app/root.jsx
 var import_react2 = require("@remix-run/react");
@@ -95,26 +95,58 @@ __export(routes_exports, {
 var import_react3 = __toESM(require("react"));
 function Footer() {
   return /* @__PURE__ */ import_react3.default.createElement(import_react3.default.Fragment, null, /* @__PURE__ */ import_react3.default.createElement("footer", {
-    className: "flex flex-col bg-gray-800 px-6 py-6  text-white items-center overflow-hidden  bottom-0 w-full mt-0 hidden md:flex"
+    className: "flex flex-col bg-gray-800 px-6 py-2  text-white items-center overflow-hidden  bottom-0 w-full mt-0 hidden md:flex"
   }, /* @__PURE__ */ import_react3.default.createElement("div", {
-    className: "inline-flex gap-2 px-2 py-2"
+    className: "inline-flex gap-2 px-2 py-2 fill-teal-900"
   }, /* @__PURE__ */ import_react3.default.createElement("a", {
     href: "#"
-  }, /* @__PURE__ */ import_react3.default.createElement("i", {
-    class: "fa fa-facebook"
-  })), /* @__PURE__ */ import_react3.default.createElement("a", {
+  }, /* @__PURE__ */ import_react3.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    width: "35",
+    height: "35"
+  }, /* @__PURE__ */ import_react3.default.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0z"
+  }), /* @__PURE__ */ import_react3.default.createElement("path", {
+    d: "M2.004 22l1.352-4.968A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.954 9.954 0 0 1-5.03-1.355L2.004 22zM8.391 7.308a.961.961 0 0 0-.371.1 1.293 1.293 0 0 0-.294.228c-.12.113-.188.211-.261.306A2.729 2.729 0 0 0 6.9 9.62c.002.49.13.967.33 1.413.409.902 1.082 1.857 1.971 2.742.214.213.423.427.648.626a9.448 9.448 0 0 0 3.84 2.046l.569.087c.185.01.37-.004.556-.013a1.99 1.99 0 0 0 .833-.231c.166-.088.244-.132.383-.22 0 0 .043-.028.125-.09.135-.1.218-.171.33-.288.083-.086.155-.187.21-.302.078-.163.156-.474.188-.733.024-.198.017-.306.014-.373-.004-.107-.093-.218-.19-.265l-.582-.261s-.87-.379-1.401-.621a.498.498 0 0 0-.177-.041.482.482 0 0 0-.378.127v-.002c-.005 0-.072.057-.795.933a.35.35 0 0 1-.368.13 1.416 1.416 0 0 1-.191-.066c-.124-.052-.167-.072-.252-.109l-.005-.002a6.01 6.01 0 0 1-1.57-1c-.126-.11-.243-.23-.363-.346a6.296 6.296 0 0 1-1.02-1.268l-.059-.095a.923.923 0 0 1-.102-.205c-.038-.147.061-.265.061-.265s.243-.266.356-.41a4.38 4.38 0 0 0 .263-.373c.118-.19.155-.385.093-.536-.28-.684-.57-1.365-.868-2.041-.059-.134-.234-.23-.393-.249-.054-.006-.108-.012-.162-.016a3.385 3.385 0 0 0-.403.004z"
+  }))), /* @__PURE__ */ import_react3.default.createElement("a", {
     href: "#"
-  }, /* @__PURE__ */ import_react3.default.createElement("i", {
-    class: "fa-brands fa-instagram"
-  })), /* @__PURE__ */ import_react3.default.createElement("a", {
+  }, /* @__PURE__ */ import_react3.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    width: "35",
+    height: "35"
+  }, /* @__PURE__ */ import_react3.default.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0z"
+  }), /* @__PURE__ */ import_react3.default.createElement("path", {
+    d: "M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"
+  }))), /* @__PURE__ */ import_react3.default.createElement("a", {
     href: "#"
-  }, /* @__PURE__ */ import_react3.default.createElement("i", {
-    class: "fa fa-youtube"
-  })), /* @__PURE__ */ import_react3.default.createElement("a", {
+  }, /* @__PURE__ */ import_react3.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    width: "35",
+    height: "35"
+  }, /* @__PURE__ */ import_react3.default.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0z"
+  }), /* @__PURE__ */ import_react3.default.createElement("path", {
+    d: "M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
+  }))), /* @__PURE__ */ import_react3.default.createElement("a", {
     href: "#"
-  }, /* @__PURE__ */ import_react3.default.createElement("i", {
-    class: "fa fa-twitter"
-  }))), /* @__PURE__ */ import_react3.default.createElement("div", {
+  }, /* @__PURE__ */ import_react3.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    width: "35",
+    height: "35"
+  }, /* @__PURE__ */ import_react3.default.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0z"
+  }), /* @__PURE__ */ import_react3.default.createElement("path", {
+    d: "M18.335 18.339H15.67v-4.177c0-.996-.02-2.278-1.39-2.278-1.389 0-1.601 1.084-1.601 2.205v4.25h-2.666V9.75h2.56v1.17h.035c.358-.674 1.228-1.387 2.528-1.387 2.7 0 3.2 1.778 3.2 4.091v4.715zM7.003 8.575a1.546 1.546 0 0 1-1.548-1.549 1.548 1.548 0 1 1 1.547 1.549zm1.336 9.764H5.666V9.75H8.34v8.589zM19.67 3H4.329C3.593 3 3 3.58 3 4.297v15.406C3 20.42 3.594 21 4.328 21h15.338C20.4 21 21 20.42 21 19.703V4.297C21 3.58 20.4 3 19.666 3h.003z"
+  })))), /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "inline-flex gap-2 px-2 py-2"
   }, /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("a", {
     href: "#"
@@ -128,8 +160,8 @@ function Footer() {
     href: "#"
   }, "About us"))), /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "row"
-  }, "Copyright \xA9 2022 Designed By: Ilunga")), /* @__PURE__ */ import_react3.default.createElement("nav", {
-    className: "flex flex-row justify-between md:hidden bottom-0 px-6 py-4 sticky bg-slate-200"
+  }, "Copyright \xA9 2022 Developed By Ilunga")), /* @__PURE__ */ import_react3.default.createElement("nav", {
+    className: "flex flex-row justify-between md:hidden bottom-0 px-6 py-4 sticky bg-slate-200 dark:bg-neutral-800"
   }, /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "flex flex-col items-center"
   }, /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("svg", {
@@ -234,7 +266,7 @@ function Hero() {
   }, /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "flex flex-auto w-full md:w-full flex-col items-center lg:items-start"
   }, /* @__PURE__ */ import_react4.default.createElement("h2", {
-    className: "text-black text-2xl italic font-bold md:text-5xl text-center items-start mb-6"
+    className: "text-black dark:text-white text-2xl italic font-bold md:text-5xl text-center items-start mb-6"
   }, "We Connect you to the World of Opportunities!"), /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "flex justify-center flex-auto mb-10 md:mb-16 lg:mb-0  md:hidden"
   }, /* @__PURE__ */ import_react4.default.createElement("img", {
@@ -247,14 +279,14 @@ function Hero() {
     className: "flex flex-1 justify-center flex-wrap  items-center"
   }, /* @__PURE__ */ import_react4.default.createElement("button", {
     className: "btn"
-  }, "get Started"))), /* @__PURE__ */ import_react4.default.createElement("div", {
-    className: "flex justify-center flex-auto mb-10 md:mb-16 lg:mb-0  hidden md:block"
+  }, "get Started "))), /* @__PURE__ */ import_react4.default.createElement("div", {
+    className: "justify-center flex-auto mb-10 md:mb-16 lg:mb-0  hidden md:block"
   }, /* @__PURE__ */ import_react4.default.createElement("img", {
     src: "world.svg",
     alt: "world",
     className: "w-5/6 h-5/6 sm:h-3/4 md:w-full md:h-full"
   })))), /* @__PURE__ */ import_react4.default.createElement("section", {
-    className: "py-10 px-2 mt-12 bg-slate-300 items-center"
+    className: "py-10 px-2 mt-12 bg-slate-300 dark:bg-neutral-800 items-center"
   }, /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "sm:w-3/4 lg:w-5/12 mx-auto"
   }, /* @__PURE__ */ import_react4.default.createElement("h1", {
@@ -273,7 +305,7 @@ function Hero() {
     className: "mt-5 mb-2 text-lg"
   }, "University/College"), /* @__PURE__ */ import_react4.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero. "), /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
   }, /* @__PURE__ */ import_react4.default.createElement("button", {
     className: "btn-service"
@@ -289,7 +321,7 @@ function Hero() {
     className: "mt-5 mb-2 text-lg"
   }, "Scholarships"), /* @__PURE__ */ import_react4.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero. "), /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
   }, /* @__PURE__ */ import_react4.default.createElement("button", {
     className: "btn-service"
@@ -305,7 +337,7 @@ function Hero() {
     className: "mt-5 mb-2 text-lg"
   }, "Job Opportunities"), /* @__PURE__ */ import_react4.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero. "), /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
   }, /* @__PURE__ */ import_react4.default.createElement("button", {
     className: "btn-service"
@@ -321,7 +353,7 @@ function Hero() {
     className: "mt-5 mb-2 text-lg"
   }, "Online Courses"), /* @__PURE__ */ import_react4.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero. "), /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
   }, /* @__PURE__ */ import_react4.default.createElement("button", {
     className: "btn-service"
@@ -333,7 +365,7 @@ function Hero() {
     className: "mt-5 mb-2 text-lg"
   }, "Coming soon.."), /* @__PURE__ */ import_react4.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero. "), /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
   }, /* @__PURE__ */ import_react4.default.createElement("button", {
     className: "btn-service"
@@ -345,7 +377,7 @@ function Hero() {
     className: "mt-5 mb-2 text-lg"
   }, "Coming soon.."), /* @__PURE__ */ import_react4.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero. "), /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
   }, /* @__PURE__ */ import_react4.default.createElement("button", {
     className: "btn-service"
@@ -357,7 +389,7 @@ function Hero() {
     className: "mt-5 mb-2 text-lg"
   }, "Coming soon.."), /* @__PURE__ */ import_react4.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero. "), /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
   }, /* @__PURE__ */ import_react4.default.createElement("button", {
     className: "btn-service"
@@ -369,12 +401,12 @@ function Hero() {
     className: "mt-5 mb-2 text-lg"
   }, "Coming soon.."), /* @__PURE__ */ import_react4.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero. "), /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
   }, /* @__PURE__ */ import_react4.default.createElement("button", {
     className: "btn-service"
   }, "learn more")))))), /* @__PURE__ */ import_react4.default.createElement("section", {
-    className: "py-20 px-2 mt-0 bg-slate-200"
+    className: "py-20 px-2 mt-0 bg-slate-200 dark:bg-neutral-800"
   }, /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "sm:w-3/4 lg:w-5/12 mx-auto"
   }, /* @__PURE__ */ import_react4.default.createElement("h1", {
@@ -382,7 +414,7 @@ function Hero() {
   }, "About us"), /* @__PURE__ */ import_react4.default.createElement("p", {
     className: "text-center mt-4"
   }, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, amet eaque obcaecati velit voluptatibus maxime."))), /* @__PURE__ */ import_react4.default.createElement("section", {
-    className: "py-20 px-2 mt-0  bg-slate-100"
+    className: "py-20 px-2 mt-0  bg-slate-100 dark:bg-neutral-800"
   }, /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "sm:w-3/4 lg:w-5/12 mx-auto"
   }, /* @__PURE__ */ import_react4.default.createElement("h1", {
@@ -404,8 +436,28 @@ function Hero() {
   }, "John Doe"), /* @__PURE__ */ import_react4.default.createElement("p", {
     className: "mb-2 font-light items-center "
   }, "CEO"), /* @__PURE__ */ import_react4.default.createElement("div", {
-    className: "flex flex-1 justify-center flex-wrap  items-center"
-  }))), /* @__PURE__ */ import_react4.default.createElement("div", {
+    className: "flex flex-row gap-4 justify-center flex-wrap  items-center"
+  }, /* @__PURE__ */ import_react4.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    width: "24",
+    height: "24"
+  }, /* @__PURE__ */ import_react4.default.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0z"
+  }), /* @__PURE__ */ import_react4.default.createElement("path", {
+    d: "M2.004 22l1.352-4.968A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.954 9.954 0 0 1-5.03-1.355L2.004 22zM8.391 7.308a.961.961 0 0 0-.371.1 1.293 1.293 0 0 0-.294.228c-.12.113-.188.211-.261.306A2.729 2.729 0 0 0 6.9 9.62c.002.49.13.967.33 1.413.409.902 1.082 1.857 1.971 2.742.214.213.423.427.648.626a9.448 9.448 0 0 0 3.84 2.046l.569.087c.185.01.37-.004.556-.013a1.99 1.99 0 0 0 .833-.231c.166-.088.244-.132.383-.22 0 0 .043-.028.125-.09.135-.1.218-.171.33-.288.083-.086.155-.187.21-.302.078-.163.156-.474.188-.733.024-.198.017-.306.014-.373-.004-.107-.093-.218-.19-.265l-.582-.261s-.87-.379-1.401-.621a.498.498 0 0 0-.177-.041.482.482 0 0 0-.378.127v-.002c-.005 0-.072.057-.795.933a.35.35 0 0 1-.368.13 1.416 1.416 0 0 1-.191-.066c-.124-.052-.167-.072-.252-.109l-.005-.002a6.01 6.01 0 0 1-1.57-1c-.126-.11-.243-.23-.363-.346a6.296 6.296 0 0 1-1.02-1.268l-.059-.095a.923.923 0 0 1-.102-.205c-.038-.147.061-.265.061-.265s.243-.266.356-.41a4.38 4.38 0 0 0 .263-.373c.118-.19.155-.385.093-.536-.28-.684-.57-1.365-.868-2.041-.059-.134-.234-.23-.393-.249-.054-.006-.108-.012-.162-.016a3.385 3.385 0 0 0-.403.004z"
+  })), /* @__PURE__ */ import_react4.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    width: "24",
+    height: "24"
+  }, /* @__PURE__ */ import_react4.default.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0z"
+  }), /* @__PURE__ */ import_react4.default.createElement("path", {
+    d: "M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
+  }))))), /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "flex flex-col rounded-md  shadow-md"
   }, /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "p-6 flex flex-col items-center"
@@ -418,8 +470,28 @@ function Hero() {
   }, "Mark Doe"), /* @__PURE__ */ import_react4.default.createElement("p", {
     className: "mb-2 font-light items-center "
   }, "Manager "), /* @__PURE__ */ import_react4.default.createElement("div", {
-    className: "flex flex-1 justify-center flex-wrap  items-center"
-  })))))));
+    className: "flex flex-row gap-4 justify-center flex-wrap  items-center"
+  }, /* @__PURE__ */ import_react4.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    width: "24",
+    height: "24"
+  }, /* @__PURE__ */ import_react4.default.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0z"
+  }), /* @__PURE__ */ import_react4.default.createElement("path", {
+    d: "M2.004 22l1.352-4.968A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.954 9.954 0 0 1-5.03-1.355L2.004 22zM8.391 7.308a.961.961 0 0 0-.371.1 1.293 1.293 0 0 0-.294.228c-.12.113-.188.211-.261.306A2.729 2.729 0 0 0 6.9 9.62c.002.49.13.967.33 1.413.409.902 1.082 1.857 1.971 2.742.214.213.423.427.648.626a9.448 9.448 0 0 0 3.84 2.046l.569.087c.185.01.37-.004.556-.013a1.99 1.99 0 0 0 .833-.231c.166-.088.244-.132.383-.22 0 0 .043-.028.125-.09.135-.1.218-.171.33-.288.083-.086.155-.187.21-.302.078-.163.156-.474.188-.733.024-.198.017-.306.014-.373-.004-.107-.093-.218-.19-.265l-.582-.261s-.87-.379-1.401-.621a.498.498 0 0 0-.177-.041.482.482 0 0 0-.378.127v-.002c-.005 0-.072.057-.795.933a.35.35 0 0 1-.368.13 1.416 1.416 0 0 1-.191-.066c-.124-.052-.167-.072-.252-.109l-.005-.002a6.01 6.01 0 0 1-1.57-1c-.126-.11-.243-.23-.363-.346a6.296 6.296 0 0 1-1.02-1.268l-.059-.095a.923.923 0 0 1-.102-.205c-.038-.147.061-.265.061-.265s.243-.266.356-.41a4.38 4.38 0 0 0 .263-.373c.118-.19.155-.385.093-.536-.28-.684-.57-1.365-.868-2.041-.059-.134-.234-.23-.393-.249-.054-.006-.108-.012-.162-.016a3.385 3.385 0 0 0-.403.004z"
+  })), /* @__PURE__ */ import_react4.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 24 24",
+    width: "24",
+    height: "24"
+  }, /* @__PURE__ */ import_react4.default.createElement("path", {
+    fill: "none",
+    d: "M0 0h24v24H0z"
+  }), /* @__PURE__ */ import_react4.default.createElement("path", {
+    d: "M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
+  })))))))));
 }
 var Hero_default = Hero;
 
@@ -504,7 +576,7 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { "version": "bd0ca879", "entry": { "module": "/build/entry.client-IOTD4R6O.js", "imports": ["/build/_shared/chunk-JKFTLV6S.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-D5YYYMEK.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-JUJ7BENJ.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-BD0CA879.js" };
+var assets_manifest_default = { "version": "d76c45ad", "entry": { "module": "/build/entry.client-Y2EMXWCV.js", "imports": ["/build/_shared/chunk-O3DQM66Y.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-2QR7NSWM.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-YSW3ETLM.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-D76C45AD.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };
