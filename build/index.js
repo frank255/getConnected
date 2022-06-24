@@ -65,7 +65,7 @@ __export(root_exports, {
 });
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-VQ3GJNUS.css";
+var app_default = "/build/_assets/app-QTF6GE3Z.css";
 
 // route:/home/ilunga/learning/remix/getConnected/app/root.jsx
 var import_react2 = require("@remix-run/react");
@@ -327,7 +327,7 @@ function Navbar() {
     role: "menuitem",
     href: "/register",
     className: "\n          py-1\n          px-6\n          bg-teal-900\n          text-white\n          rounded-lg\n          "
-  }, "Join us")))));
+  }, "Sign Up")))));
 }
 var Navbar_default = Navbar;
 
@@ -340,13 +340,13 @@ function register() {
   }, /* @__PURE__ */ React.createElement("div", {
     className: "sm:w-3/4 lg:w-5/12 mx-auto"
   }, /* @__PURE__ */ React.createElement("h1", {
-    className: "text-3xl text-center"
-  }, "Register Here")), /* @__PURE__ */ React.createElement("form", {
+    className: "text-3xl md:text-xl  text-center"
+  }, "Please Register To continue..")), /* @__PURE__ */ React.createElement("form", {
     class: "w-full max-w-lg px-6 py-6 md:ml-20"
   }, /* @__PURE__ */ React.createElement("div", {
     class: "flex flex-wrap -mx-3 md:mb-6 mb-2"
   }, /* @__PURE__ */ React.createElement("div", {
-    class: "w-full md:w-1/2 px-3 md:mb-6 mb-2 md:mb-0"
+    class: "w-full md:w-1/2 px-3 md:mb-6 mb-2 "
   }, /* @__PURE__ */ React.createElement("label", {
     class: "tracking-wide text-gray-700 text-xs font-bold mb-2",
     for: "grid-first-name"
@@ -683,7 +683,7 @@ function login() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { "version": "a8752817", "entry": { "module": "/build/entry.client-BOICOJJ5.js", "imports": ["/build/_shared/chunk-NNW7MYEC.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-U7LN62ZH.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-F5VDZ73H.js", "imports": ["/build/_shared/chunk-A4CXPU4H.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/login": { "id": "routes/login", "parentId": "root", "path": "login", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/login-TMDGMZID.js", "imports": ["/build/_shared/chunk-A4CXPU4H.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/register": { "id": "routes/register", "parentId": "root", "path": "register", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/register-IKCABUHK.js", "imports": ["/build/_shared/chunk-A4CXPU4H.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-A8752817.js" };
+var assets_manifest_default = { "version": "167efaa7", "entry": { "module": "/build/entry.client-BOICOJJ5.js", "imports": ["/build/_shared/chunk-NNW7MYEC.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-FGO43BA4.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-U5AKV42A.js", "imports": ["/build/_shared/chunk-CWJUPQGZ.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/login": { "id": "routes/login", "parentId": "root", "path": "login", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/login-IQ5HHZGV.js", "imports": ["/build/_shared/chunk-CWJUPQGZ.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/register": { "id": "routes/register", "parentId": "root", "path": "register", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/register-BCGVU5MD.js", "imports": ["/build/_shared/chunk-CWJUPQGZ.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-167EFAA7.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };

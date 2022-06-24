@@ -9,11 +9,11 @@ export default function register() {
         {/* register */}
         <div className=" md:basis-3/4 md:px-20  md:ml-20 ">
         <div className="sm:w-3/4 lg:w-5/12 mx-auto">
-          <h1 className="text-3xl text-center">Register Here</h1>
+          <h1 className="text-3xl md:text-xl  text-center">Please Register To continue..</h1>
         </div>
           <form class="w-full max-w-lg px-6 py-6 md:ml-20">
             <div class="flex flex-wrap -mx-3 md:mb-6 mb-2">
-              <div class="w-full md:w-1/2 px-3 md:mb-6 mb-2 md:mb-0">
+              <div class="w-full md:w-1/2 px-3 md:mb-6 mb-2 ">
                 <label
                   class="tracking-wide text-gray-700 text-xs font-bold mb-2"
                   for="grid-first-name"

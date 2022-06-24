@@ -166,7 +166,7 @@ function Navbar() {
           rounded-lg
           "
             >
-              Join us
+              Sign Up
             </a>
           </div>
         </div>
