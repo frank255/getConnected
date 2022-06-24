@@ -1534,10 +1534,6 @@ select {
     width: 50%;
   }
 
-  .md\:flex-1 {
-    flex: 1 1 0%;
-  }
-
   .md\:basis-3\/4 {
     flex-basis: 75%;
   }

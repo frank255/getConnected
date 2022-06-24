@@ -784,11 +784,6 @@ select {
   margin-right: 0.5rem;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .mt-0 {
   margin-top: 0px;
 }
@@ -947,14 +942,6 @@ select {
 
 .w-1\/5 {
   width: 20%;
-}
-
-.w-12 {
-  width: 3rem;
-}
-
-.w-6 {
-  width: 1.5rem;
 }
 
 .max-w-\[2000px\] {
@@ -1532,10 +1519,6 @@ select {
 
   .md\:w-1\/2 {
     width: 50%;
-  }
-
-  .md\:flex-1 {
-    flex: 1 1 0%;
   }
 
   .md\:basis-3\/4 {
