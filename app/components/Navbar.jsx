@@ -144,7 +144,7 @@ function Navbar() {
             </a>
             <a
               role="menuitem"
-              href="/"
+              href="/login"
               className="
           py-1
           px-6
@@ -157,7 +157,7 @@ function Navbar() {
             </a>
             <a
               role="menuitem"
-              href="/"
+              href="/register"
               className="
           py-1
           px-6

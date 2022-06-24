@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/ilunga/learning/remix/getConnected/app/routes/login.jsx?browser", "../../../app/routes/login.jsx"],
+  "sourcesContent": ["export { default } from \"/home/ilunga/learning/remix/getConnected/app/routes/login.jsx\";", "import Footer from \"~/components/Footer\";\nimport Navbar from \"~/components/Navbar\";\n\nexport default function login() {\n  return <>\n  \n   <Navbar/>\n    <Footer/>\n  \n  </>\n   \n}\n"],
+  "mappings": ";;;;;;;;;;AAAA;;;ACAA;AAGe,iBAAiB;AAC9B,SAAO,0DAEN,oCAAC,gBAAD,OACC,oCAAC,gBAAD;AAAA;",
+  "names": []
+}

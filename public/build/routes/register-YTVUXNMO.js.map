@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/ilunga/learning/remix/getConnected/app/routes/register.jsx?browser", "../../../app/routes/register.jsx"],
+  "sourcesContent": ["export { default } from \"/home/ilunga/learning/remix/getConnected/app/routes/register.jsx\";", "import React from 'react'\n\nexport default function register() {\n    return <>\n  \n    <Navbar/>\n  <section>\n     hello\n  </section>\n     <Footer/>\n   </>\n}\n"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAEH,oBAAoB;AAC/B,SAAO,wFAEP,mDAAC,QAAD,OACF,mDAAC,WAAD,MAAS,UAGN,mDAAC,QAAD;AAAA;",
+  "names": []
+}

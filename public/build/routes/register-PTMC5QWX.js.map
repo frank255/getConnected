@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/home/ilunga/learning/remix/getConnected/app/routes/register.jsx?browser", "../../../app/routes/register.jsx"],
+  "sourcesContent": ["export { default } from \"/home/ilunga/learning/remix/getConnected/app/routes/register.jsx\";", "import Footer from \"~/components/Footer\";\nimport Navbar from \"~/components/Navbar\";\n\nexport default function register() {\n    return <>\n  \n    <Navbar/>\n  <section>\n     hello\n  </section>\n     <Footer/>\n   </>\n}\n"],
+  "mappings": ";;;;;;;;;;AAAA;;;ACAA;AAGe,oBAAoB;AAC/B,SAAO,0DAEP,oCAAC,gBAAD,OACF,oCAAC,WAAD,MAAS,UAGN,oCAAC,gBAAD;AAAA;",
+  "names": []
+}

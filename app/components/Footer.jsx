@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <>
-      <footer className="flex flex-col bg-gray-800 px-6 py-2  text-white items-center overflow-hidden  bottom-0 w-full mt-0 hidden md:flex">
+      <footer className=" flex-col bg-gray-800 px-6 py-2  text-white items-center overflow-hidden  bottom-0 w-full mt-0 hidden md:flex">
         <div className="inline-flex gap-2 px-2 py-2 fill-teal-900">
           <a href="#">
             <svg
