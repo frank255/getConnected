@@ -1,7 +1,45 @@
+import axios from "axios";
+import { useState } from "react";
 import Footer from "~/components/Footer";
 import Navbar from "~/components/Navbar";
 
 export default function register() {
+
+   const [registerInput, setRegister] = useState({
+       firstname:'',
+       lastname:'',
+       email:'',
+       phone:'',
+       password:'',
+       repeatpassword:''
+   });
+
+   const handleInput = (e) =>{
+    e.presist();
+    setRegister({...registerInput, [e.target.name]: e.target.value});
+   }
+
+
+   const registerSubmit = (e)=>{
+     e.preventDefault();
+
+     const data = {
+        firstname:registerInput.firstname,
+        lastname:registerInput.lastname,
+        email:registerInput.email,
+        phone:registerInput.phone,
+        password:registerInput.password,
+        repeatpassword:registerInput.repeatpassword,
+     }
+        //    Api request
+
+      axios.get('/sanctum/csrf-cookie').then(response =>{
+            axios.post(`/api/register`, data).then(res=>{
+
+          });
+      });    
+   }
+
   return (
     <>
       <Navbar />
@@ -11,7 +49,7 @@ export default function register() {
         <div className="sm:w-3/4 lg:w-5/12 mx-auto">
           <h1 className="text-3xl md:text-xl  text-center">Please Register To continue..</h1>
         </div>
-          <form class="w-full max-w-lg px-6 py-6 md:ml-20">
+          <form onSubmit={registerSubmit} class="w-full max-w-lg px-6 py-6 md:ml-20">
             <div class="flex flex-wrap -mx-3 md:mb-6 mb-2">
               <div class="w-full md:w-1/2 px-3 md:mb-6 mb-2 ">
                 <label
@@ -24,7 +62,11 @@ export default function register() {
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
                   type="text"
+                  name="firstname"
+                  onChange={handleInput}
+                  value={registerInput.firstname}
                   placeholder="example:Joe"
+                  // autoComplete="first name"
                 ></input>
                 {/* <p class="text-red-500 text-xs italic">Please fill out this field.</p> */}
               </div>
@@ -39,7 +81,11 @@ export default function register() {
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-last-name"
                   type="text"
+                  name="lastname"
+                  onChange={handleInput}
+                  value={registerInput.lastname}
                   placeholder="example:Will"
+                  // autoComplete="last name"
                 ></input>
               </div>
             </div>
@@ -54,7 +100,10 @@ export default function register() {
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
-                  type="text"
+                  type="email"
+                  name="email"
+                  onChange={handleInput}
+                  value={registerInput.email}
                   placeholder="example:joe@gmail.com"
                 ></input>
                 {/* <p class="text-red-500 text-xs italic">Please fill out this field.</p> */}
@@ -69,7 +118,10 @@ export default function register() {
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-last-name"
-                  type="text"
+                  type="number"
+                  name="phone"
+                  onChange={handleInput}
+                  value={registerInput.phone}
                   placeholder="example:+255766890443"
                 ></input>
               </div>
@@ -85,7 +137,10 @@ export default function register() {
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                   id="grid-first-name"
-                  type="text"
+                  type="password"
+                  name="password"
+                  onChange={handleInput}
+                  value={registerInput.password}
                   placeholder="*********"
                 ></input>
                 {/* <p class="text-red-500 text-xs italic">Please fill out this field.</p> */}
@@ -100,7 +155,10 @@ export default function register() {
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-last-name"
-                  type="text"
+                  type="password"
+                  name="repeatpassword"
+                  onChange={handleInput}
+                  value={registerInput.repeatpassword}
                   placeholder="*********"
                 ></input>
               </div>
@@ -108,7 +166,7 @@ export default function register() {
             <div class="flex items-center justify-between">
               <button
                 class="bg-teal-900 hover:bg-blue-700 text-white font-bold py-2 px-6  rounded focus:outline-none focus:shadow-outline"
-                type="button"
+                type="submit"
               >
                 Register
               </button>
@@ -122,36 +180,7 @@ export default function register() {
           <img className="h-56" src="signup.svg" alt="signup" />
         </div>
 
-        {/* login form
-     <div className="flex-auto">
-     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-    <div class="mb-4">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
-        Username
-      </label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username"></input>
-    </div>
-    <div class="mb-6">
-      <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-        Password
-      </label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************"></input>
-      <p class="text-red-500 text-xs italic">Please choose a password.</p>
-    </div>
-    <div class="flex items-center justify-between">
-      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
-        Sign In
-      </button>
-      <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
-        Forgot Password?
-      </a>
-    </div>
-  </form>
-  <p class="text-center text-gray-500 text-xs">
-    &copy;2020 Acme Corp. All rights reserved.
-  </p>
-
-     </div> */}
+       
       </section>
       <Footer />
     </>

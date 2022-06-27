@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       <footer className=" flex-col bg-gray-800 px-6 py-2  text-white items-center overflow-hidden  bottom-0 w-full mt-0 hidden md:flex">
-        <div className="inline-flex gap-2 px-2 py-2 fill-teal-900">
+        <div className="inline-flex gap-2 px-2 py-2  fill-teal-900">
           <a href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ function Footer() {
             <a href="#">About us</a>
           </div>
         </div>
-        <div className="row">Copyright © 2022 Developed By Ilunga</div>
+        <div className="row">Copyright © 2022 getConnected</div>
       </footer>
 
       {/* footer nav for mobile */}

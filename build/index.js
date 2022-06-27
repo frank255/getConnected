@@ -1,9 +1,26 @@
 var __create = Object.create;
 var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
 var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (__hasOwnProp.call(b, prop))
+      __defNormalProp(a, prop, b[prop]);
+  if (__getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(b)) {
+      if (__propIsEnum.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
+var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
 var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
 var __export = (target, all) => {
   for (var name in all)
@@ -65,10 +82,15 @@ __export(root_exports, {
 });
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-QTF6GE3Z.css";
+var app_default = "/build/_assets/app-QIBELUDK.css";
 
 // route:/home/ilunga/learning/remix/getConnected/app/root.jsx
+var import_axios = __toESM(require("axios"));
 var import_react2 = require("@remix-run/react");
+import_axios.default.defaults.baseURL = "http://127.0.0.1:8000";
+import_axios.default.defaults.headers.post["Content-Type"] = "application/json";
+import_axios.default.defaults.headers.post["Accept"] = "application/json";
+import_axios.default.defaults.withCredentials = true;
 function links() {
   return [{ rel: "stylesheet", href: app_default }];
 }
@@ -90,6 +112,8 @@ var register_exports = {};
 __export(register_exports, {
   default: () => register
 });
+var import_axios2 = __toESM(require("axios"));
+var import_react5 = require("react");
 
 // app/components/Footer.jsx
 var import_react3 = __toESM(require("react"));
@@ -97,7 +121,7 @@ function Footer() {
   return /* @__PURE__ */ import_react3.default.createElement(import_react3.default.Fragment, null, /* @__PURE__ */ import_react3.default.createElement("footer", {
     className: " flex-col bg-gray-800 px-6 py-2  text-white items-center overflow-hidden  bottom-0 w-full mt-0 hidden md:flex"
   }, /* @__PURE__ */ import_react3.default.createElement("div", {
-    className: "inline-flex gap-2 px-2 py-2 fill-teal-900"
+    className: "inline-flex gap-2 px-2 py-2  fill-teal-900"
   }, /* @__PURE__ */ import_react3.default.createElement("a", {
     href: "#"
   }, /* @__PURE__ */ import_react3.default.createElement("svg", {
@@ -160,7 +184,7 @@ function Footer() {
     href: "#"
   }, "About us"))), /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "row"
-  }, "Copyright \xA9 2022 Developed By Ilunga")), /* @__PURE__ */ import_react3.default.createElement("nav", {
+  }, "Copyright \xA9 2022 getConnected")), /* @__PURE__ */ import_react3.default.createElement("nav", {
     className: "flex flex-row justify-between md:hidden bottom-0 px-6 py-4 sticky bg-slate-200 dark:bg-neutral-800"
   }, /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "flex flex-col items-center"
@@ -333,6 +357,33 @@ var Navbar_default = Navbar;
 
 // route:/home/ilunga/learning/remix/getConnected/app/routes/register.jsx
 function register() {
+  const [registerInput, setRegister] = (0, import_react5.useState)({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    password: "",
+    repeatpassword: ""
+  });
+  const handleInput = (e) => {
+    e.presist();
+    setRegister(__spreadProps(__spreadValues({}, registerInput), { [e.target.name]: e.target.value }));
+  };
+  const registerSubmit = (e) => {
+    e.preventDefault();
+    const data = {
+      firstname: registerInput.firstname,
+      lastname: registerInput.lastname,
+      email: registerInput.email,
+      phone: registerInput.phone,
+      password: registerInput.password,
+      repeatpassword: registerInput.repeatpassword
+    };
+    import_axios2.default.get("/sanctum/csrf-cookie").then((response) => {
+      import_axios2.default.post(`/api/register`, data).then((res) => {
+      });
+    });
+  };
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Navbar_default, null), /* @__PURE__ */ React.createElement("section", {
     className: "flex flex-1 py-6 px-4 md:flex-row md:px-18 md:py-20 md:mx-20 md:shadow-md overflow-hidden"
   }, /* @__PURE__ */ React.createElement("div", {
@@ -342,6 +393,7 @@ function register() {
   }, /* @__PURE__ */ React.createElement("h1", {
     className: "text-3xl md:text-xl  text-center"
   }, "Please Register To continue..")), /* @__PURE__ */ React.createElement("form", {
+    onSubmit: registerSubmit,
     class: "w-full max-w-lg px-6 py-6 md:ml-20"
   }, /* @__PURE__ */ React.createElement("div", {
     class: "flex flex-wrap -mx-3 md:mb-6 mb-2"
@@ -354,6 +406,9 @@ function register() {
     class: "appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white",
     id: "grid-first-name",
     type: "text",
+    name: "firstname",
+    onChange: handleInput,
+    value: registerInput.firstname,
     placeholder: "example:Joe"
   })), /* @__PURE__ */ React.createElement("div", {
     class: "w-full md:w-1/2 px-3"
@@ -364,6 +419,9 @@ function register() {
     class: "appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500",
     id: "grid-last-name",
     type: "text",
+    name: "lastname",
+    onChange: handleInput,
+    value: registerInput.lastname,
     placeholder: "example:Will"
   }))), /* @__PURE__ */ React.createElement("div", {
     class: "flex flex-wrap -mx-3 md:mb-6 mb-2"
@@ -375,7 +433,10 @@ function register() {
   }, "Email"), /* @__PURE__ */ React.createElement("input", {
     class: "appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white",
     id: "grid-first-name",
-    type: "text",
+    type: "email",
+    name: "email",
+    onChange: handleInput,
+    value: registerInput.email,
     placeholder: "example:joe@gmail.com"
   })), /* @__PURE__ */ React.createElement("div", {
     class: "w-full md:w-1/2 px-3"
@@ -385,7 +446,10 @@ function register() {
   }, "WhatsApp Number"), /* @__PURE__ */ React.createElement("input", {
     class: "appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500",
     id: "grid-last-name",
-    type: "text",
+    type: "number",
+    name: "phone",
+    onChange: handleInput,
+    value: registerInput.phone,
     placeholder: "example:+255766890443"
   }))), /* @__PURE__ */ React.createElement("div", {
     class: "flex flex-wrap -mx-3 md:mb-6 mb-2"
@@ -397,7 +461,10 @@ function register() {
   }, "Password"), /* @__PURE__ */ React.createElement("input", {
     class: "appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white",
     id: "grid-first-name",
-    type: "text",
+    type: "password",
+    name: "password",
+    onChange: handleInput,
+    value: registerInput.password,
     placeholder: "*********"
   })), /* @__PURE__ */ React.createElement("div", {
     class: "w-full md:w-1/2 px-3 mb-2"
@@ -407,13 +474,16 @@ function register() {
   }, "Repeat Password"), /* @__PURE__ */ React.createElement("input", {
     class: "appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500",
     id: "grid-last-name",
-    type: "text",
+    type: "password",
+    name: "repeatpassword",
+    onChange: handleInput,
+    value: registerInput.repeatpassword,
     placeholder: "*********"
   }))), /* @__PURE__ */ React.createElement("div", {
     class: "flex items-center justify-between"
   }, /* @__PURE__ */ React.createElement("button", {
     class: "bg-teal-900 hover:bg-blue-700 text-white font-bold py-2 px-6  rounded focus:outline-none focus:shadow-outline",
-    type: "button"
+    type: "submit"
   }, "Register")))), /* @__PURE__ */ React.createElement("div", {
     className: "basis-1/4 items-center hidden md:inline"
   }, /* @__PURE__ */ React.createElement("img", {
@@ -430,239 +500,239 @@ __export(routes_exports, {
 });
 
 // app/components/Hero.jsx
-var import_react5 = __toESM(require("react"));
+var import_react6 = __toESM(require("react"));
 function Hero() {
-  return /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, /* @__PURE__ */ import_react5.default.createElement("section", {
+  return /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, /* @__PURE__ */ import_react6.default.createElement("section", {
     className: "relative overflow-hidden"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "container \n    flex\n    flex-col-reverse\n    lg:flex-row\n    items-center\n    gap-12\n    lg:mt-20\n    mt-6\n    mx-auto"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-auto w-full md:w-full flex-col items-center lg:items-start"
-  }, /* @__PURE__ */ import_react5.default.createElement("h2", {
+  }, /* @__PURE__ */ import_react6.default.createElement("h2", {
     className: "text-black dark:text-white text-2xl italic font-bold md:text-5xl text-center items-start mb-6"
-  }, "We Connect you to the World of Opportunities!"), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "We Connect you to the World of Opportunities!"), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex justify-center flex-auto mb-10 md:mb-16 lg:mb-0  md:hidden"
-  }, /* @__PURE__ */ import_react5.default.createElement("img", {
+  }, /* @__PURE__ */ import_react6.default.createElement("img", {
     src: "world.svg",
     alt: "world",
     className: "w-5/6 h-5/6 sm:h-3/4 md:w-full md:h-full"
-  })), /* @__PURE__ */ import_react5.default.createElement("p", {
+  })), /* @__PURE__ */ import_react6.default.createElement("p", {
     className: "text-lg text-center lg:items-start mx-auto"
-  }, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, amet eaque obcaecati velit voluptatibus maxime."), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, amet eaque obcaecati velit voluptatibus maxime."), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("button", {
+  }, /* @__PURE__ */ import_react6.default.createElement("button", {
     className: "btn"
-  }, "get Started "))), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "get Started "))), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "justify-center flex-auto mb-10 md:mb-16 lg:mb-0  hidden md:block"
-  }, /* @__PURE__ */ import_react5.default.createElement("img", {
+  }, /* @__PURE__ */ import_react6.default.createElement("img", {
     src: "world.svg",
     alt: "world",
     className: "w-5/6 h-5/6 sm:h-3/4 md:w-full md:h-full"
-  })))), /* @__PURE__ */ import_react5.default.createElement("section", {
+  })))), /* @__PURE__ */ import_react6.default.createElement("section", {
     className: "py-10 px-2 mt-12 bg-slate-300 dark:bg-neutral-800 items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "sm:w-3/4 lg:w-5/12 mx-auto"
-  }, /* @__PURE__ */ import_react5.default.createElement("h1", {
+  }, /* @__PURE__ */ import_react6.default.createElement("h1", {
     className: "text-3xl text-center"
-  }, "Services")), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "Services")), /* @__PURE__ */ import_react6.default.createElement("div", {
     class: "container grid grid-cols-1 md:grid-cols-4 max-w-screen-lg mx-auto my-6 md:gap-6"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-col rounded-md  shadow-md"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "p-6 flex flex-col items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("img", {
+  }, /* @__PURE__ */ import_react6.default.createElement("img", {
     className: "h-3/5 w-3/5 md:w-full md:h-full",
     src: "university.svg",
     alt: ""
-  }), /* @__PURE__ */ import_react5.default.createElement("h3", {
+  }), /* @__PURE__ */ import_react6.default.createElement("h3", {
     className: "mt-5 mb-2 text-lg"
-  }, "University/College"), /* @__PURE__ */ import_react5.default.createElement("p", {
+  }, "University/College"), /* @__PURE__ */ import_react6.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("button", {
+  }, /* @__PURE__ */ import_react6.default.createElement("button", {
     className: "btn-service"
-  }, "learn more")))), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "learn more")))), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-col rounded-md  shadow-md"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "p-6 flex flex-col items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("img", {
+  }, /* @__PURE__ */ import_react6.default.createElement("img", {
     className: "h-3/5 w-3/5 md:w-full md:h-full",
     src: "scholarship.svg",
     alt: ""
-  }), /* @__PURE__ */ import_react5.default.createElement("h3", {
+  }), /* @__PURE__ */ import_react6.default.createElement("h3", {
     className: "mt-12 md:mt-20 mb-2 text-lg"
-  }, "Scholarships"), /* @__PURE__ */ import_react5.default.createElement("p", {
+  }, "Scholarships"), /* @__PURE__ */ import_react6.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("button", {
+  }, /* @__PURE__ */ import_react6.default.createElement("button", {
     className: "btn-service"
-  }, "learn more")))), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "learn more")))), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-col rounded-md  shadow-md"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "p-6 flex flex-col items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("img", {
+  }, /* @__PURE__ */ import_react6.default.createElement("img", {
     className: "h-3/5 w-3/5 md:w-full md:h-full",
     src: "job.svg",
     alt: ""
-  }), /* @__PURE__ */ import_react5.default.createElement("h3", {
+  }), /* @__PURE__ */ import_react6.default.createElement("h3", {
     className: "mt-5 md:mt-[3rem] mb-2 text-lg"
-  }, "Job Opportunities"), /* @__PURE__ */ import_react5.default.createElement("p", {
+  }, "Job Opportunities"), /* @__PURE__ */ import_react6.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("button", {
+  }, /* @__PURE__ */ import_react6.default.createElement("button", {
     className: "btn-service"
-  }, "learn more")))), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "learn more")))), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-col rounded-md  shadow-md"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "p-6 flex flex-col items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("img", {
+  }, /* @__PURE__ */ import_react6.default.createElement("img", {
     className: "h-3/5 w-3/5 md:w-full md:h-full",
     src: "online-learning.svg",
     alt: ""
-  }), /* @__PURE__ */ import_react5.default.createElement("h3", {
+  }), /* @__PURE__ */ import_react6.default.createElement("h3", {
     className: "mt-5 mb-2 text-lg"
-  }, "Online Courses"), /* @__PURE__ */ import_react5.default.createElement("p", {
+  }, "Online Courses"), /* @__PURE__ */ import_react6.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("button", {
+  }, /* @__PURE__ */ import_react6.default.createElement("button", {
     className: "btn-service"
-  }, "learn more")))), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "learn more")))), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-col rounded-md  shadow-md"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "p-6 flex flex-col items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("h3", {
+  }, /* @__PURE__ */ import_react6.default.createElement("h3", {
     className: "mt-5 mb-2 text-lg"
-  }, "Coming soon.."), /* @__PURE__ */ import_react5.default.createElement("p", {
+  }, "Coming soon.."), /* @__PURE__ */ import_react6.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("button", {
+  }, /* @__PURE__ */ import_react6.default.createElement("button", {
     className: "btn-service"
-  }, "learn more")))), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "learn more")))), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-col rounded-md  shadow-md"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "p-6 flex flex-col items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("h3", {
+  }, /* @__PURE__ */ import_react6.default.createElement("h3", {
     className: "mt-5 mb-2 text-lg"
-  }, "Coming soon.."), /* @__PURE__ */ import_react5.default.createElement("p", {
+  }, "Coming soon.."), /* @__PURE__ */ import_react6.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("button", {
+  }, /* @__PURE__ */ import_react6.default.createElement("button", {
     className: "btn-service"
-  }, "learn more")))), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "learn more")))), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-col rounded-md  shadow-md"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "p-6 flex flex-col items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("h3", {
+  }, /* @__PURE__ */ import_react6.default.createElement("h3", {
     className: "mt-5 mb-2 text-lg"
-  }, "Coming soon.."), /* @__PURE__ */ import_react5.default.createElement("p", {
+  }, "Coming soon.."), /* @__PURE__ */ import_react6.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("button", {
+  }, /* @__PURE__ */ import_react6.default.createElement("button", {
     className: "btn-service"
-  }, "learn more")))), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "learn more")))), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-col rounded-md  shadow-md"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "p-6 flex flex-col items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("h3", {
+  }, /* @__PURE__ */ import_react6.default.createElement("h3", {
     className: "mt-5 mb-2 text-lg"
-  }, "Coming soon.."), /* @__PURE__ */ import_react5.default.createElement("p", {
+  }, "Coming soon.."), /* @__PURE__ */ import_react6.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, " ", "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem ipsa ad veritatis quo, numquam, quis illum mollitia libero.", " "), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-1 justify-center flex-wrap  items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("button", {
+  }, /* @__PURE__ */ import_react6.default.createElement("button", {
     className: "btn-service"
-  }, "learn more")))))), /* @__PURE__ */ import_react5.default.createElement("section", {
+  }, "learn more")))))), /* @__PURE__ */ import_react6.default.createElement("section", {
     className: "py-20 px-2 mt-0 bg-slate-200 dark:bg-neutral-800"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "sm:w-3/4 lg:w-5/12 mx-auto"
-  }, /* @__PURE__ */ import_react5.default.createElement("h1", {
+  }, /* @__PURE__ */ import_react6.default.createElement("h1", {
     className: "text-3xl text-center"
-  }, "About us"), /* @__PURE__ */ import_react5.default.createElement("p", {
+  }, "About us"), /* @__PURE__ */ import_react6.default.createElement("p", {
     className: "text-center mt-4"
-  }, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, amet eaque obcaecati velit voluptatibus maxime."))), /* @__PURE__ */ import_react5.default.createElement("section", {
+  }, "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum, amet eaque obcaecati velit voluptatibus maxime."))), /* @__PURE__ */ import_react6.default.createElement("section", {
     className: "py-20 px-2 mt-0  bg-slate-100 dark:bg-neutral-800"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "sm:w-3/4 lg:w-5/12 mx-auto"
-  }, /* @__PURE__ */ import_react5.default.createElement("h1", {
+  }, /* @__PURE__ */ import_react6.default.createElement("h1", {
     className: "text-3xl text-center"
-  }, "Our Team"), /* @__PURE__ */ import_react5.default.createElement("p", {
+  }, "Our Team"), /* @__PURE__ */ import_react6.default.createElement("p", {
     className: "text-center mt-4"
-  }, "Lorem ipsum dolor sit amet consectetur."), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "Lorem ipsum dolor sit amet consectetur."), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "container grid grid-cols-2 max-w-screen-lg mx-auto my-6 md:gap-6"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-col rounded-md  shadow-md"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "p-6 flex flex-col items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("img", {
+  }, /* @__PURE__ */ import_react6.default.createElement("img", {
     className: "h-3/5 w-3/5 md:w-full md:h-full",
     src: "avator.svg",
     alt: ""
-  }), /* @__PURE__ */ import_react5.default.createElement("h3", {
+  }), /* @__PURE__ */ import_react6.default.createElement("h3", {
     className: "mt-5 mb-2 text-lg"
-  }, "John Doe"), /* @__PURE__ */ import_react5.default.createElement("p", {
+  }, "John Doe"), /* @__PURE__ */ import_react6.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, "CEO"), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "CEO"), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-row gap-4 justify-center flex-wrap  items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("svg", {
+  }, /* @__PURE__ */ import_react6.default.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 24 24",
     width: "24",
     height: "24"
-  }, /* @__PURE__ */ import_react5.default.createElement("path", {
+  }, /* @__PURE__ */ import_react6.default.createElement("path", {
     fill: "none",
     d: "M0 0h24v24H0z"
-  }), /* @__PURE__ */ import_react5.default.createElement("path", {
+  }), /* @__PURE__ */ import_react6.default.createElement("path", {
     d: "M2.004 22l1.352-4.968A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.954 9.954 0 0 1-5.03-1.355L2.004 22zM8.391 7.308a.961.961 0 0 0-.371.1 1.293 1.293 0 0 0-.294.228c-.12.113-.188.211-.261.306A2.729 2.729 0 0 0 6.9 9.62c.002.49.13.967.33 1.413.409.902 1.082 1.857 1.971 2.742.214.213.423.427.648.626a9.448 9.448 0 0 0 3.84 2.046l.569.087c.185.01.37-.004.556-.013a1.99 1.99 0 0 0 .833-.231c.166-.088.244-.132.383-.22 0 0 .043-.028.125-.09.135-.1.218-.171.33-.288.083-.086.155-.187.21-.302.078-.163.156-.474.188-.733.024-.198.017-.306.014-.373-.004-.107-.093-.218-.19-.265l-.582-.261s-.87-.379-1.401-.621a.498.498 0 0 0-.177-.041.482.482 0 0 0-.378.127v-.002c-.005 0-.072.057-.795.933a.35.35 0 0 1-.368.13 1.416 1.416 0 0 1-.191-.066c-.124-.052-.167-.072-.252-.109l-.005-.002a6.01 6.01 0 0 1-1.57-1c-.126-.11-.243-.23-.363-.346a6.296 6.296 0 0 1-1.02-1.268l-.059-.095a.923.923 0 0 1-.102-.205c-.038-.147.061-.265.061-.265s.243-.266.356-.41a4.38 4.38 0 0 0 .263-.373c.118-.19.155-.385.093-.536-.28-.684-.57-1.365-.868-2.041-.059-.134-.234-.23-.393-.249-.054-.006-.108-.012-.162-.016a3.385 3.385 0 0 0-.403.004z"
-  })), /* @__PURE__ */ import_react5.default.createElement("svg", {
+  })), /* @__PURE__ */ import_react6.default.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 24 24",
     width: "24",
     height: "24"
-  }, /* @__PURE__ */ import_react5.default.createElement("path", {
+  }, /* @__PURE__ */ import_react6.default.createElement("path", {
     fill: "none",
     d: "M0 0h24v24H0z"
-  }), /* @__PURE__ */ import_react5.default.createElement("path", {
+  }), /* @__PURE__ */ import_react6.default.createElement("path", {
     d: "M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
-  }))))), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }))))), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-col rounded-md  shadow-md"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "p-6 flex flex-col items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("img", {
+  }, /* @__PURE__ */ import_react6.default.createElement("img", {
     className: "h-3/5 w-3/5 md:w-full md:h-full",
     src: "avator.svg",
     alt: ""
-  }), /* @__PURE__ */ import_react5.default.createElement("h3", {
+  }), /* @__PURE__ */ import_react6.default.createElement("h3", {
     className: "mt-5 mb-2 text-lg"
-  }, "Mark Doe"), /* @__PURE__ */ import_react5.default.createElement("p", {
+  }, "Mark Doe"), /* @__PURE__ */ import_react6.default.createElement("p", {
     className: "mb-2 font-light items-center "
-  }, "Manager "), /* @__PURE__ */ import_react5.default.createElement("div", {
+  }, "Manager "), /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "flex flex-row gap-4 justify-center flex-wrap  items-center"
-  }, /* @__PURE__ */ import_react5.default.createElement("svg", {
+  }, /* @__PURE__ */ import_react6.default.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 24 24",
     width: "24",
     height: "24"
-  }, /* @__PURE__ */ import_react5.default.createElement("path", {
+  }, /* @__PURE__ */ import_react6.default.createElement("path", {
     fill: "none",
     d: "M0 0h24v24H0z"
-  }), /* @__PURE__ */ import_react5.default.createElement("path", {
+  }), /* @__PURE__ */ import_react6.default.createElement("path", {
     d: "M2.004 22l1.352-4.968A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.954 9.954 0 0 1-5.03-1.355L2.004 22zM8.391 7.308a.961.961 0 0 0-.371.1 1.293 1.293 0 0 0-.294.228c-.12.113-.188.211-.261.306A2.729 2.729 0 0 0 6.9 9.62c.002.49.13.967.33 1.413.409.902 1.082 1.857 1.971 2.742.214.213.423.427.648.626a9.448 9.448 0 0 0 3.84 2.046l.569.087c.185.01.37-.004.556-.013a1.99 1.99 0 0 0 .833-.231c.166-.088.244-.132.383-.22 0 0 .043-.028.125-.09.135-.1.218-.171.33-.288.083-.086.155-.187.21-.302.078-.163.156-.474.188-.733.024-.198.017-.306.014-.373-.004-.107-.093-.218-.19-.265l-.582-.261s-.87-.379-1.401-.621a.498.498 0 0 0-.177-.041.482.482 0 0 0-.378.127v-.002c-.005 0-.072.057-.795.933a.35.35 0 0 1-.368.13 1.416 1.416 0 0 1-.191-.066c-.124-.052-.167-.072-.252-.109l-.005-.002a6.01 6.01 0 0 1-1.57-1c-.126-.11-.243-.23-.363-.346a6.296 6.296 0 0 1-1.02-1.268l-.059-.095a.923.923 0 0 1-.102-.205c-.038-.147.061-.265.061-.265s.243-.266.356-.41a4.38 4.38 0 0 0 .263-.373c.118-.19.155-.385.093-.536-.28-.684-.57-1.365-.868-2.041-.059-.134-.234-.23-.393-.249-.054-.006-.108-.012-.162-.016a3.385 3.385 0 0 0-.403.004z"
-  })), /* @__PURE__ */ import_react5.default.createElement("svg", {
+  })), /* @__PURE__ */ import_react6.default.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     viewBox: "0 0 24 24",
     width: "24",
     height: "24"
-  }, /* @__PURE__ */ import_react5.default.createElement("path", {
+  }, /* @__PURE__ */ import_react6.default.createElement("path", {
     fill: "none",
     d: "M0 0h24v24H0z"
-  }), /* @__PURE__ */ import_react5.default.createElement("path", {
+  }), /* @__PURE__ */ import_react6.default.createElement("path", {
     d: "M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"
   })))))))));
 }
@@ -679,11 +749,55 @@ __export(login_exports, {
   default: () => login
 });
 function login() {
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Navbar_default, null), /* @__PURE__ */ React.createElement("section", null, "hello"), /* @__PURE__ */ React.createElement(Footer_default, null));
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Navbar_default, null), /* @__PURE__ */ React.createElement("section", {
+    className: "flex flex-1 py-6 px-4 md:flex-row md:px-18 md:py-20 md:mx-20  overflow-hidden"
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: " md:basis-3/4 md:px-20  md:ml-20 "
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: "sm:w-3/4 lg:w-5/12 mx-auto"
+  }, /* @__PURE__ */ React.createElement("h1", {
+    className: "text-3xl md:text-xl  text-center"
+  }, "Please Login To continue..")), /* @__PURE__ */ React.createElement("form", {
+    class: "bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+  }, /* @__PURE__ */ React.createElement("div", {
+    class: "mb-4"
+  }, /* @__PURE__ */ React.createElement("label", {
+    class: "block text-gray-700 text-sm font-bold mb-2",
+    for: "email"
+  }, "Email"), /* @__PURE__ */ React.createElement("input", {
+    class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+    id: "username",
+    type: "email",
+    placeholder: "email"
+  })), /* @__PURE__ */ React.createElement("div", {
+    class: "mb-6"
+  }, /* @__PURE__ */ React.createElement("label", {
+    class: "block text-gray-700 text-sm font-bold mb-2",
+    for: "password"
+  }, "Password"), /* @__PURE__ */ React.createElement("input", {
+    class: "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline",
+    id: "password",
+    type: "password",
+    placeholder: "***********"
+  })), /* @__PURE__ */ React.createElement("div", {
+    class: "flex items-center justify-between"
+  }, /* @__PURE__ */ React.createElement("button", {
+    class: "bg-teal-900 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline",
+    type: "button"
+  }, "Sign In"), /* @__PURE__ */ React.createElement("a", {
+    class: "inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800",
+    href: "#"
+  }, "Forgot Password?")))), /* @__PURE__ */ React.createElement("div", {
+    className: "basis-1/4 items-center hidden md:inline"
+  }, /* @__PURE__ */ React.createElement("img", {
+    className: "h-56",
+    src: "signup.svg",
+    alt: "signup"
+  }))), /* @__PURE__ */ React.createElement(Footer_default, null));
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { "version": "167efaa7", "entry": { "module": "/build/entry.client-BOICOJJ5.js", "imports": ["/build/_shared/chunk-NNW7MYEC.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-FGO43BA4.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-U5AKV42A.js", "imports": ["/build/_shared/chunk-CWJUPQGZ.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/login": { "id": "routes/login", "parentId": "root", "path": "login", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/login-IQ5HHZGV.js", "imports": ["/build/_shared/chunk-CWJUPQGZ.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/register": { "id": "routes/register", "parentId": "root", "path": "register", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/register-BCGVU5MD.js", "imports": ["/build/_shared/chunk-CWJUPQGZ.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-167EFAA7.js" };
+var assets_manifest_default = { "version": "e59f4f22", "entry": { "module": "/build/entry.client-UPCCS4GW.js", "imports": ["/build/_shared/chunk-UBX3SU2W.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-SJNJJPAN.js", "imports": ["/build/_shared/chunk-UKHQ3TWG.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-X42SZDDQ.js", "imports": ["/build/_shared/chunk-KMLAAXKA.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/login": { "id": "routes/login", "parentId": "root", "path": "login", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/login-GZAOL55B.js", "imports": ["/build/_shared/chunk-KMLAAXKA.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/register": { "id": "routes/register", "parentId": "root", "path": "register", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/register-L45T4E24.js", "imports": ["/build/_shared/chunk-KMLAAXKA.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-E59F4F22.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };
