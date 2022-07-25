@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/index.jsx?browser", "../../../app/routes/index.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/index.jsx\";", "\nexport default function Index() {\n  return <>\n    <header className=\"px-4 py-4 bg-red-50 \">\n      <nav className=\"flex justify-between text-black\">\n        <div>1</div>\n        <div>\n          <ul className=\"inline-flex space-x-6 text-xl\">\n            <li><a href=\"#\">Home</a></li>\n            <li><a href=\"#\">About</a></li>\n            <li><a href=\"#\">Services</a></li>\n            <li><a href=\"#\">Contacts</a></li>\n          </ul>\n        </div>\n        <div>\n          <button className=\"bg-orange-300 text-xl px-2 py-2 rounded-md\">\n            Get Started\n          </button>\n        </div>\n      </nav>\n\n    </header>\n  </>\n\n}\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AACe,iBAAiB;AAC9B,SAAO,0DACL,oCAAC,UAAD;AAAA,IAAQ,WAAU;AAAA,KAChB,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACb,oCAAC,OAAD,MAAK,MACL,oCAAC,OAAD,MACE,oCAAC,MAAD;AAAA,IAAI,WAAU;AAAA,KACZ,oCAAC,MAAD,MAAI,oCAAC,KAAD;AAAA,IAAG,MAAK;AAAA,KAAI,UAChB,oCAAC,MAAD,MAAI,oCAAC,KAAD;AAAA,IAAG,MAAK;AAAA,KAAI,WAChB,oCAAC,MAAD,MAAI,oCAAC,KAAD;AAAA,IAAG,MAAK;AAAA,KAAI,cAChB,oCAAC,MAAD,MAAI,oCAAC,KAAD;AAAA,IAAG,MAAK;AAAA,KAAI,gBAGpB,oCAAC,OAAD,MACE,oCAAC,UAAD;AAAA,IAAQ,WAAU;AAAA,KAA6C;AAAA;",
+  "names": []
+}

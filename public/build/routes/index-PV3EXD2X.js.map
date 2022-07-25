@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/index.jsx?browser", "../../../app/routes/index.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/index.jsx\";", "\nexport default function Index() {\n  return <>\n  <header className=\"bg-orange\">\n    <nav>\n\n    </nav>\n  </header>\n  </>\n\n}\n"],
+  "mappings": ";;;;;;AAAA;;;ACAA;AACe,iBAAiB;AAC9B,SAAO,0DACP,oCAAC,UAAD;AAAA,IAAQ,WAAU;AAAA,KAChB,oCAAC,OAAD;AAAA;",
+  "names": []
+}
