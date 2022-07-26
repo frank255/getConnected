@@ -38,6 +38,7 @@ export default function App() {
       </head>
       <body className="max-w-[2000px] 
        mx-auto
+       bg-gray-100
        text-neutral-900
        dark:text-neutral-200
         bg-transparent

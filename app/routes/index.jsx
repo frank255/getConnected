@@ -1,9 +1,10 @@
 
 export default function Index() {
   return <>
-    <header className="px-4 py-4 md:bg-gray-100 ">
+    <header className="px-4 py-4 bg-gray-100">
+      {/* nav for medium devices */}
       <nav className="hidden md:flex justify-between text-black">
-        <div className="font-tangerine text-4xl">
+        <div className="font-tangerine text-5xl">
           getConnected
         </div>
         <div>
@@ -21,9 +22,34 @@ export default function Index() {
           </button>
         </div>
       </nav>
-
+      </header>
+      {/* hero section */}
+      <hero className="pt-20 flex  flex-1 mx-0 bg-gray-100 pb-20 " >
+        <div className=" w-1/2 grid h-64  justify-items-center text-black mx-4">
+          <div className="my-2 text-6xl" >we connect you to the</div>
+          <div className="mt-1 text-5xl text-orange-300">World of Opportunities!</div>
+          <div className="mt-10 grid justify-items-center text-black text-l">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa natus omnis quasi ipsum magni, quaerat voluptas officia, porro aspernatur culpa debitis neque blanditiis quia optio tempora numquam, doloremque dolores fugit!
+            </p>
+          </div>
+          <div className="mt-10">
+            <button className=" flex bg-orange-300 text-xl px-6 py-3 rounded-md">
+    
+             <span className="px-2">
+              Find out More
+              </span> 
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-5 h-7 ">
+                <path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"/></svg>
+            </button>
+          </div>
+        </div>
+        <div className="flex justify-center w-1/2">
+          <img className="h-4/5 w-4/5 object-fit" src="world.png" alt="" />
+        </div>
+      </hero>
       {/* footer nav for small devices*/}
-      <nav className="text-orange-200 inline-flex space-x-2 justify-between md:hidden fixed bottom-0 left- 0 right-0 w-full px-6 py-4  dark:bg-neutral-800">
+      <nav className="text-yellow-800 inline-flex space-x-2 justify-between md:hidden fixed bottom-0 left- 0 right-0 w-full px-6 py-4  dark:bg-neutral-800">
         <div className="flex flex-col items-center">
           <div>
             <svg
@@ -136,8 +162,9 @@ export default function Index() {
           </div>
         </div>
       </nav>
-
-    </header>
+      {/* footer */}
+      <footer class="fixed w-full  bg-gray-100 text-gray-300 py-2 bottom-0 left-0 text-center"><span>© getConnected 2022</span></footer>
+   
   </>
 
 }

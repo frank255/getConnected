@@ -65,7 +65,7 @@ __export(root_exports, {
 });
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-J3KK5M5S.css";
+var app_default = "/build/_assets/app-NBNTYCBK.css";
 
 // route:/Volumes/ROOT/learning/getConnected/app/root.jsx
 var import_axios = __toESM(require("axios"));
@@ -86,7 +86,7 @@ function App() {
   return /* @__PURE__ */ React.createElement("html", {
     lang: "en"
   }, /* @__PURE__ */ React.createElement("head", null, /* @__PURE__ */ React.createElement(import_react2.Meta, null), /* @__PURE__ */ React.createElement(import_react2.Links, null)), /* @__PURE__ */ React.createElement("body", {
-    className: "max-w-[2000px] \n       mx-auto\n       text-neutral-900\n       dark:text-neutral-200\n        bg-transparent\n       dark:bg-neutral-800"
+    className: "max-w-[2000px] \n       mx-auto\n       bg-gray-100\n       text-neutral-900\n       dark:text-neutral-200\n        bg-transparent\n       dark:bg-neutral-800"
   }, /* @__PURE__ */ React.createElement(import_react2.Outlet, null), /* @__PURE__ */ React.createElement(import_react2.ScrollRestoration, null), /* @__PURE__ */ React.createElement(import_react2.Scripts, null), /* @__PURE__ */ React.createElement(import_react2.LiveReload, null)));
 }
 
@@ -100,11 +100,11 @@ __export(routes_exports, {
 });
 function Index() {
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("header", {
-    className: "px-4 py-4 md:bg-gray-100 "
+    className: "px-4 py-4 bg-gray-100"
   }, /* @__PURE__ */ React.createElement("nav", {
     className: "hidden md:flex justify-between text-black"
   }, /* @__PURE__ */ React.createElement("div", {
-    className: "font-tangerine text-4xl"
+    className: "font-tangerine text-5xl"
   }, "getConnected"), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("ul", {
     className: "inline-flex space-x-6 text-xl"
   }, /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("a", {
@@ -119,8 +119,36 @@ function Index() {
     href: "#"
   }, "Contacts")))), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("button", {
     className: "bg-orange-300 text-xl px-4 py-3 rounded-md"
-  }, "Get Started"))), /* @__PURE__ */ React.createElement("nav", {
-    className: "text-orange-200 inline-flex space-x-2 justify-between md:hidden fixed bottom-0 left- 0 right-0 w-full px-6 py-4  dark:bg-neutral-800"
+  }, "Get Started")))), /* @__PURE__ */ React.createElement("hero", {
+    className: "pt-20 flex  flex-1 mx-0 bg-gray-100 pb-20 "
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: " w-1/2 grid h-64  justify-items-center text-black mx-4"
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: "my-2 text-6xl"
+  }, "we connect you to the"), /* @__PURE__ */ React.createElement("div", {
+    className: "mt-1 text-5xl text-orange-300"
+  }, "World of Opportunities!"), /* @__PURE__ */ React.createElement("div", {
+    className: "mt-10 grid justify-items-center text-black text-l"
+  }, /* @__PURE__ */ React.createElement("p", null, "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa natus omnis quasi ipsum magni, quaerat voluptas officia, porro aspernatur culpa debitis neque blanditiis quia optio tempora numquam, doloremque dolores fugit!")), /* @__PURE__ */ React.createElement("div", {
+    className: "mt-10"
+  }, /* @__PURE__ */ React.createElement("button", {
+    className: " flex bg-orange-300 text-xl px-6 py-3 rounded-md"
+  }, /* @__PURE__ */ React.createElement("span", {
+    className: "px-2"
+  }, "Find out More"), /* @__PURE__ */ React.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 448 512",
+    className: "w-5 h-7 "
+  }, /* @__PURE__ */ React.createElement("path", {
+    d: "M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"
+  }))))), /* @__PURE__ */ React.createElement("div", {
+    className: "flex justify-center w-1/2"
+  }, /* @__PURE__ */ React.createElement("img", {
+    className: "h-4/5 w-4/5 object-fit",
+    src: "world.png",
+    alt: ""
+  }))), /* @__PURE__ */ React.createElement("nav", {
+    className: "text-yellow-800 inline-flex space-x-2 justify-between md:hidden fixed bottom-0 left- 0 right-0 w-full px-6 py-4  dark:bg-neutral-800"
   }, /* @__PURE__ */ React.createElement("div", {
     className: "flex flex-col items-center"
   }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("svg", {
@@ -211,14 +239,16 @@ function Index() {
     className: "text-sm"
   }, /* @__PURE__ */ React.createElement("a", {
     href: "/"
-  }, "Contacts"))))));
+  }, "Contacts")))), /* @__PURE__ */ React.createElement("footer", {
+    class: "fixed w-full  bg-gray-100 text-gray-300 py-2 bottom-0 left-0 text-center"
+  }, /* @__PURE__ */ React.createElement("span", null, "\xA9 getConnected 2022")));
 }
 
 // route:/Volumes/ROOT/learning/getConnected/app/routes/login.jsx
 var login_exports = {};
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { "version": "b9235a2f", "entry": { "module": "/build/entry.client-36P56RUR.js", "imports": ["/build/_shared/chunk-SFDWAHLJ.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-WK3PXABO.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-QPPVVY6Q.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/login": { "id": "routes/login", "parentId": "root", "path": "login", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/login-MZWXZ65I.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/register": { "id": "routes/register", "parentId": "root", "path": "register", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/register-RQLMTE5M.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-B9235A2F.js" };
+var assets_manifest_default = { "version": "82efe8c0", "entry": { "module": "/build/entry.client-YRSU5NCE.js", "imports": ["/build/_shared/chunk-PKO6KJXJ.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-C5TUZFVB.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-52KUDUGK.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/login": { "id": "routes/login", "parentId": "root", "path": "login", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/login-MZWXZ65I.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/register": { "id": "routes/register", "parentId": "root", "path": "register", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/register-RQLMTE5M.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-82EFE8C0.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };
