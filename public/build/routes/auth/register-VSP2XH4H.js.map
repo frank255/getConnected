@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/auth/register.jsx?browser", "../../../../app/routes/auth/register.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/auth/register.jsx\";", "import React from 'react'\n\nfunction register() {\n  return (\n    <div>register</div>\n  )\n}\n\nexport default register"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAElB,oBAAoB;AAClB,SACE,mDAAC,OAAD,MAAK;AAAA;AAIT,IAAO,mBAAQ;",
+  "names": []
+}

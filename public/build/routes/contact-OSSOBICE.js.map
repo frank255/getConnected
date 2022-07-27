@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/contact.jsx?browser", "../../../app/routes/contact.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/contact.jsx\";", "import React from 'react'\n\nfunction contact() {\n  return (\n    <div>contact</div>\n  )\n}\n\nexport default contact"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAElB,mBAAmB;AACjB,SACE,mDAAC,OAAD,MAAK;AAAA;AAIT,IAAO,kBAAQ;",
+  "names": []
+}

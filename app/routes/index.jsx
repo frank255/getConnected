@@ -1,47 +1,91 @@
+import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 export default function Index() {
-  return <>
-    <header className="px-4 py-4 bg-gray-100">
+  return (
+    <>
+      {/* meta information */}
+      <Helmet>
+        <title>Home - getConnected</title>
+        <meta
+          name="description"
+          content="A platform for connecting people to different Opportunities"
+        />
+      </Helmet>
+
       {/* nav for medium devices */}
-      <nav className="hidden md:flex justify-between text-black">
-        <div className="font-tangerine text-5xl">
-          getConnected
-        </div>
-        <div>
-          <ul className="inline-flex space-x-6 text-xl">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Learning</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contacts</a></li>
-          </ul>
-        </div>
-        <div>
-          <button className="bg-orange-300 text-xl px-4 py-3 rounded-md">
-            Get Started
-          </button>
-        </div>
-      </nav>
+
+      <header className="px-4 py-4 bg-gray-100 ">
+        <nav className="hidden md:flex justify-between text-black">
+          <div className="flex font-tangerine text-4xl">
+            <Link to="/"><img className="h-1/2" src="favicon.ico" alt="logo" /></Link>
+            <Link to={"/"}>  <span>getConnected</span></Link>
+          </div>
+          <div>
+            <ul className="inline-flex space-x-6 text-xl ">
+              <Link className="hover:bg-orange-200 p-2 rounded-md" to={"/"}>
+                Home
+              </Link>
+              <Link
+                className="hover:bg-orange-200 p-2 rounded-md"
+                to={"services"}
+              >
+                Services
+              </Link>
+              <Link
+                className="hover:bg-orange-200 p-2 rounded-md"
+                to={"learning"}
+              >
+                Learning
+              </Link>
+              <Link className="hover:bg-orange-200 p-2 rounded-md" to={"about"}>
+                About
+              </Link>
+              <Link
+                className="hover:bg-orange-200 p-2 rounded-md"
+                to={"contacts"}
+              >
+                Contacts
+              </Link>
+            </ul>
+          </div>
+          <div>
+            <Link to={"auth"}>
+              <button className="bg-green-400 hover:bg-orange-200 text-xl px-4 py-3 rounded-md">
+                Get Started
+              </button>
+            </Link>
+          </div>
+        </nav>
       </header>
       {/* hero section */}
-      <hero className="pt-20 flex  flex-1 mx-0 bg-gray-100 pb-20 " >
+      <hero className=" md:pt-1 md:flex h-screen w-screen  md:flex-1 mx-0 bg-gray-100 pb-20 ">
         <div className=" w-1/2 grid h-64  justify-items-center text-black mx-4">
-          <div className="my-2 text-6xl" >we connect you to the</div>
-          <div className="mt-1 text-5xl text-orange-300">World of Opportunities!</div>
+          <div className="my-2 text-3xl md:text-6xl">we connect you to the</div>
+          <div className="mt-1 text-2xl md:text-5xl text-orange-300">
+            World of Opportunities!
+          </div>
           <div className="mt-10 grid justify-items-center text-black text-l">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa natus omnis quasi ipsum magni, quaerat voluptas officia, porro aspernatur culpa debitis neque blanditiis quia optio tempora numquam, doloremque dolores fugit!
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+              natus omnis quasi ipsum magni, quaerat voluptas officia, porro
+              aspernatur culpa debitis neque blanditiis quia optio tempora
+              numquam, doloremque dolores fugit!
             </p>
           </div>
           <div className="mt-10">
-            <button className=" flex bg-orange-300 text-xl px-6 py-3 rounded-md">
-    
-             <span className="px-2">
-              Find out More
-              </span> 
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" className="w-5 h-7 ">
-                <path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"/></svg>
-            </button>
+            <Link to={"services"}>
+              <button className="hover:bg-orange-200 flex bg-green-400 text-xl px-6 py-3 rounded-md">
+                <span className="px-2">Find out More</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  className="w-5 h-7 "
+                >
+                  <path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" />
+                </svg>
+              </button>
+            </Link>
           </div>
         </div>
         <div className="flex justify-center w-1/2">
@@ -163,8 +207,9 @@ export default function Index() {
         </div>
       </nav>
       {/* footer */}
-      <footer class="fixed w-full  bg-gray-100 text-gray-300 py-2 bottom-0 left-0 text-center"><span>© getConnected 2022</span></footer>
-   
-  </>
-
+      <footer class="fixed w-full hidden md:inline bg-gray-100 text-gray-300 py-2 bottom-0 left-0 text-center">
+        <span>© getConnected {new Date().getFullYear()}</span>
+      </footer>
+    </>
+  );
 }

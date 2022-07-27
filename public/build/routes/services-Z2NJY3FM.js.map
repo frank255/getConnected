@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/services.jsx?browser", "../../../app/routes/services.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/services.jsx\";", "import React from 'react'\n\nfunction services() {\n  return (\n    <div>services</div>\n  )\n}\n\nexport default services"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAElB,oBAAoB;AAClB,SACE,mDAAC,OAAD,MAAK;AAAA;AAIT,IAAO,mBAAQ;",
+  "names": []
+}

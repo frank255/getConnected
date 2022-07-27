@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/auth/index.jsx?browser", "../../../../app/routes/auth/index.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/auth/index.jsx\";", "import React from 'react'\nimport {Outlet} from \"@remix-run/react\"\n\nexport default funct"],
+  "mappings": ";;;;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAGlB,IAAO,eAAQ;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/auth/index.jsx?browser", "../../../../app/routes/auth/index.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/auth/index.jsx\";", "import React from \"react\";\nimport { Outlet } from \"@remix-run/react\";\nimport { Helmet } from \"react-helmet\";\n\nexport default function index() {\n  return (\n    <>\n    div\n    <Helmet>\n        <title>Authentication - getConnected</title>\n        <meta\n          name=\"description\"\n          content=\"A platform for connecting people to different Opportunities\"\n        />\n      </Helmet>\n     <div className=\"flex flex-col items-center justify-center w-full flex-1 px-20  text-center bg-gray-100\">\n        <div className=\"bg-white\">\n            <div>sign in</div>\n            <div>sign up</div>\n        </div>\n     </div>\n      <Outlet />\n    </>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAIH,iBAAiB;AAC9B,SACE,wFAAE,OAEF,mDAAC,cAAD,MACI,mDAAC,SAAD,MAAO,kCACP,mDAAC,QAAD;AAAA,IACE,MAAK;AAAA,IACL,SAAQ;AAAA,OAGb,mDAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACZ,mDAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACX,mDAAC,OAAD,MAAK,YACL,mDAAC,OAAD,MAAK,cAGX,mDAAC,QAAD;AAAA;",
+  "names": []
+}

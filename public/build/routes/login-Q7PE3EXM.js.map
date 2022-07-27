@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/login.jsx?browser", "../../../app/routes/login.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/login.jsx\";", "import React from 'react'\n\nfunction login() {\n  return (\n    <div>login</div>\n  )\n}\n\nexport default login"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAElB,iBAAiB;AACf,SACE,mDAAC,OAAD,MAAK;AAAA;AAIT,IAAO,gBAAQ;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/auth/index.jsx?browser", "../../../../app/routes/auth/index.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/auth/index.jsx\";", "import React from 'react'\nimport {Outlet} from \"@remix-run/react\"\n\n\nexport default function index() {\n  return (\n    <div>\n <header className=\"px-4 py-4 bg-gray-100 \">\n      <nav className=\"hidden md:flex justify-between text-black\">\n        <div className=\"font-tangerine text-5xl\">\n          getConnected\n        </div>\n       \n        <div>\n          <Link to={\"auth\"}>\n           <button className=\"bg-green-400 hover:bg-orange-200 text-xl px-4 py-3 rounded-md\">\n            Get Started\n          </button>\n          </Link>\n         \n        </div>\n      </nav>\n      </header>    <Outlet/>\n  </div>  )\n}\n"],
+  "mappings": ";;;;;;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAIH,iBAAiB;AAC9B,SACE,mDAAC,OAAD,MACH,mDAAC,UAAD;AAAA,IAAQ,WAAU;AAAA,KACb,mDAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KACb,mDAAC,OAAD;AAAA,IAAK,WAAU;AAAA,KAA0B,iBAIzC,mDAAC,OAAD,MACE,mDAAC,MAAD;AAAA,IAAM,IAAI;AAAA,KACT,mDAAC,UAAD;AAAA,IAAQ,WAAU;AAAA,KAAgE,oBAO9E,QAAI,mDAAC,QAAD;AAAA;",
+  "names": []
+}

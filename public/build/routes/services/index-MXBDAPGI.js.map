@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/services/index.jsx?browser"],
+  "sourcesContent": ["module.exports = {};"],
+  "mappings": ";;;;;;AAAA;AAAA;AAAA;AAAA,WAAO,UAAU;AAAA;AAAA;",
+  "names": []
+}

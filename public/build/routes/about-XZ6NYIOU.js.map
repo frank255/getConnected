@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/about.jsx?browser", "../../../app/routes/about.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/about.jsx\";", "import React from 'react'\n\nfunction about() {\n  return (\n    <div>about</div>\n  )\n}\n\nexport default about"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAElB,iBAAiB;AACf,SACE,mDAAC,OAAD,MAAK;AAAA;AAIT,IAAO,gBAAQ;",
+  "names": []
+}

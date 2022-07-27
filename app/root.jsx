@@ -2,11 +2,11 @@ import styles from "./styles/app.css";
 import axios from 'axios';
 
 
-axios.defaults.baseURL = "http://127.0.0.1:8000";
-axios.defaults.headers.post['Content-Type'] = 'application/json';
-axios.defaults.headers.post['Accept'] = 'application/json';
+// axios.defaults.baseURL = "http://127.0.0.1:8000";
+// axios.defaults.headers.post['Content-Type'] = 'application/json';
+// axios.defaults.headers.post['Accept'] = 'application/json';
 
-axios.defaults.withCredentials = true;
+// axios.defaults.withCredentials = true;
 
 
 
@@ -38,11 +38,7 @@ export default function App() {
       </head>
       <body className="max-w-[2000px] 
        mx-auto
-       bg-gray-100
-       text-neutral-900
-       dark:text-neutral-200
-        bg-transparent
-       dark:bg-neutral-800">
+      ">
         <Outlet />
         <ScrollRestoration />
         <Scripts />

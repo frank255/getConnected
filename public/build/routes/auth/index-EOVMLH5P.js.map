@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/auth/index.jsx?browser", "../../../../app/routes/auth/index.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/auth/index.jsx\";", "import React from 'react'\n\n\nfunction index() {\n  return (\n    <div>\n      <h1>auth index</h1>\n      \n    </div>\n  )\n}\n\nexport default index"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAGlB,iBAAiB;AACf,SACE,mDAAC,OAAD,MACE,mDAAC,MAAD,MAAI;AAAA;AAMV,IAAO,eAAQ;",
+  "names": []
+}
