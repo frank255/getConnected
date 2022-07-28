@@ -2,7 +2,15 @@ import React from "react";
 import { Outlet } from "@remix-run/react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import { FaGoogle,FaLock, FaFacebookF, FaLinkedinIn,FaRegEnvelope,FaUserCircle,FaKey } from "react-icons/fa";
+import {
+  FaGoogle,
+  FaLock,
+  FaFacebookF,
+  FaLinkedinIn,
+  FaRegEnvelope,
+  FaUserCircle,
+  FaKey,
+} from "react-icons/fa";
 
 export default function index() {
   return (
@@ -55,19 +63,44 @@ export default function index() {
                 </p>
                 <div className="flex flex-col items-center">
                   <div className="bg-gray-100 w-64 p-2  flex items-center rounded-md">
-                    <FaUserCircle className="text-gray-400 m-2"/>
-                    <input type="text" name="username" placeholder="Username" className="bg-gray-100 outline-none text-sm flex-1"/>
+                    <FaUserCircle className="text-gray-400 m-2" />
+                    <input
+                      type="text"
+                      name="username"
+                      placeholder="Username"
+                      className="bg-gray-100 border-gray-100 focus:rounded-md focus:ring-orange-300 text-sm flex-1"
+                    />
                   </div>
                   <div className="bg-gray-100 w-64 p-2 mt-3 flex items-center rounded-md">
-                    <FaLock className="text-gray-400 m-2"/>
-                    <input type="password" name="Password" placeholder="********" className="bg-gray-100 border-gray-100 text-sm flex-1"/>
+                    <FaLock className="text-gray-400 m-2" />
+                    <input
+                      type="password"
+                      name="Password"
+                      placeholder="********"
+                      className="bg-gray-100 focus:rounded-md  border-gray-100 text-sm flex-1"
+                    />
                   </div>
-                  <div className="flex justify-between w-64 mb-5">
-                    <label htmlFor="checkbox" classclassName="flex items-center text-">
-                        <input type="checkbox" name="remember" className="m-2"/>Remember me
+                  <div className="flex justify-between w-64 mt-2 text-sm text-gray-400">
+                    <label
+                      htmlFor="checkbox"
+                      classclassName="flex items-center "
+                    >
+                      <input
+                        type="checkbox"
+                        name="remember"
+                        className="text-sm m-1 text-gray-400 rounded-sm h-3 w-3"
+                      />
+                      Remember me
                     </label>
-                    <a href="" className="text-xs">Forgot password?</a>
+                    <a href="" className="">
+                      Forgot password?
+                    </a>
                   </div>
+                  <Link to="">
+                    <button className="font-semibold border-2 border-orange-300 bg-green-400 rounded-full inline-block px-12 py-2 mt-6 hover:bg-orange-300 hover:text-black">
+                      Sign In
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -75,7 +108,8 @@ export default function index() {
               <h2 className="text-3xl font-bold mb-2">Hi, There! 👋🏽</h2>
               <div className="border-2 w-20 border-green-400 inline-block mb-2 rounded-md"></div>
               <p className="mb-10">
-               Not registered yet? <br /> Kindly click the button below to get registered.
+                Not registered yet? <br /> Kindly click the button below to get
+                registered.
               </p>
               <Link to="">
                 <button className="font-semibold border-2 border-green-400 rounded-full inline-block px-12 py-2 hover:bg-green-400 hover:text-black">
