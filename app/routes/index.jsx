@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-
+import Footer from "~/components/Footer";
 export default function Index() {
   return (
     <>
@@ -13,16 +13,19 @@ export default function Index() {
         />
       </Helmet>
 
-      {/* nav for medium devices */}
-
-      <header className="px-4 py-4 bg-gray-100 ">
-        <nav className="hidden md:flex justify-between text-black">
+      <div className="min-h-screen bg-gray-100">
+        {/* nav for medium devices */}
+        <div className="hidden md:p-4 md:flex justify-between text-black">
           <div className="flex font-tangerine text-4xl">
-            <Link to="/"><img className="h-1/2" src="favicon.ico" alt="logo" /></Link>
-            <Link to={"/"}>  <span>getConnected</span></Link>
+            <Link to="/">
+              <img className="h-12" src="favicon.ico" alt="logo" />
+            </Link>
+            <Link to={"/"}>
+              <span>getConnected</span>
+            </Link>
           </div>
           <div>
-            <ul className="inline-flex space-x-6 text-xl ">
+            <ul className="inline-flex space-x-6 text-xl">
               <Link className="hover:bg-orange-200 p-2 rounded-md" to={"/"}>
                 Home
               </Link>
@@ -56,10 +59,68 @@ export default function Index() {
               </button>
             </Link>
           </div>
-        </nav>
-      </header>
-      {/* hero section */}
-      <hero className=" md:pt-1 md:flex h-screen w-screen  md:flex-1 mx-0 bg-gray-100 pb-20 ">
+        </div>
+        <div className="flex p-3 md:hidden">
+          <div className="flex-1">
+            <Link to="/">
+              <img className="h-12" src="favicon.ico" alt="logo" />
+            </Link>
+          </div>
+          <div className="font-tangerine text-3xl">
+            <Link to={"/"}>
+              <span>getConnected</span>
+            </Link>
+          </div>
+        </div>
+        {/* hero section */}
+
+        <div className="px-6 md:pl-6 md:space-y-4 md:grid md:grid-cols-2">
+          {/* left */}
+
+          <div className="md:pt-10">
+            <div className="md:my-2 text-3xl md:text-6xl">
+              we connect you to the
+            </div>
+            <div className="pl-4 md:mt-1 md:pl-24 text-2xl md:text-4xl text-orange-300">
+              World of Opportunities!
+            </div>
+            <div className="pt-2 flex justify-center md:pl-20 md:hidden">
+              <img
+                className="h-3/5 w-3/5 md:object-fit"
+                src="world.png"
+                alt=""
+              />
+            </div>
+            <p className="text-black text-l p-10">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+              natus omnis quasi ipsum magni, quaerat voluptas officia, porro
+              aspernatur culpa debitis neque blanditiis quia optio tempora
+              numquam, doloremque dolores fugit!
+            </p>
+            {/* button */}
+            <div className="flex justify-center motion-safe:animate-bounce">
+              <Link to={"services"}>
+                <button className="hover:bg-orange-200 flex bg-green-400 text-lg p-3 rounded-full md:text-xl md:px-8 md:py-3 md:shadow-md md:skew-x-6">
+                  <span className="px-2">Find out More</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    className="w-5 h-7 "
+                  >
+                    <path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" />
+                  </svg>
+                </button>
+              </Link>
+            </div>
+          </div>
+          {/* right */}
+          <div className="hidden md:pl-20 md:flex">
+            <img className="object-fit" src="world.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <Footer />
+      {/* <div className=" md:pt-1 md:flex h-screen w-screen  md:flex-1 mx-0 bg-gray-100 pb-20 ">
         <div className=" w-1/2 grid h-64  justify-items-center text-black mx-4">
           <div className="my-2 text-3xl md:text-6xl">we connect you to the</div>
           <div className="mt-1 text-2xl md:text-5xl text-orange-300">
@@ -73,143 +134,11 @@ export default function Index() {
               numquam, doloremque dolores fugit!
             </p>
           </div>
-          <div className="mt-10">
-            <Link to={"services"}>
-              <button className="hover:bg-orange-200 flex bg-green-400 text-xl px-6 py-3 rounded-md">
-                <span className="px-2">Find out More</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                  className="w-5 h-7 "
-                >
-                  <path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z" />
-                </svg>
-              </button>
-            </Link>
-          </div>
         </div>
         <div className="flex justify-center w-1/2">
           <img className="h-4/5 w-4/5 object-fit" src="world.png" alt="" />
         </div>
-      </hero>
-      {/* footer nav for small devices*/}
-      <nav className="text-yellow-800 inline-flex space-x-2 justify-between md:hidden fixed bottom-0 left- 0 right-0 w-full px-6 py-4  dark:bg-neutral-800">
-        <div className="flex flex-col items-center">
-          <div>
-            <svg
-              class="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-              ></path>
-            </svg>
-          </div>
-          <div className="text-sm">
-            <a href="/"> Home</a>
-          </div>
-        </div>
-        <div className="flex flex-col items-center">
-          <div>
-            <svg
-              class="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-              ></path>
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-              ></path>
-            </svg>
-          </div>
-          <div className="text-sm">
-            <a href="/">Services</a>
-          </div>
-        </div>
-        <div className="flex flex-col items-center">
-          <div>
-            <svg
-              class="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-              ></path>
-            </svg>
-          </div>
-          <div className="text-sm">
-            <a href="/">Learning</a>
-          </div>
-        </div>
-        <div className="flex flex-col items-center">
-          <div>
-            <svg
-              class="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              ></path>
-            </svg>
-          </div>
-          <div className="text-sm">
-            <a href="/">About us</a>
-          </div>
-        </div>
-        <div className="flex flex-col items-center">
-          <div>
-            <svg
-              class="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-              ></path>
-            </svg>
-          </div>
-          <div className="text-sm">
-            <a href="/">Contacts</a>
-          </div>
-        </div>
-      </nav>
-      {/* footer */}
-      <footer class="fixed w-full hidden md:inline bg-gray-100 text-gray-300 py-2 bottom-0 left-0 text-center">
-        <span>© getConnected {new Date().getFullYear()}</span>
-      </footer>
+      </div> */}
     </>
   );
 }

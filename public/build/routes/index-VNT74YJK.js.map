@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/index.jsx?browser", "../../../app/routes/index.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/index.jsx\";", "import { Helmet } from \"react-helmet\";\nimport { Link } from \"react-router-dom\";\n\nexport default function Index() {\n  return (\n    <>\n    <div className=\"flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100\">\n\n    </div>\n     \n    </>\n  );\n}\n"],
+  "mappings": ";;;;;;;;AAAA;;;ACAA;AAGe,iBAAiB;AAC9B,SACE,0DACA,oCAAC,OAAD;AAAA,IAAK,WAAU;AAAA;AAAA;",
+  "names": []
+}
