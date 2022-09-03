@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/auth/login.jsx?browser", "../../../../app/routes/auth/login.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/auth/login.jsx\";", "import React from \"react\";\nimport { Outlet } from \"@remix-run/react\";\nimport { Helmet } from \"react-helmet\";\nimport { Link } from \"react-router-dom\";\nimport {\n  FaGoogle,\n  FaLock,\n  FaFacebookF,\n  FaLinkedinIn,\n  FaRegEnvelope,\n  FaUserCircle,\n  FaKey,\n} from \"react-icons/fa\";\n\nexport default function index() {\n  return (\n    <>\n  \n    </>\n  );\n}\n"],
+  "mappings": ";;;;;;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAcH,iBAAiB;AAC9B,SACE;AAAA;",
+  "names": []
+}

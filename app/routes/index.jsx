@@ -12,7 +12,6 @@ export default function Index() {
           content="A platform for connecting people to different Opportunities"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gray-100">
         {/* nav for medium devices */}
         <div className="hidden md:p-4 md:flex justify-between text-black">
@@ -53,13 +52,14 @@ export default function Index() {
             </ul>
           </div>
           <div>
-            <Link to={"auth"}>
+            <Link to={"auth/register"}>
               <button className="bg-green-400 hover:bg-orange-200 text-xl px-4 py-3 rounded-md">
                 Get Started
               </button>
             </Link>
           </div>
         </div>
+        {/* header for small devices */}
         <div className="flex p-3 md:hidden">
           <div className="flex-1">
             <Link to="/">
@@ -73,7 +73,6 @@ export default function Index() {
           </div>
         </div>
         {/* hero section */}
-
         <div className="px-6 md:pl-6 md:space-y-4 md:grid md:grid-cols-2">
           {/* left */}
 
@@ -120,25 +119,6 @@ export default function Index() {
         </div>
       </div>
       <Footer />
-      {/* <div className=" md:pt-1 md:flex h-screen w-screen  md:flex-1 mx-0 bg-gray-100 pb-20 ">
-        <div className=" w-1/2 grid h-64  justify-items-center text-black mx-4">
-          <div className="my-2 text-3xl md:text-6xl">we connect you to the</div>
-          <div className="mt-1 text-2xl md:text-5xl text-orange-300">
-            World of Opportunities!
-          </div>
-          <div className="mt-10 grid justify-items-center text-black text-l">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-              natus omnis quasi ipsum magni, quaerat voluptas officia, porro
-              aspernatur culpa debitis neque blanditiis quia optio tempora
-              numquam, doloremque dolores fugit!
-            </p>
-          </div>
-        </div>
-        <div className="flex justify-center w-1/2">
-          <img className="h-4/5 w-4/5 object-fit" src="world.png" alt="" />
-        </div>
-      </div> */}
     </>
   );
 }

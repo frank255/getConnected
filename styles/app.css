@@ -5,11 +5,6 @@
 @tailwind utilities;
 
 
-
-.btn {
-  @apply shadow py-3 px-6 mx-52 rounded-md transition duration-300 bg-teal-900 text-white  my-6 w-52;
-} 
-
 .btn-service {
-  @apply shadow py-3 px-3  rounded-md transition duration-300 bg-teal-900 text-white  my-6 w-28;
+  @apply motion-safe:animate-bounce shadow py-3 px-3  rounded-full transition duration-300 bg-green-400 text-black  my-6 w-28;
 } 

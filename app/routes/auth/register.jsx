@@ -24,103 +24,88 @@ export default function index() {
             content="A platform for connecting people to different Opportunities"
           />
         </Helmet>
-        <div className="flex flex-col items-center justify-center w-full flex-1 px-20  text-center ">
-          <div className="bg-white shadow-2xl flex w-2/3 max-w-4xl rounded-2xl">
-            <div className="w-3/5 p-5">
-              <div className="flex text-left  font-tangerine text-2xl">
-                <img className="h-10" src="logo.png" alt="logo" />
-                <span>getConnected</span>
-              </div>
-              <div className="py-10">
-                <h2 className="text-3xl font-bold mb-2 text-black">
-                  Please Sign up
-                </h2>
-                <div className="border-2 w-20 rounded-md border-orange-300 inline-block mb-2"></div>
-                <div className="flex justify-center my-2">
-                  <a
-                    href=""
-                    className="border-2 border-green-400 rounded-full p-3 mx-1"
-                  >
-                    {" "}
-                    <FaFacebookF />{" "}
-                  </a>
-                  <a
-                    href=""
-                    className="border-2 border-green-400 rounded-full p-3 mx-1"
-                  >
-                    {" "}
-                    <FaGoogle />{" "}
-                  </a>
-                  <a
-                    href=""
-                    className="border-2 border-green-400 rounded-full p-3 mx-1"
-                  >
-                    {" "}
-                    <FaLinkedinIn />{" "}
-                  </a>
-                </div>
-                <p className="text-gray-400 my-3">
-                  You may sign up using links above
-                </p>
-                <div className="flex flex-col items-center">
-                  <div className="bg-gray-100 w-64 p-2  flex items-center rounded-md">
-                    <FaUserCircle className="text-gray-400 m-2" />
-                    <input
-                      type="text"
-                      name="username"
-                      placeholder="Username"
-                      className="bg-gray-100 border-gray-100 focus:rounded-md focus:ring-orange-300 text-sm flex-1"
-                    />
+
+        <section class="w-full border-2  bg-white md:mx-6 md:my-6">
+          <div class="mx-auto max-w-7xl ">
+            <div class="flex flex-col lg:flex-row ">
+              <div class="relative w-full bg-cover lg:w-6/12 xl:w-7/12 bg-gradient-to-r from-white via-white to-gray-100">
+                <div class="relative flex flex-col items-center justify-center w-full h-full px-10 my-4 lg:px-16 lg:my-0">
+                  <div class="flex flex-col items-start space-y-8 tracking-tight lg:max-w-3xl">
+                    <div class="relative">
+                      <h2 class="text-5xl font-bold text-gray-900 xl:text-6xl">
+                      Hi, There! 👋🏽
+                      </h2>
+                    </div>
+                    <p class="text-2xl text-gray-700">
+                     Are you registered? <br /> Kindly click the button bellow to login.
+                    </p>
+                    <a
+                      href="/auth/login"
+                      class="inline-block ml-20 px-10 py-3 text-xl font-medium text-center text-white transition duration-200 bg-orange-300 rounded-full hover:bg-green-500 ease"
+                    >
+                      Sign in
+                    </a>
                   </div>
-                  <div className="bg-gray-100 w-64 p-2 mt-3 flex items-center rounded-md">
-                    <FaPhone className="text-gray-400 m-2" />
-                    <input
-                      type="Number"
-                      name="Phone Number"
-                      placeholder="phone:example 076683...."
-                      className="bg-gray-100 focus:rounded-md  border-gray-100 text-sm flex-1"
-                    />
-                  </div>
-                  <div className="bg-gray-100 w-64 p-2 mt-3 flex items-center rounded-md">
-                    <FaLock className="text-gray-400 m-2" />
-                    <input
-                      type="password"
-                      name="Password"
-                      placeholder="create a new password"
-                      className="bg-gray-100 focus:rounded-md  border-gray-100 text-sm flex-1"
-                    />
-                  </div>
-                  <div className="bg-gray-100 w-64 p-2 mt-3 flex items-center rounded-md">
-                    <FaLock className="text-gray-400 m-2" />
-                    <input
-                      type="password"
-                      name="Password"
-                      placeholder="repeat password"
-                      className="bg-gray-100 focus:rounded-md  border-gray-100 text-sm flex-1"
-                    />
-                  </div>
-                  <button className="font-semibold border-2 border-orange-300 bg-green-400 rounded-full inline-block px-12 py-2 mt-6 hover:bg-orange-300 hover:text-black">
-                    Sign Up
-                  </button>
                 </div>
               </div>
-            </div>
-            <div className="w-2/5 text-white rounded-tr-2xl rounded-br-2xl bg-orange-300 py-36 px-12">
-              <h2 className="text-4xl font-bold mb-2">Hi, There! 👋🏽</h2>
-              <div className="border-2 w-20 border-green-400 inline-block mb-2 rounded-md"></div>
-              <p className="mb-10 text-2xl">
-                Already have an account? <br /> Kindly click the button below to
-                sign in
-              </p>
-              <Link to="/auth/login">
-                <button className="font-semibold border-2 border-green-400 rounded-full inline-block px-12 py-2 hover:bg-green-400 hover:text-black">
-                  Sign In
-                </button>
-              </Link>
+
+              <div class="w-full bg-white lg:w-6/12 xl:w-5/12">
+                <div class="flex flex-col items-start justify-center w-full h-full p-10 lg:p-16 xl:p-24">
+                  <h4 class="w-full text-3xl font-bold">Signup</h4>
+
+                  <div class="relative w-full mt-10 space-y-8">
+                    <div class="relative">
+                      <label class="font-medium text-gray-900">Name</label>
+                      <input
+                        type="text"
+                        class="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50"
+                        placeholder="Enter Your Name"
+                      />
+                    </div>
+                    <div class="relative">
+                      <label class="font-medium text-gray-900">Email</label>
+                      <input
+                        type="text"
+                        class="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50"
+                        placeholder="Enter Your Email Address"
+                      />
+                    </div>
+                    <div class="relative">
+                      <label class="font-medium text-gray-900">Phone</label>
+                      <input
+                        type="number"
+                        class="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50"
+                        placeholder="phone number"
+                      />
+                    </div>
+                    <div class="relative">
+                      <label class="font-medium text-gray-900">Password</label>
+                      <input
+                        type="password"
+                        class="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50"
+                        placeholder="Password"
+                      />
+                    </div>
+                    <div class="relative">
+                      <a
+                        href="#_"
+                        class="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-green-400 rounded-lg hover:bg-green-500 ease"
+                      >
+                        Create Account
+                      </a>
+                      <a
+                        href="#_"
+                        class="inline-block w-full px-5 py-4 mt-3 text-lg font-bold text-center text-gray-900 transition duration-200 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 ease"
+                      >
+                        Sign up with Google
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <Outlet />
+        </section>
       </div>
     </>
   );
