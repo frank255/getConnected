@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/services/index.jsx?browser", "../../../../app/routes/services/index.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/services/index.jsx\";", "import { useEffect, useState } from \"react\";\nimport Footer from \"~/components/Footer\";\n\nfunction index() {\n  const [services, setServices] = useState([]);\n\n  useEffect(() =>{\n    getServices();\n  }, []);\n\n  async function getServices() {\n    try {\n      const res = await fetch('http://localhost:1337/services');\n      const data =await res.json();\n      setServices(data);\n    } catch (Err) {\n      console.error(err);\n    }\n  }\n\n  return (\n    <>\n      {/* services */}\n\n      <section class=\"p-6 mb-20 md:mb-6 md:py-20 bg-white\">\n       {services.map((service,))}\n      </section>\n\n      <Footer />\n    </>\n  );\n}\n\nexport default index;\n"],
+  "mappings": ";;;;;;;;;;;AAAA;;;ACAA;AAAA,mBAAoC;AAGpC,iBAAiB;AACf,QAAM,CAAC,UAAU,eAAe,2BAAS;AAEzC,8BAAU,MAAK;AACb;AAAA,KACC;AAEH,+BAA6B;AAC3B,QAAI;AACF,YAAM,MAAM,MAAM,MAAM;AACxB,YAAM,OAAM,MAAM,IAAI;AACtB,kBAAY;AAAA,aACL,KAAP;AACA,cAAQ,MAAM;AAAA;AAAA;AAIlB,SACE,0DAGE,oCAAC,WAAD;AAAA,IAAS,OAAM;AAAA,KACb,SAAS,IAAK,WAGhB,oCAAC,gBAAD;AAAA;AAKN,IAAO,mBAAQ;",
+  "names": []
+}

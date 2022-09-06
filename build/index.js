@@ -65,7 +65,7 @@ __export(root_exports, {
 });
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-7SUD7CB2.css";
+var app_default = "/build/_assets/app-MWX342VD.css";
 
 // route:/Volumes/ROOT/learning/getConnected/app/root.jsx
 var import_axios = __toESM(require("axios"));
@@ -89,7 +89,8 @@ function App() {
 // route:/Volumes/ROOT/learning/getConnected/app/routes/services/index.jsx
 var services_exports = {};
 __export(services_exports, {
-  default: () => services_default
+  default: () => services_default,
+  loader: () => loader
 });
 
 // app/components/Footer.jsx
@@ -286,7 +287,15 @@ function Footer() {
 var Footer_default = Footer;
 
 // route:/Volumes/ROOT/learning/getConnected/app/routes/services/index.jsx
+var import_interweave = require("interweave");
+var import_react4 = require("@remix-run/react");
+var loader = async () => {
+  const response = await fetch("http://localhost:1337/api/services");
+  return response.json();
+};
 function index() {
+  const services = (0, import_react4.useLoaderData)();
+  console.log(services);
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("section", {
     class: "p-6 mb-20 md:mb-6 md:py-20 bg-white"
   }, /* @__PURE__ */ React.createElement("div", {
@@ -297,215 +306,18 @@ function index() {
     class: "mt-2 text-lg text-center text-gray-600"
   }, "Check out our list of awesome services below."), /* @__PURE__ */ React.createElement("div", {
     class: "grid grid-cols-4 gap-8 mt-10 sm:grid-cols-8 lg:grid-cols-12 sm:px-8 xl:px-0"
-  }, /* @__PURE__ */ React.createElement("div", {
+  }, services.data.map((service) => /* @__PURE__ */ React.createElement("div", {
+    key: service.id,
     class: "rounded-md relative flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 overflow-hidden bg-gray-100 sm:rounded-xl"
   }, /* @__PURE__ */ React.createElement("div", {
     class: "p-3 text-white bg-blue-500 rounded-full"
-  }, /* @__PURE__ */ React.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    class: "w-8 h-8 ",
-    viewBox: "0 0 24 24",
-    "stroke-width": "1.5",
-    stroke: "currentColor",
-    fill: "none",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round"
-  }, /* @__PURE__ */ React.createElement("path", {
-    stroke: "none",
-    d: "M0 0h24v24H0z",
-    fill: "none"
-  }), /* @__PURE__ */ React.createElement("path", {
-    d: "M14 3v4a1 1 0 0 0 1 1h4"
-  }), /* @__PURE__ */ React.createElement("path", {
-    d: "M5 8v-3a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2h-5"
-  }), /* @__PURE__ */ React.createElement("circle", {
-    cx: "6",
-    cy: "14",
-    r: "3"
-  }), /* @__PURE__ */ React.createElement("path", {
-    d: "M4.5 17l-1.5 5l3 -1.5l3 1.5l-1.5 -5"
-  }))), /* @__PURE__ */ React.createElement("h4", {
+  }, /* @__PURE__ */ React.createElement("img", {
+    src: service.attributes.icon
+  })), /* @__PURE__ */ React.createElement("h4", {
     class: "text-xl font-medium text-gray-700"
-  }, "Certifications"), /* @__PURE__ */ React.createElement("p", {
+  }, service.attributes.title), /* @__PURE__ */ React.createElement("p", {
     class: "text-base text-center text-gray-500"
-  }, "Each of our plan will provide you and your team with certifications.")), /* @__PURE__ */ React.createElement("div", {
-    class: "rounded-md flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl"
-  }, /* @__PURE__ */ React.createElement("div", {
-    class: "p-3 text-white bg-blue-500 rounded-full"
-  }, /* @__PURE__ */ React.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    class: "w-8 h-8 ",
-    viewBox: "0 0 24 24",
-    "stroke-width": "1.5",
-    stroke: "currentColor",
-    fill: "none",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round"
-  }, /* @__PURE__ */ React.createElement("path", {
-    stroke: "none",
-    d: "M0 0h24v24H0z",
-    fill: "none"
-  }), /* @__PURE__ */ React.createElement("path", {
-    d: "M18 8a3 3 0 0 1 0 6"
-  }), /* @__PURE__ */ React.createElement("path", {
-    d: "M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5"
-  }), /* @__PURE__ */ React.createElement("path", {
-    d: "M12 8h0l4.524 -3.77a0.9 .9 0 0 1 1.476 .692v12.156a0.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8"
-  }))), /* @__PURE__ */ React.createElement("h4", {
-    class: "text-xl font-medium text-gray-700"
-  }, "Notifications"), /* @__PURE__ */ React.createElement("p", {
-    class: "text-base text-center text-gray-500"
-  }, "Send out notifications to all your customers to keep them engaged.")), /* @__PURE__ */ React.createElement("div", {
-    class: "rounded-md flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl"
-  }, /* @__PURE__ */ React.createElement("div", {
-    class: "p-3 text-white bg-blue-500 rounded-full"
-  }, /* @__PURE__ */ React.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    class: "w-8 h-8 ",
-    viewBox: "0 0 24 24",
-    "stroke-width": "1.5",
-    stroke: "currentColor",
-    fill: "none",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round"
-  }, /* @__PURE__ */ React.createElement("path", {
-    stroke: "none",
-    d: "M0 0h24v24H0z",
-    fill: "none"
-  }), /* @__PURE__ */ React.createElement("polyline", {
-    points: "12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3"
-  }), /* @__PURE__ */ React.createElement("line", {
-    x1: "12",
-    y1: "12",
-    x2: "20",
-    y2: "7.5"
-  }), /* @__PURE__ */ React.createElement("line", {
-    x1: "12",
-    y1: "12",
-    x2: "12",
-    y2: "21"
-  }), /* @__PURE__ */ React.createElement("line", {
-    x1: "12",
-    y1: "12",
-    x2: "4",
-    y2: "7.5"
-  }), /* @__PURE__ */ React.createElement("line", {
-    x1: "16",
-    y1: "5.25",
-    x2: "8",
-    y2: "9.75"
-  }))), /* @__PURE__ */ React.createElement("h4", {
-    class: "text-xl font-medium text-gray-700"
-  }, "Bundles"), /* @__PURE__ */ React.createElement("p", {
-    class: "text-base text-center text-gray-500"
-  }, "High-quality bundles of awesome tools to help you out.")), /* @__PURE__ */ React.createElement("div", {
-    class: "rounded-md flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl"
-  }, /* @__PURE__ */ React.createElement("div", {
-    class: "p-3 text-white bg-blue-500 rounded-full"
-  }, /* @__PURE__ */ React.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    class: "w-8 h-8 ",
-    viewBox: "0 0 24 24",
-    "stroke-width": "1.5",
-    stroke: "currentColor",
-    fill: "none",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round"
-  }, /* @__PURE__ */ React.createElement("path", {
-    stroke: "none",
-    d: "M0 0h24v24H0z",
-    fill: "none"
-  }), /* @__PURE__ */ React.createElement("path", {
-    d: "M8 9l3 3l-3 3"
-  }), /* @__PURE__ */ React.createElement("line", {
-    x1: "13",
-    y1: "15",
-    x2: "16",
-    y2: "15"
-  }), /* @__PURE__ */ React.createElement("rect", {
-    x: "3",
-    y: "4",
-    width: "18",
-    height: "16",
-    rx: "2"
-  }))), /* @__PURE__ */ React.createElement("h4", {
-    class: "text-xl font-medium text-gray-700"
-  }, "Developer Tools"), /* @__PURE__ */ React.createElement("p", {
-    class: "text-base text-center text-gray-500"
-  }, "Developer tools to help grow your application and keep it up-to-date.")), /* @__PURE__ */ React.createElement("div", {
-    class: "rounded-md flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl"
-  }, /* @__PURE__ */ React.createElement("div", {
-    class: "p-3 text-white bg-blue-500 rounded-full"
-  }, /* @__PURE__ */ React.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    class: "w-8 h-8 ",
-    viewBox: "0 0 24 24",
-    "stroke-width": "1.5",
-    stroke: "currentColor",
-    fill: "none",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round"
-  }, /* @__PURE__ */ React.createElement("path", {
-    stroke: "none",
-    d: "M0 0h24v24H0z",
-    fill: "none"
-  }), /* @__PURE__ */ React.createElement("line", {
-    x1: "9.5",
-    y1: "11",
-    x2: "9.51",
-    y2: "11"
-  }), /* @__PURE__ */ React.createElement("line", {
-    x1: "14.5",
-    y1: "11",
-    x2: "14.51",
-    y2: "11"
-  }), /* @__PURE__ */ React.createElement("path", {
-    d: "M9.5 15a3.5 3.5 0 0 0 5 0"
-  }), /* @__PURE__ */ React.createElement("path", {
-    d: "M7 5h1v-2h8v2h1a3 3 0 0 1 3 3v9a3 3 0 0 1 -3 3v1h-10v-1a3 3 0 0 1 -3 -3v-9a3 3 0 0 1 3 -3"
-  }))), /* @__PURE__ */ React.createElement("h4", {
-    class: "text-xl font-medium text-gray-700"
-  }, "Building Blocks"), /* @__PURE__ */ React.createElement("p", {
-    class: "text-base text-center text-gray-500"
-  }, "The right kind of building blocks to take your company to the next level.")), /* @__PURE__ */ React.createElement("div", {
-    class: "rounded-md flex flex-col items-center justify-between col-span-4 px-8 py-12 space-y-4 bg-gray-100 sm:rounded-xl"
-  }, /* @__PURE__ */ React.createElement("div", {
-    class: "p-3 text-white bg-blue-500 rounded-full"
-  }, /* @__PURE__ */ React.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    class: "w-8 h-8 ",
-    viewBox: "0 0 24 24",
-    "stroke-width": "1.5",
-    stroke: "currentColor",
-    fill: "none",
-    "stroke-linecap": "round",
-    "stroke-linejoin": "round"
-  }, /* @__PURE__ */ React.createElement("path", {
-    stroke: "none",
-    d: "M0 0h24v24H0z",
-    fill: "none"
-  }), /* @__PURE__ */ React.createElement("line", {
-    x1: "15",
-    y1: "5",
-    x2: "15",
-    y2: "7"
-  }), /* @__PURE__ */ React.createElement("line", {
-    x1: "15",
-    y1: "11",
-    x2: "15",
-    y2: "13"
-  }), /* @__PURE__ */ React.createElement("line", {
-    x1: "15",
-    y1: "17",
-    x2: "15",
-    y2: "19"
-  }), /* @__PURE__ */ React.createElement("path", {
-    d: "M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"
-  }))), /* @__PURE__ */ React.createElement("h4", {
-    class: "text-xl font-medium text-gray-700"
-  }, "Coupons"), /* @__PURE__ */ React.createElement("p", {
-    class: "text-base text-center text-gray-500"
-  }, "Coupons system to provide special offers and discounts for your app."))))), /* @__PURE__ */ React.createElement(Footer_default, null));
+  }, service.attributes.description)))))), /* @__PURE__ */ React.createElement(Footer_default, null));
 }
 var services_default = index;
 
@@ -514,84 +326,84 @@ var register_exports = {};
 __export(register_exports, {
   default: () => index2
 });
-var import_react4 = __toESM(require("react"));
-var import_react5 = require("@remix-run/react");
+var import_react5 = __toESM(require("react"));
+var import_react6 = require("@remix-run/react");
 var import_react_helmet = require("react-helmet");
 var import_react_router_dom = require("react-router-dom");
 var import_fa = require("react-icons/fa");
 function index2() {
-  return /* @__PURE__ */ import_react4.default.createElement(import_react4.default.Fragment, null, /* @__PURE__ */ import_react4.default.createElement("div", {
+  return /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, /* @__PURE__ */ import_react5.default.createElement("div", {
     className: "flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100"
-  }, /* @__PURE__ */ import_react4.default.createElement(import_react_helmet.Helmet, null, /* @__PURE__ */ import_react4.default.createElement("title", null, "Authentication - getConnected"), /* @__PURE__ */ import_react4.default.createElement("meta", {
+  }, /* @__PURE__ */ import_react5.default.createElement(import_react_helmet.Helmet, null, /* @__PURE__ */ import_react5.default.createElement("title", null, "Authentication - getConnected"), /* @__PURE__ */ import_react5.default.createElement("meta", {
     name: "description",
     content: "A platform for connecting people to different Opportunities"
-  })), /* @__PURE__ */ import_react4.default.createElement("section", {
+  })), /* @__PURE__ */ import_react5.default.createElement("section", {
     class: "w-full border-2  bg-white md:mx-6 md:my-6"
-  }, /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "mx-auto max-w-7xl "
-  }, /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "flex flex-col lg:flex-row "
-  }, /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "relative w-full bg-cover lg:w-6/12 xl:w-7/12 bg-gradient-to-r from-white via-white to-gray-100"
-  }, /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "relative flex flex-col items-center justify-center w-full h-full px-10 my-4 lg:px-16 lg:my-0"
-  }, /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "flex flex-col items-start space-y-8 tracking-tight lg:max-w-3xl"
-  }, /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "relative"
-  }, /* @__PURE__ */ import_react4.default.createElement("h2", {
+  }, /* @__PURE__ */ import_react5.default.createElement("h2", {
     class: "text-5xl font-bold text-gray-900 xl:text-6xl"
-  }, "Hi, There! \u{1F44B}\u{1F3FD}")), /* @__PURE__ */ import_react4.default.createElement("p", {
+  }, "Hi, There! \u{1F44B}\u{1F3FD}")), /* @__PURE__ */ import_react5.default.createElement("p", {
     class: "text-2xl text-gray-700"
-  }, "Are you registered? ", /* @__PURE__ */ import_react4.default.createElement("br", null), " Kindly click the button bellow to login."), /* @__PURE__ */ import_react4.default.createElement("a", {
+  }, "Are you registered? ", /* @__PURE__ */ import_react5.default.createElement("br", null), " Kindly click the button bellow to login."), /* @__PURE__ */ import_react5.default.createElement("a", {
     href: "/auth/login",
     class: "inline-block ml-20 px-10 py-3 text-xl font-medium text-center text-white transition duration-200 bg-orange-300 rounded-full hover:bg-green-500 ease"
-  }, "Sign in")))), /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, "Sign in")))), /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "w-full bg-white lg:w-6/12 xl:w-5/12"
-  }, /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "flex flex-col items-start justify-center w-full h-full p-10 lg:p-16 xl:p-24"
-  }, /* @__PURE__ */ import_react4.default.createElement("h4", {
+  }, /* @__PURE__ */ import_react5.default.createElement("h4", {
     class: "w-full text-3xl font-bold"
-  }, "Signup"), /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, "Signup"), /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "relative w-full mt-10 space-y-8"
-  }, /* @__PURE__ */ import_react4.default.createElement("div", {
+  }, /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "relative"
-  }, /* @__PURE__ */ import_react4.default.createElement("label", {
+  }, /* @__PURE__ */ import_react5.default.createElement("label", {
     class: "font-medium text-gray-900"
-  }, "Name"), /* @__PURE__ */ import_react4.default.createElement("input", {
+  }, "Name"), /* @__PURE__ */ import_react5.default.createElement("input", {
     type: "text",
     class: "block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50",
     placeholder: "Enter Your Name"
-  })), /* @__PURE__ */ import_react4.default.createElement("div", {
+  })), /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "relative"
-  }, /* @__PURE__ */ import_react4.default.createElement("label", {
+  }, /* @__PURE__ */ import_react5.default.createElement("label", {
     class: "font-medium text-gray-900"
-  }, "Email"), /* @__PURE__ */ import_react4.default.createElement("input", {
+  }, "Email"), /* @__PURE__ */ import_react5.default.createElement("input", {
     type: "text",
     class: "block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50",
     placeholder: "Enter Your Email Address"
-  })), /* @__PURE__ */ import_react4.default.createElement("div", {
+  })), /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "relative"
-  }, /* @__PURE__ */ import_react4.default.createElement("label", {
+  }, /* @__PURE__ */ import_react5.default.createElement("label", {
     class: "font-medium text-gray-900"
-  }, "Phone"), /* @__PURE__ */ import_react4.default.createElement("input", {
+  }, "Phone"), /* @__PURE__ */ import_react5.default.createElement("input", {
     type: "number",
     class: "block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50",
     placeholder: "phone number"
-  })), /* @__PURE__ */ import_react4.default.createElement("div", {
+  })), /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "relative"
-  }, /* @__PURE__ */ import_react4.default.createElement("label", {
+  }, /* @__PURE__ */ import_react5.default.createElement("label", {
     class: "font-medium text-gray-900"
-  }, "Password"), /* @__PURE__ */ import_react4.default.createElement("input", {
+  }, "Password"), /* @__PURE__ */ import_react5.default.createElement("input", {
     type: "password",
     class: "block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50",
     placeholder: "Password"
-  })), /* @__PURE__ */ import_react4.default.createElement("div", {
+  })), /* @__PURE__ */ import_react5.default.createElement("div", {
     class: "relative"
-  }, /* @__PURE__ */ import_react4.default.createElement("a", {
+  }, /* @__PURE__ */ import_react5.default.createElement("a", {
     href: "#_",
     class: "inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-green-400 rounded-lg hover:bg-green-500 ease"
-  }, "Create Account"), /* @__PURE__ */ import_react4.default.createElement("a", {
+  }, "Create Account"), /* @__PURE__ */ import_react5.default.createElement("a", {
     href: "#_",
     class: "inline-block w-full px-5 py-4 mt-3 text-lg font-bold text-center text-gray-900 transition duration-200 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 ease"
   }, "Sign up with Google"))))))))));
@@ -605,95 +417,95 @@ var login_exports = {};
 __export(login_exports, {
   default: () => index3
 });
-var import_react6 = __toESM(require("react"));
-var import_react7 = require("@remix-run/react");
+var import_react7 = __toESM(require("react"));
+var import_react8 = require("@remix-run/react");
 var import_react_helmet2 = require("react-helmet");
 var import_react_router_dom2 = require("react-router-dom");
 var import_fa2 = require("react-icons/fa");
 function index3() {
-  return /* @__PURE__ */ import_react6.default.createElement(import_react6.default.Fragment, null, /* @__PURE__ */ import_react6.default.createElement("div", {
+  return /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100"
-  }, /* @__PURE__ */ import_react6.default.createElement(import_react_helmet2.Helmet, null, /* @__PURE__ */ import_react6.default.createElement("title", null, "Authentication - getConnected"), /* @__PURE__ */ import_react6.default.createElement("meta", {
+  }, /* @__PURE__ */ import_react7.default.createElement(import_react_helmet2.Helmet, null, /* @__PURE__ */ import_react7.default.createElement("title", null, "Authentication - getConnected"), /* @__PURE__ */ import_react7.default.createElement("meta", {
     name: "description",
     content: "A platform for connecting people to different Opportunities"
-  })), /* @__PURE__ */ import_react6.default.createElement("div", {
+  })), /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "flex flex-col items-center justify-center w-full flex-1 px-20  text-center "
-  }, /* @__PURE__ */ import_react6.default.createElement("div", {
+  }, /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "bg-white shadow-2xl flex w-2/3 max-w-4xl rounded-2xl"
-  }, /* @__PURE__ */ import_react6.default.createElement("div", {
+  }, /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "w-3/5 p-5"
-  }, /* @__PURE__ */ import_react6.default.createElement("div", {
+  }, /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "flex text-left  font-tangerine text-2xl"
-  }, /* @__PURE__ */ import_react6.default.createElement("img", {
+  }, /* @__PURE__ */ import_react7.default.createElement("img", {
     className: "h-10",
     src: "favicon.ico",
     alt: "logo"
-  }), /* @__PURE__ */ import_react6.default.createElement("span", null, "getConnected")), /* @__PURE__ */ import_react6.default.createElement("div", {
+  }), /* @__PURE__ */ import_react7.default.createElement("span", null, "getConnected")), /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "py-10"
-  }, /* @__PURE__ */ import_react6.default.createElement("h2", {
+  }, /* @__PURE__ */ import_react7.default.createElement("h2", {
     className: "text-3xl font-bold mb-2 text-black"
-  }, "Please Sign in"), /* @__PURE__ */ import_react6.default.createElement("div", {
+  }, "Please Sign in"), /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "border-2 w-20 rounded-md border-orange-300 inline-block mb-2"
-  }), /* @__PURE__ */ import_react6.default.createElement("div", {
+  }), /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "flex justify-center my-2"
-  }, /* @__PURE__ */ import_react6.default.createElement("a", {
+  }, /* @__PURE__ */ import_react7.default.createElement("a", {
     href: "",
     className: "border-2 border-green-400 rounded-full p-3 mx-1"
-  }, " ", /* @__PURE__ */ import_react6.default.createElement(import_fa2.FaFacebookF, null), " "), /* @__PURE__ */ import_react6.default.createElement("a", {
+  }, " ", /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaFacebookF, null), " "), /* @__PURE__ */ import_react7.default.createElement("a", {
     href: "",
     className: "border-2 border-green-400 rounded-full p-3 mx-1"
-  }, " ", /* @__PURE__ */ import_react6.default.createElement(import_fa2.FaGoogle, null), " "), /* @__PURE__ */ import_react6.default.createElement("a", {
+  }, " ", /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaGoogle, null), " "), /* @__PURE__ */ import_react7.default.createElement("a", {
     href: "",
     className: "border-2 border-green-400 rounded-full p-3 mx-1"
-  }, " ", /* @__PURE__ */ import_react6.default.createElement(import_fa2.FaLinkedinIn, null), " ")), /* @__PURE__ */ import_react6.default.createElement("p", {
+  }, " ", /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaLinkedinIn, null), " ")), /* @__PURE__ */ import_react7.default.createElement("p", {
     className: "text-gray-400 my-3"
-  }, "You may sign in using links above"), /* @__PURE__ */ import_react6.default.createElement("div", {
+  }, "You may sign in using links above"), /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "flex flex-col items-center"
-  }, /* @__PURE__ */ import_react6.default.createElement("div", {
+  }, /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "bg-gray-100 w-64 p-2  flex items-center rounded-md"
-  }, /* @__PURE__ */ import_react6.default.createElement(import_fa2.FaUserCircle, {
+  }, /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaUserCircle, {
     className: "text-gray-400 m-2"
-  }), /* @__PURE__ */ import_react6.default.createElement("input", {
+  }), /* @__PURE__ */ import_react7.default.createElement("input", {
     type: "text",
     name: "username",
     placeholder: "Username",
     className: "bg-gray-100 border-gray-100 focus:rounded-md focus:ring-orange-300 text-sm flex-1"
-  })), /* @__PURE__ */ import_react6.default.createElement("div", {
+  })), /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "bg-gray-100 w-64 p-2 mt-3 flex items-center rounded-md"
-  }, /* @__PURE__ */ import_react6.default.createElement(import_fa2.FaLock, {
+  }, /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaLock, {
     className: "text-gray-400 m-2"
-  }), /* @__PURE__ */ import_react6.default.createElement("input", {
+  }), /* @__PURE__ */ import_react7.default.createElement("input", {
     type: "password",
     name: "Password",
     placeholder: "********",
     className: "bg-gray-100 focus:rounded-md  border-gray-100 text-sm flex-1"
-  })), /* @__PURE__ */ import_react6.default.createElement("div", {
+  })), /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "flex justify-between w-64 mt-2 text-sm text-gray-400"
-  }, /* @__PURE__ */ import_react6.default.createElement("label", {
+  }, /* @__PURE__ */ import_react7.default.createElement("label", {
     htmlFor: "checkbox",
     classclassName: "flex items-center "
-  }, /* @__PURE__ */ import_react6.default.createElement("input", {
+  }, /* @__PURE__ */ import_react7.default.createElement("input", {
     type: "checkbox",
     name: "remember",
     className: "text-sm m-1 text-gray-400 rounded-sm h-3 w-3"
-  }), "Remember me"), /* @__PURE__ */ import_react6.default.createElement("a", {
+  }), "Remember me"), /* @__PURE__ */ import_react7.default.createElement("a", {
     href: "",
     className: ""
-  }, "Forgot password?")), /* @__PURE__ */ import_react6.default.createElement("button", {
+  }, "Forgot password?")), /* @__PURE__ */ import_react7.default.createElement("button", {
     className: "font-semibold border-2 border-orange-300 bg-green-400 rounded-full inline-block px-12 py-2 mt-6 hover:bg-orange-300 hover:text-black"
-  }, "Sign In")))), /* @__PURE__ */ import_react6.default.createElement("div", {
+  }, "Sign In")))), /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "w-2/5 text-white rounded-tr-2xl rounded-br-2xl bg-orange-300 py-36 px-12"
-  }, /* @__PURE__ */ import_react6.default.createElement("h2", {
+  }, /* @__PURE__ */ import_react7.default.createElement("h2", {
     className: "text-3xl font-bold mb-2"
-  }, "Hi, There! \u{1F44B}\u{1F3FD}"), /* @__PURE__ */ import_react6.default.createElement("div", {
+  }, "Hi, There! \u{1F44B}\u{1F3FD}"), /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "border-2 w-20 border-green-400 inline-block mb-2 rounded-md"
-  }), /* @__PURE__ */ import_react6.default.createElement("p", {
+  }), /* @__PURE__ */ import_react7.default.createElement("p", {
     className: "mb-10 text-2xl"
-  }, "Not registered yet? ", /* @__PURE__ */ import_react6.default.createElement("br", null), " Kindly click the button below to get registered."), /* @__PURE__ */ import_react6.default.createElement(import_react_router_dom2.Link, {
+  }, "Not registered yet? ", /* @__PURE__ */ import_react7.default.createElement("br", null), " Kindly click the button below to get registered."), /* @__PURE__ */ import_react7.default.createElement(import_react_router_dom2.Link, {
     to: "/auth/register"
-  }, /* @__PURE__ */ import_react6.default.createElement("button", {
+  }, /* @__PURE__ */ import_react7.default.createElement("button", {
     className: "font-semibold border-2 border-green-400 rounded-full inline-block px-12 py-2 hover:bg-green-400 hover:text-black"
-  }, "Sign Up"))))), /* @__PURE__ */ import_react6.default.createElement(import_react7.Outlet, null)));
+  }, "Sign Up"))))), /* @__PURE__ */ import_react7.default.createElement(import_react8.Outlet, null)));
 }
 
 // route:/Volumes/ROOT/learning/getConnected/app/routes/contacts.jsx
@@ -701,9 +513,9 @@ var contacts_exports = {};
 __export(contacts_exports, {
   default: () => contacts_default
 });
-var import_react8 = __toESM(require("react"));
+var import_react9 = __toESM(require("react"));
 function contact() {
-  return /* @__PURE__ */ import_react8.default.createElement("div", null, "contact");
+  return /* @__PURE__ */ import_react9.default.createElement("div", null, "contact");
 }
 var contacts_default = contact;
 
@@ -903,7 +715,7 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { "version": "6047abd9", "entry": { "module": "/build/entry.client-4L3E3HJC.js", "imports": ["/build/_shared/chunk-VJQS6O5K.js", "/build/_shared/chunk-WVCR2VME.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-EOILBXYJ.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-43YNIYQQ.js", "imports": ["/build/_shared/chunk-QTGTY3SW.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/auth/index": { "id": "routes/auth/index", "parentId": "root", "path": "auth", "index": true, "caseSensitive": void 0, "module": "/build/routes/auth/index-6WA6IXNH.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/auth/login": { "id": "routes/auth/login", "parentId": "root", "path": "auth/login", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/auth/login-DHEI7NIK.js", "imports": ["/build/_shared/chunk-2B5RT5HT.js", "/build/_shared/chunk-Z7Q6IFVF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/auth/register": { "id": "routes/auth/register", "parentId": "root", "path": "auth/register", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/auth/register-5SERSLXK.js", "imports": ["/build/_shared/chunk-2B5RT5HT.js", "/build/_shared/chunk-Z7Q6IFVF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/contacts": { "id": "routes/contacts", "parentId": "root", "path": "contacts", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/contacts-IJNQFE3F.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-SYHQ2VY7.js", "imports": ["/build/_shared/chunk-Z7Q6IFVF.js", "/build/_shared/chunk-QTGTY3SW.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/services/index": { "id": "routes/services/index", "parentId": "root", "path": "services", "index": true, "caseSensitive": void 0, "module": "/build/routes/services/index-MKCXZ6TV.js", "imports": ["/build/_shared/chunk-QTGTY3SW.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-6047ABD9.js" };
+var assets_manifest_default = { "version": "3d4d4858", "entry": { "module": "/build/entry.client-X3BHCAF4.js", "imports": ["/build/_shared/chunk-INFB3K4O.js", "/build/_shared/chunk-WVCR2VME.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-MCQAIF6X.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-43YNIYQQ.js", "imports": ["/build/_shared/chunk-QTGTY3SW.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/auth/index": { "id": "routes/auth/index", "parentId": "root", "path": "auth", "index": true, "caseSensitive": void 0, "module": "/build/routes/auth/index-6WA6IXNH.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/auth/login": { "id": "routes/auth/login", "parentId": "root", "path": "auth/login", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/auth/login-PVJSRNHV.js", "imports": ["/build/_shared/chunk-2B5RT5HT.js", "/build/_shared/chunk-Z7Q6IFVF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/auth/register": { "id": "routes/auth/register", "parentId": "root", "path": "auth/register", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/auth/register-HJQ3X6HH.js", "imports": ["/build/_shared/chunk-2B5RT5HT.js", "/build/_shared/chunk-Z7Q6IFVF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/contacts": { "id": "routes/contacts", "parentId": "root", "path": "contacts", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/contacts-IJNQFE3F.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-SYHQ2VY7.js", "imports": ["/build/_shared/chunk-Z7Q6IFVF.js", "/build/_shared/chunk-QTGTY3SW.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/services/index": { "id": "routes/services/index", "parentId": "root", "path": "services", "index": true, "caseSensitive": void 0, "module": "/build/routes/services/index-PFT53DHX.js", "imports": ["/build/_shared/chunk-QTGTY3SW.js"], "hasAction": false, "hasLoader": true, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-3D4D4858.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };
