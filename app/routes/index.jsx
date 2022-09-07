@@ -53,7 +53,7 @@ export default function Index() {
           </div>
           <div>
             <Link to={"auth/register"}>
-              <button className="bg-green-400 hover:bg-orange-200 text-xl px-4 py-3 rounded-md">
+              <button className="bg-green-400 hover:bg-orange-200 text-xl px-4 py-3 rounded-full">
                 Get Started
               </button>
             </Link>

@@ -65,7 +65,7 @@ __export(root_exports, {
 });
 
 // app/styles/app.css
-var app_default = "/build/_assets/app-MWX342VD.css";
+var app_default = "/build/_assets/app-MCCXZ45X.css";
 
 // route:/Volumes/ROOT/learning/getConnected/app/root.jsx
 var import_axios = __toESM(require("axios"));
@@ -153,7 +153,7 @@ function Footer() {
   }))), /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "text-sm"
   }, /* @__PURE__ */ import_react3.default.createElement("a", {
-    href: "/"
+    href: "/learning"
   }, "Learning"))), /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "flex flex-col items-center"
   }, /* @__PURE__ */ import_react3.default.createElement("div", null, /* @__PURE__ */ import_react3.default.createElement("svg", {
@@ -187,7 +187,7 @@ function Footer() {
   }))), /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "text-sm"
   }, /* @__PURE__ */ import_react3.default.createElement("a", {
-    href: "/"
+    href: "/contacts"
   }, "Contacts")))), /* @__PURE__ */ import_react3.default.createElement("section", {
     className: "hidden md:inline"
   }, /* @__PURE__ */ import_react3.default.createElement("div", {
@@ -197,12 +197,12 @@ function Footer() {
   }, /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "px-5 py-2"
   }, /* @__PURE__ */ import_react3.default.createElement("a", {
-    href: "#",
+    href: "/",
     className: "text-base leading-6 text-gray-500 hover:text-gray-900"
   }, "Home")), /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "px-5 py-2"
   }, /* @__PURE__ */ import_react3.default.createElement("a", {
-    href: "#",
+    href: "/services",
     className: "text-base leading-6 text-gray-500 hover:text-gray-900"
   }, "Services")), /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "px-5 py-2"
@@ -212,17 +212,17 @@ function Footer() {
   }, "Learning")), /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "px-5 py-2"
   }, /* @__PURE__ */ import_react3.default.createElement("a", {
-    href: "#",
+    href: "/about",
     className: "text-base leading-6 text-gray-500 hover:text-gray-900"
   }, "About us")), /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "px-5 py-2"
   }, /* @__PURE__ */ import_react3.default.createElement("a", {
-    href: "#",
+    href: "/contacts",
     className: "text-base leading-6 text-gray-500 hover:text-gray-900"
   }, "Contacts")), /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "px-5 py-2"
   }, /* @__PURE__ */ import_react3.default.createElement("a", {
-    href: "#",
+    href: "/terms",
     className: "text-base leading-6 text-gray-500 hover:text-gray-900"
   }, "Terms"))), /* @__PURE__ */ import_react3.default.createElement("div", {
     className: "flex justify-center mt-8 space-x-6"
@@ -287,7 +287,6 @@ function Footer() {
 var Footer_default = Footer;
 
 // route:/Volumes/ROOT/learning/getConnected/app/routes/services/index.jsx
-var import_interweave = require("interweave");
 var import_react4 = require("@remix-run/react");
 var loader = async () => {
   const response = await fetch("http://localhost:1337/api/services");
@@ -334,79 +333,115 @@ var import_fa = require("react-icons/fa");
 function index2() {
   return /* @__PURE__ */ import_react5.default.createElement(import_react5.default.Fragment, null, /* @__PURE__ */ import_react5.default.createElement("div", {
     className: "flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100"
-  }, /* @__PURE__ */ import_react5.default.createElement(import_react_helmet.Helmet, null, /* @__PURE__ */ import_react5.default.createElement("title", null, "Authentication - getConnected"), /* @__PURE__ */ import_react5.default.createElement("meta", {
+  }, /* @__PURE__ */ import_react5.default.createElement(import_react_helmet.Helmet, null, /* @__PURE__ */ import_react5.default.createElement("title", null, "getConnected-Register"), /* @__PURE__ */ import_react5.default.createElement("meta", {
     name: "description",
     content: "A platform for connecting people to different Opportunities"
   })), /* @__PURE__ */ import_react5.default.createElement("section", {
-    class: "w-full border-2  bg-white md:mx-6 md:my-6"
+    class: "p-6 mb-20 md:mb-6 md:py-20 "
   }, /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "mx-auto max-w-7xl "
+    class: "md:flex hidden flex-row items-center justify-center lg:justify-center"
+  }, /* @__PURE__ */ import_react5.default.createElement(import_react_router_dom.Link, {
+    to: "/"
+  }, /* @__PURE__ */ import_react5.default.createElement("img", {
+    className: "",
+    src: "logo.png",
+    alt: "logo"
+  }))), /* @__PURE__ */ import_react5.default.createElement("section", {
+    className: "py-6 dark:bg-gray-800 dark:text-gray-50 rounded-lg"
   }, /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "flex flex-col lg:flex-row "
+    className: "grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x"
   }, /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "relative w-full bg-cover lg:w-6/12 xl:w-7/12 bg-gradient-to-r from-white via-white to-gray-100"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "relative flex flex-col items-center justify-center w-full h-full px-10 my-4 lg:px-16 lg:my-0"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "flex flex-col items-start space-y-8 tracking-tight lg:max-w-3xl"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "relative"
-  }, /* @__PURE__ */ import_react5.default.createElement("h2", {
-    class: "text-5xl font-bold text-gray-900 xl:text-6xl"
-  }, "Hi, There! \u{1F44B}\u{1F3FD}")), /* @__PURE__ */ import_react5.default.createElement("p", {
-    class: "text-2xl text-gray-700"
-  }, "Are you registered? ", /* @__PURE__ */ import_react5.default.createElement("br", null), " Kindly click the button bellow to login."), /* @__PURE__ */ import_react5.default.createElement("a", {
-    href: "/auth/login",
-    class: "inline-block ml-20 px-10 py-3 text-xl font-medium text-center text-white transition duration-200 bg-orange-300 rounded-full hover:bg-green-500 ease"
-  }, "Sign in")))), /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "w-full bg-white lg:w-6/12 xl:w-5/12"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "flex flex-col items-start justify-center w-full h-full p-10 lg:p-16 xl:p-24"
-  }, /* @__PURE__ */ import_react5.default.createElement("h4", {
-    class: "w-full text-3xl font-bold"
-  }, "Signup"), /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "relative w-full mt-10 space-y-8"
-  }, /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "relative"
+    className: "py-6 md:py-0 md:px-6"
+  }, /* @__PURE__ */ import_react5.default.createElement("h1", {
+    className: "text-2xl md:text-4xl font-bold"
+  }, "Join Our Community \u{1F60E}"), /* @__PURE__ */ import_react5.default.createElement("p", {
+    className: "pt-2 pb-4"
+  }, "You may signup using links below......."), /* @__PURE__ */ import_react5.default.createElement("div", {
+    class: "flex flex-row items-center justify-center lg:justify-center"
+  }, /* @__PURE__ */ import_react5.default.createElement("button", {
+    type: "button",
+    "data-mdb-ripple": "true",
+    "data-mdb-ripple-color": "light",
+    class: "inline-block p-4 bg-orange-300 text-black font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+  }, /* @__PURE__ */ import_react5.default.createElement(import_fa.FaGoogle, null)), /* @__PURE__ */ import_react5.default.createElement("button", {
+    type: "button",
+    "data-mdb-ripple": "true",
+    "data-mdb-ripple-color": "light",
+    class: "inline-block p-4 bg-orange-300 text-black  font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+  }, /* @__PURE__ */ import_react5.default.createElement(import_fa.FaFacebookF, null)), /* @__PURE__ */ import_react5.default.createElement("button", {
+    type: "button",
+    "data-mdb-ripple": "true",
+    "data-mdb-ripple-color": "light",
+    class: "inline-block p-4 bg-orange-300 text-black  font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+  }, /* @__PURE__ */ import_react5.default.createElement(import_fa.FaLinkedinIn, null))), /* @__PURE__ */ import_react5.default.createElement("p", {
+    className: "pt-2 pb-4 my-4"
+  }, "Already registered? click the button below to sign in"), /* @__PURE__ */ import_react5.default.createElement("div", {
+    className: "flex flex-row items-center justify-center lg:justify-center"
+  }, /* @__PURE__ */ import_react5.default.createElement(import_react_router_dom.Link, {
+    to: "/auth/login"
+  }, /* @__PURE__ */ import_react5.default.createElement("button", {
+    type: "button",
+    className: "self-center flex px-8 py-3 text-lg rounded-full focus:ring hover:ring focus:ring-opacity-75 dark:bg-green-400 dark:text-gray-900"
+  }, "Signin"))), /* @__PURE__ */ import_react5.default.createElement("div", {
+    class: "md:flex hidden flex-row items-center justify-start lg:justify-start mt-56"
+  }, /* @__PURE__ */ import_react5.default.createElement("button", {
+    type: "button",
+    "data-mdb-ripple": "true",
+    "data-mdb-ripple-color": "light",
+    class: "inline-block p-3 bg-green-400 text-black font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+  }, /* @__PURE__ */ import_react5.default.createElement(import_react_router_dom.Link, {
+    to: "/"
+  }, /* @__PURE__ */ import_react5.default.createElement(import_fa.FaHome, null)))), /* @__PURE__ */ import_react5.default.createElement("span", {
+    className: "hidden md:inline"
+  }, " Home")), /* @__PURE__ */ import_react5.default.createElement("form", {
+    novalidate: "",
+    className: "flex flex-col py-2 md:py-6 space-y-6  md:px-6 ng-untouched ng-pristine ng-valid"
   }, /* @__PURE__ */ import_react5.default.createElement("label", {
-    class: "font-medium text-gray-900"
-  }, "Name"), /* @__PURE__ */ import_react5.default.createElement("input", {
+    className: "block"
+  }, /* @__PURE__ */ import_react5.default.createElement("span", {
+    className: "mb-1"
+  }, "Full name"), /* @__PURE__ */ import_react5.default.createElement("input", {
     type: "text",
-    class: "block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50",
-    placeholder: "Enter Your Name"
-  })), /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "relative"
-  }, /* @__PURE__ */ import_react5.default.createElement("label", {
-    class: "font-medium text-gray-900"
-  }, "Email"), /* @__PURE__ */ import_react5.default.createElement("input", {
-    type: "text",
-    class: "block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50",
-    placeholder: "Enter Your Email Address"
-  })), /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "relative"
-  }, /* @__PURE__ */ import_react5.default.createElement("label", {
-    class: "font-medium text-gray-900"
-  }, "Phone"), /* @__PURE__ */ import_react5.default.createElement("input", {
+    placeholder: "Leroy Jenkins",
+    className: "block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+  })), /* @__PURE__ */ import_react5.default.createElement("label", {
+    className: "block"
+  }, /* @__PURE__ */ import_react5.default.createElement("span", {
+    className: "mb-1"
+  }, "Email address"), /* @__PURE__ */ import_react5.default.createElement("input", {
+    type: "email",
+    placeholder: "leroy@jenkins.com",
+    className: "block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+  })), /* @__PURE__ */ import_react5.default.createElement("label", {
+    className: "block"
+  }, /* @__PURE__ */ import_react5.default.createElement("span", {
+    className: "mb-1"
+  }, "Phone number"), /* @__PURE__ */ import_react5.default.createElement("input", {
     type: "number",
-    class: "block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50",
-    placeholder: "phone number"
-  })), /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "relative"
-  }, /* @__PURE__ */ import_react5.default.createElement("label", {
-    class: "font-medium text-gray-900"
+    placeholder: "07667890......",
+    className: "block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+  })), /* @__PURE__ */ import_react5.default.createElement("label", {
+    className: "block"
+  }, /* @__PURE__ */ import_react5.default.createElement("span", {
+    className: "mb-1"
   }, "Password"), /* @__PURE__ */ import_react5.default.createElement("input", {
     type: "password",
-    class: "block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50",
-    placeholder: "Password"
-  })), /* @__PURE__ */ import_react5.default.createElement("div", {
-    class: "relative"
-  }, /* @__PURE__ */ import_react5.default.createElement("a", {
-    href: "#_",
-    class: "inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-green-400 rounded-lg hover:bg-green-500 ease"
-  }, "Create Account"), /* @__PURE__ */ import_react5.default.createElement("a", {
-    href: "#_",
-    class: "inline-block w-full px-5 py-4 mt-3 text-lg font-bold text-center text-gray-900 transition duration-200 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 ease"
-  }, "Sign up with Google"))))))))));
+    placeholder: "********",
+    className: "block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+  })), /* @__PURE__ */ import_react5.default.createElement("label", {
+    className: "block"
+  }, /* @__PURE__ */ import_react5.default.createElement("span", {
+    className: "mb-1"
+  }, "Confirm Password"), /* @__PURE__ */ import_react5.default.createElement("input", {
+    type: "password",
+    placeholder: "********",
+    className: "block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+  })), /* @__PURE__ */ import_react5.default.createElement("button", {
+    type: "button",
+    className: "self-center flex px-8 py-3 text-lg rounded-full focus:ring hover:ring focus:ring-opacity-75 dark:bg-green-400 dark:text-gray-900"
+  }, /* @__PURE__ */ import_react5.default.createElement("span", {
+    className: "p-1"
+  }, /* @__PURE__ */ import_react5.default.createElement(import_fa.FaUserPlus, null)), "Signup")))))), /* @__PURE__ */ import_react5.default.createElement(Footer_default, null));
 }
 
 // route:/Volumes/ROOT/learning/getConnected/app/routes/auth/index.jsx
@@ -418,94 +453,97 @@ __export(login_exports, {
   default: () => index3
 });
 var import_react7 = __toESM(require("react"));
-var import_react8 = require("@remix-run/react");
 var import_react_helmet2 = require("react-helmet");
 var import_react_router_dom2 = require("react-router-dom");
 var import_fa2 = require("react-icons/fa");
 function index3() {
   return /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, /* @__PURE__ */ import_react7.default.createElement("div", {
     className: "flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100"
-  }, /* @__PURE__ */ import_react7.default.createElement(import_react_helmet2.Helmet, null, /* @__PURE__ */ import_react7.default.createElement("title", null, "Authentication - getConnected"), /* @__PURE__ */ import_react7.default.createElement("meta", {
+  }, /* @__PURE__ */ import_react7.default.createElement(import_react_helmet2.Helmet, null, /* @__PURE__ */ import_react7.default.createElement("title", null, "getConnected-Register"), /* @__PURE__ */ import_react7.default.createElement("meta", {
     name: "description",
     content: "A platform for connecting people to different Opportunities"
-  })), /* @__PURE__ */ import_react7.default.createElement("div", {
-    className: "flex flex-col items-center justify-center w-full flex-1 px-20  text-center "
+  })), /* @__PURE__ */ import_react7.default.createElement("section", {
+    class: "p-6 mb-20 md:mb-6 md:py-20 "
   }, /* @__PURE__ */ import_react7.default.createElement("div", {
-    className: "bg-white shadow-2xl flex w-2/3 max-w-4xl rounded-2xl"
-  }, /* @__PURE__ */ import_react7.default.createElement("div", {
-    className: "w-3/5 p-5"
-  }, /* @__PURE__ */ import_react7.default.createElement("div", {
-    className: "flex text-left  font-tangerine text-2xl"
+    class: "md:flex hidden flex-row items-center justify-center lg:justify-center"
+  }, /* @__PURE__ */ import_react7.default.createElement(import_react_router_dom2.Link, {
+    to: "/"
   }, /* @__PURE__ */ import_react7.default.createElement("img", {
-    className: "h-10",
-    src: "favicon.ico",
+    className: "",
+    src: "logo.png",
     alt: "logo"
-  }), /* @__PURE__ */ import_react7.default.createElement("span", null, "getConnected")), /* @__PURE__ */ import_react7.default.createElement("div", {
-    className: "py-10"
-  }, /* @__PURE__ */ import_react7.default.createElement("h2", {
-    className: "text-3xl font-bold mb-2 text-black"
-  }, "Please Sign in"), /* @__PURE__ */ import_react7.default.createElement("div", {
-    className: "border-2 w-20 rounded-md border-orange-300 inline-block mb-2"
-  }), /* @__PURE__ */ import_react7.default.createElement("div", {
-    className: "flex justify-center my-2"
-  }, /* @__PURE__ */ import_react7.default.createElement("a", {
-    href: "",
-    className: "border-2 border-green-400 rounded-full p-3 mx-1"
-  }, " ", /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaFacebookF, null), " "), /* @__PURE__ */ import_react7.default.createElement("a", {
-    href: "",
-    className: "border-2 border-green-400 rounded-full p-3 mx-1"
-  }, " ", /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaGoogle, null), " "), /* @__PURE__ */ import_react7.default.createElement("a", {
-    href: "",
-    className: "border-2 border-green-400 rounded-full p-3 mx-1"
-  }, " ", /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaLinkedinIn, null), " ")), /* @__PURE__ */ import_react7.default.createElement("p", {
-    className: "text-gray-400 my-3"
-  }, "You may sign in using links above"), /* @__PURE__ */ import_react7.default.createElement("div", {
-    className: "flex flex-col items-center"
+  }))), /* @__PURE__ */ import_react7.default.createElement("section", {
+    className: "py-6 dark:bg-gray-800 dark:text-gray-50 rounded-lg"
   }, /* @__PURE__ */ import_react7.default.createElement("div", {
-    className: "bg-gray-100 w-64 p-2  flex items-center rounded-md"
-  }, /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaUserCircle, {
-    className: "text-gray-400 m-2"
-  }), /* @__PURE__ */ import_react7.default.createElement("input", {
-    type: "text",
-    name: "username",
-    placeholder: "Username",
-    className: "bg-gray-100 border-gray-100 focus:rounded-md focus:ring-orange-300 text-sm flex-1"
-  })), /* @__PURE__ */ import_react7.default.createElement("div", {
-    className: "bg-gray-100 w-64 p-2 mt-3 flex items-center rounded-md"
-  }, /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaLock, {
-    className: "text-gray-400 m-2"
-  }), /* @__PURE__ */ import_react7.default.createElement("input", {
-    type: "password",
-    name: "Password",
-    placeholder: "********",
-    className: "bg-gray-100 focus:rounded-md  border-gray-100 text-sm flex-1"
-  })), /* @__PURE__ */ import_react7.default.createElement("div", {
-    className: "flex justify-between w-64 mt-2 text-sm text-gray-400"
-  }, /* @__PURE__ */ import_react7.default.createElement("label", {
-    htmlFor: "checkbox",
-    classclassName: "flex items-center "
-  }, /* @__PURE__ */ import_react7.default.createElement("input", {
-    type: "checkbox",
-    name: "remember",
-    className: "text-sm m-1 text-gray-400 rounded-sm h-3 w-3"
-  }), "Remember me"), /* @__PURE__ */ import_react7.default.createElement("a", {
-    href: "",
-    className: ""
-  }, "Forgot password?")), /* @__PURE__ */ import_react7.default.createElement("button", {
-    className: "font-semibold border-2 border-orange-300 bg-green-400 rounded-full inline-block px-12 py-2 mt-6 hover:bg-orange-300 hover:text-black"
-  }, "Sign In")))), /* @__PURE__ */ import_react7.default.createElement("div", {
-    className: "w-2/5 text-white rounded-tr-2xl rounded-br-2xl bg-orange-300 py-36 px-12"
-  }, /* @__PURE__ */ import_react7.default.createElement("h2", {
-    className: "text-3xl font-bold mb-2"
-  }, "Hi, There! \u{1F44B}\u{1F3FD}"), /* @__PURE__ */ import_react7.default.createElement("div", {
-    className: "border-2 w-20 border-green-400 inline-block mb-2 rounded-md"
-  }), /* @__PURE__ */ import_react7.default.createElement("p", {
-    className: "mb-10 text-2xl"
-  }, "Not registered yet? ", /* @__PURE__ */ import_react7.default.createElement("br", null), " Kindly click the button below to get registered."), /* @__PURE__ */ import_react7.default.createElement(import_react_router_dom2.Link, {
+    className: "grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x"
+  }, /* @__PURE__ */ import_react7.default.createElement("div", {
+    className: "py-6 md:py-0 md:px-6"
+  }, /* @__PURE__ */ import_react7.default.createElement("h1", {
+    className: "text-2xl md:text-4xl font-bold"
+  }, "Welcome back \u{1F60A}"), /* @__PURE__ */ import_react7.default.createElement("p", {
+    className: "pt-2 pb-4"
+  }, "You may signin using links below......."), /* @__PURE__ */ import_react7.default.createElement("div", {
+    class: "flex flex-row items-center justify-center lg:justify-center"
+  }, /* @__PURE__ */ import_react7.default.createElement("button", {
+    type: "button",
+    "data-mdb-ripple": "true",
+    "data-mdb-ripple-color": "light",
+    class: "inline-block p-4 bg-orange-300 text-black font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+  }, /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaGoogle, null)), /* @__PURE__ */ import_react7.default.createElement("button", {
+    type: "button",
+    "data-mdb-ripple": "true",
+    "data-mdb-ripple-color": "light",
+    class: "inline-block p-4 bg-orange-300 text-black  font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+  }, /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaFacebookF, null)), /* @__PURE__ */ import_react7.default.createElement("button", {
+    type: "button",
+    "data-mdb-ripple": "true",
+    "data-mdb-ripple-color": "light",
+    class: "inline-block p-4 bg-orange-300 text-black  font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+  }, /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaLinkedinIn, null))), /* @__PURE__ */ import_react7.default.createElement("p", {
+    className: "pt-2 pb-4 my-4"
+  }, "Not registered? click the button below to sign up"), /* @__PURE__ */ import_react7.default.createElement("div", {
+    className: "flex flex-row items-center justify-center lg:justify-center"
+  }, /* @__PURE__ */ import_react7.default.createElement(import_react_router_dom2.Link, {
     to: "/auth/register"
   }, /* @__PURE__ */ import_react7.default.createElement("button", {
-    className: "font-semibold border-2 border-green-400 rounded-full inline-block px-12 py-2 hover:bg-green-400 hover:text-black"
-  }, "Sign Up"))))), /* @__PURE__ */ import_react7.default.createElement(import_react8.Outlet, null)));
+    type: "button",
+    className: "self-center flex px-8 py-3 text-lg rounded-full focus:ring hover:ring focus:ring-opacity-75 dark:bg-green-400 dark:text-gray-900"
+  }, /* @__PURE__ */ import_react7.default.createElement("span", {
+    className: "p-1"
+  }, /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaUserPlus, null)), "Signup"))), /* @__PURE__ */ import_react7.default.createElement("div", {
+    class: "md:flex hidden flex-row items-center justify-start lg:justify-start mt-40"
+  }, /* @__PURE__ */ import_react7.default.createElement("button", {
+    type: "button",
+    "data-mdb-ripple": "true",
+    "data-mdb-ripple-color": "light",
+    class: "inline-block p-3 bg-green-400 text-black font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+  }, /* @__PURE__ */ import_react7.default.createElement(import_react_router_dom2.Link, {
+    to: "/"
+  }, /* @__PURE__ */ import_react7.default.createElement(import_fa2.FaHome, null)))), /* @__PURE__ */ import_react7.default.createElement("span", {
+    className: "hidden md:inline"
+  }, " Home")), /* @__PURE__ */ import_react7.default.createElement("form", {
+    novalidate: "",
+    className: "flex flex-col py-2 md:py-6 space-y-6  md:px-6 ng-untouched ng-pristine ng-valid"
+  }, /* @__PURE__ */ import_react7.default.createElement("label", {
+    className: "block"
+  }, /* @__PURE__ */ import_react7.default.createElement("span", {
+    className: "mb-1"
+  }, "Email address"), /* @__PURE__ */ import_react7.default.createElement("input", {
+    type: "email",
+    placeholder: "leroy@jenkins.com",
+    className: "block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+  })), /* @__PURE__ */ import_react7.default.createElement("label", {
+    className: "block"
+  }, /* @__PURE__ */ import_react7.default.createElement("span", {
+    className: "mb-1"
+  }, "Password"), /* @__PURE__ */ import_react7.default.createElement("input", {
+    type: "password",
+    placeholder: "********",
+    className: "block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+  })), /* @__PURE__ */ import_react7.default.createElement("button", {
+    type: "button",
+    className: "self-center flex px-8 py-3 text-lg rounded-full focus:ring hover:ring focus:ring-opacity-75 dark:bg-green-400 dark:text-gray-900"
+  }, "Signin")))))), /* @__PURE__ */ import_react7.default.createElement(Footer_default, null));
 }
 
 // route:/Volumes/ROOT/learning/getConnected/app/routes/contacts.jsx
@@ -513,9 +551,82 @@ var contacts_exports = {};
 __export(contacts_exports, {
   default: () => contacts_default
 });
-var import_react9 = __toESM(require("react"));
 function contact() {
-  return /* @__PURE__ */ import_react9.default.createElement("div", null, "contact");
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("section", {
+    class: "p-6 mb-20 md:mb-6 md:py-20 bg-white"
+  }, /* @__PURE__ */ React.createElement("section", {
+    className: "py-6 dark:bg-gray-800 dark:text-gray-50 rounded-lg"
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: "grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x"
+  }, /* @__PURE__ */ React.createElement("div", {
+    className: "py-6 md:py-0 md:px-6"
+  }, /* @__PURE__ */ React.createElement("h1", {
+    className: "text-4xl font-bold"
+  }, "Get in touch \u{1F609}"), /* @__PURE__ */ React.createElement("p", {
+    className: "pt-2 pb-4"
+  }, "Fill in the form to start a conversation"), /* @__PURE__ */ React.createElement("div", {
+    className: "space-y-4"
+  }, /* @__PURE__ */ React.createElement("p", {
+    className: "flex items-center"
+  }, /* @__PURE__ */ React.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20",
+    fill: "currentColor",
+    className: "w-5 h-5 mr-2 sm:mr-6"
+  }, /* @__PURE__ */ React.createElement("path", {
+    fillRule: "evenodd",
+    d: "M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z",
+    clipRule: "evenodd"
+  })), /* @__PURE__ */ React.createElement("span", null, "Fake address, 9999 City")), /* @__PURE__ */ React.createElement("p", {
+    className: "flex items-center"
+  }, /* @__PURE__ */ React.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20",
+    fill: "currentColor",
+    className: "w-5 h-5 mr-2 sm:mr-6"
+  }, /* @__PURE__ */ React.createElement("path", {
+    d: "M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+  })), /* @__PURE__ */ React.createElement("span", null, "123456789")), /* @__PURE__ */ React.createElement("p", {
+    className: "flex items-center"
+  }, /* @__PURE__ */ React.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 20 20",
+    fill: "currentColor",
+    className: "w-5 h-5 mr-2 sm:mr-6"
+  }, /* @__PURE__ */ React.createElement("path", {
+    d: "M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+  }), /* @__PURE__ */ React.createElement("path", {
+    d: "M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+  })), /* @__PURE__ */ React.createElement("span", null, "contact@business.com")))), /* @__PURE__ */ React.createElement("form", {
+    novalidate: "",
+    className: "flex flex-col py-6 space-y-6 md:py-0 md:px-6 ng-untouched ng-pristine ng-valid"
+  }, /* @__PURE__ */ React.createElement("label", {
+    className: "block"
+  }, /* @__PURE__ */ React.createElement("span", {
+    className: "mb-1"
+  }, "Full name"), /* @__PURE__ */ React.createElement("input", {
+    type: "text",
+    placeholder: "Leroy Jenkins",
+    className: "block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+  })), /* @__PURE__ */ React.createElement("label", {
+    className: "block"
+  }, /* @__PURE__ */ React.createElement("span", {
+    className: "mb-1"
+  }, "Email address"), /* @__PURE__ */ React.createElement("input", {
+    type: "email",
+    placeholder: "leroy@jenkins.com",
+    className: "block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+  })), /* @__PURE__ */ React.createElement("label", {
+    className: "block"
+  }, /* @__PURE__ */ React.createElement("span", {
+    className: "mb-1"
+  }, "Message"), /* @__PURE__ */ React.createElement("textarea", {
+    rows: "3",
+    className: "block w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+  })), /* @__PURE__ */ React.createElement("button", {
+    type: "button",
+    className: "self-center px-8 py-3 text-lg rounded focus:ring hover:ring focus:ring-opacity-75 dark:bg-green-400 dark:text-gray-900"
+  }, "Submit \u27A4"))))), /* @__PURE__ */ React.createElement(Footer_default, null));
 }
 var contacts_default = contact;
 
@@ -660,7 +771,7 @@ function Index() {
   }, "Contacts"))), /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(import_react_router_dom3.Link, {
     to: "auth/register"
   }, /* @__PURE__ */ React.createElement("button", {
-    className: "bg-green-400 hover:bg-orange-200 text-xl px-4 py-3 rounded-md"
+    className: "bg-green-400 hover:bg-orange-200 text-xl px-4 py-3 rounded-full"
   }, "Get Started")))), /* @__PURE__ */ React.createElement("div", {
     className: "flex p-3 md:hidden"
   }, /* @__PURE__ */ React.createElement("div", {
@@ -715,7 +826,7 @@ function Index() {
 }
 
 // server-assets-manifest:@remix-run/dev/assets-manifest
-var assets_manifest_default = { "version": "3d4d4858", "entry": { "module": "/build/entry.client-X3BHCAF4.js", "imports": ["/build/_shared/chunk-INFB3K4O.js", "/build/_shared/chunk-WVCR2VME.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-MCQAIF6X.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-43YNIYQQ.js", "imports": ["/build/_shared/chunk-QTGTY3SW.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/auth/index": { "id": "routes/auth/index", "parentId": "root", "path": "auth", "index": true, "caseSensitive": void 0, "module": "/build/routes/auth/index-6WA6IXNH.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/auth/login": { "id": "routes/auth/login", "parentId": "root", "path": "auth/login", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/auth/login-PVJSRNHV.js", "imports": ["/build/_shared/chunk-2B5RT5HT.js", "/build/_shared/chunk-Z7Q6IFVF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/auth/register": { "id": "routes/auth/register", "parentId": "root", "path": "auth/register", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/auth/register-HJQ3X6HH.js", "imports": ["/build/_shared/chunk-2B5RT5HT.js", "/build/_shared/chunk-Z7Q6IFVF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/contacts": { "id": "routes/contacts", "parentId": "root", "path": "contacts", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/contacts-IJNQFE3F.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-SYHQ2VY7.js", "imports": ["/build/_shared/chunk-Z7Q6IFVF.js", "/build/_shared/chunk-QTGTY3SW.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/services/index": { "id": "routes/services/index", "parentId": "root", "path": "services", "index": true, "caseSensitive": void 0, "module": "/build/routes/services/index-PFT53DHX.js", "imports": ["/build/_shared/chunk-QTGTY3SW.js"], "hasAction": false, "hasLoader": true, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-3D4D4858.js" };
+var assets_manifest_default = { "version": "8446707e", "entry": { "module": "/build/entry.client-X3BHCAF4.js", "imports": ["/build/_shared/chunk-INFB3K4O.js", "/build/_shared/chunk-WVCR2VME.js", "/build/_shared/chunk-IYRIQ6PI.js"] }, "routes": { "root": { "id": "root", "parentId": void 0, "path": "", "index": void 0, "caseSensitive": void 0, "module": "/build/root-VIXC7XDO.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/about": { "id": "routes/about", "parentId": "root", "path": "about", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/about-GJMTGPNU.js", "imports": ["/build/_shared/chunk-PQCLLIOF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/auth/index": { "id": "routes/auth/index", "parentId": "root", "path": "auth", "index": true, "caseSensitive": void 0, "module": "/build/routes/auth/index-6WA6IXNH.js", "imports": void 0, "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/auth/login": { "id": "routes/auth/login", "parentId": "root", "path": "auth/login", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/auth/login-TX36QVWJ.js", "imports": ["/build/_shared/chunk-GBKZLXUN.js", "/build/_shared/chunk-Z7Q6IFVF.js", "/build/_shared/chunk-PQCLLIOF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/auth/register": { "id": "routes/auth/register", "parentId": "root", "path": "auth/register", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/auth/register-K2CZRK65.js", "imports": ["/build/_shared/chunk-GBKZLXUN.js", "/build/_shared/chunk-Z7Q6IFVF.js", "/build/_shared/chunk-PQCLLIOF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/contacts": { "id": "routes/contacts", "parentId": "root", "path": "contacts", "index": void 0, "caseSensitive": void 0, "module": "/build/routes/contacts-MIYYVE47.js", "imports": ["/build/_shared/chunk-PQCLLIOF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/index": { "id": "routes/index", "parentId": "root", "path": void 0, "index": true, "caseSensitive": void 0, "module": "/build/routes/index-QKUVIDAH.js", "imports": ["/build/_shared/chunk-Z7Q6IFVF.js", "/build/_shared/chunk-PQCLLIOF.js"], "hasAction": false, "hasLoader": false, "hasCatchBoundary": false, "hasErrorBoundary": false }, "routes/services/index": { "id": "routes/services/index", "parentId": "root", "path": "services", "index": true, "caseSensitive": void 0, "module": "/build/routes/services/index-FCW3QHGZ.js", "imports": ["/build/_shared/chunk-PQCLLIOF.js"], "hasAction": false, "hasLoader": true, "hasCatchBoundary": false, "hasErrorBoundary": false } }, "url": "/build/manifest-8446707E.js" };
 
 // server-entry-module:@remix-run/dev/server-build
 var entry = { module: entry_server_exports };

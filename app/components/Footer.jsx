@@ -71,7 +71,7 @@ function Footer() {
             </svg>
           </div>
           <div className="text-sm">
-            <a href="/">Learning</a>
+            <a href="/learning">Learning</a>
           </div>
         </div>
         <div className="flex flex-col items-center">
@@ -113,7 +113,7 @@ function Footer() {
             </svg>
           </div>
           <div className="text-sm">
-            <a href="/">Contacts</a>
+            <a href="/contacts">Contacts</a>
           </div>
         </div>
       </nav>
@@ -123,7 +123,7 @@ function Footer() {
           <nav className="flex flex-wrap justify-center -mx-5 -my-2">
             <div className="px-5 py-2">
               <a
-                href="#"
+                href="/"
                 className="text-base leading-6 text-gray-500 hover:text-gray-900"
               >
                 Home
@@ -131,7 +131,7 @@ function Footer() {
             </div>
             <div className="px-5 py-2">
               <a
-                href="#"
+                href="/services"
                 className="text-base leading-6 text-gray-500 hover:text-gray-900"
               >
                 Services
@@ -147,7 +147,7 @@ function Footer() {
             </div>
             <div className="px-5 py-2">
               <a
-                href="#"
+                href="/about"
                 className="text-base leading-6 text-gray-500 hover:text-gray-900"
               >
                 About us
@@ -155,7 +155,7 @@ function Footer() {
             </div>
             <div className="px-5 py-2">
               <a
-                href="#"
+                href="/contacts"
                 className="text-base leading-6 text-gray-500 hover:text-gray-900"
               >
                 Contacts
@@ -163,7 +163,7 @@ function Footer() {
             </div>
             <div className="px-5 py-2">
               <a
-                href="#"
+                href="/terms"
                 className="text-base leading-6 text-gray-500 hover:text-gray-900"
               >
                 Terms
@@ -227,7 +227,6 @@ function Footer() {
                 ></path>
               </svg>
             </a>
-          
           </div>
           <p className="mt-8 text-base leading-6 text-center text-gray-400">
             © {new Date().getFullYear()} getConnected, Inc. All rights reserved.

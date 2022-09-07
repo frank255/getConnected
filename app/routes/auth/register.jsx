@@ -1,12 +1,15 @@
 import React from "react";
 import { Outlet } from "@remix-run/react";
+import Footer from "~/components/Footer";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import {
+  FaUserPlus,
   FaGoogle,
   FaLock,
   FaFacebookF,
   FaLinkedinIn,
+  FaHome,
   FaRegEnvelope,
   FaUserCircle,
   FaKey,
@@ -18,95 +21,142 @@ export default function index() {
     <>
       <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
         <Helmet>
-          <title>Authentication - getConnected</title>
+          <title>getConnected-Register</title>
           <meta
             name="description"
             content="A platform for connecting people to different Opportunities"
           />
         </Helmet>
 
-        <section class="w-full border-2  bg-white md:mx-6 md:my-6">
-          <div class="mx-auto max-w-7xl ">
-            <div class="flex flex-col lg:flex-row ">
-              <div class="relative w-full bg-cover lg:w-6/12 xl:w-7/12 bg-gradient-to-r from-white via-white to-gray-100">
-                <div class="relative flex flex-col items-center justify-center w-full h-full px-10 my-4 lg:px-16 lg:my-0">
-                  <div class="flex flex-col items-start space-y-8 tracking-tight lg:max-w-3xl">
-                    <div class="relative">
-                      <h2 class="text-5xl font-bold text-gray-900 xl:text-6xl">
-                      Hi, There! 👋🏽
-                      </h2>
-                    </div>
-                    <p class="text-2xl text-gray-700">
-                     Are you registered? <br /> Kindly click the button bellow to login.
-                    </p>
-                    <a
-                      href="/auth/login"
-                      class="inline-block ml-20 px-10 py-3 text-xl font-medium text-center text-white transition duration-200 bg-orange-300 rounded-full hover:bg-green-500 ease"
-                    >
-                      Sign in
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="w-full bg-white lg:w-6/12 xl:w-5/12">
-                <div class="flex flex-col items-start justify-center w-full h-full p-10 lg:p-16 xl:p-24">
-                  <h4 class="w-full text-3xl font-bold">Signup</h4>
-
-                  <div class="relative w-full mt-10 space-y-8">
-                    <div class="relative">
-                      <label class="font-medium text-gray-900">Name</label>
-                      <input
-                        type="text"
-                        class="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50"
-                        placeholder="Enter Your Name"
-                      />
-                    </div>
-                    <div class="relative">
-                      <label class="font-medium text-gray-900">Email</label>
-                      <input
-                        type="text"
-                        class="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50"
-                        placeholder="Enter Your Email Address"
-                      />
-                    </div>
-                    <div class="relative">
-                      <label class="font-medium text-gray-900">Phone</label>
-                      <input
-                        type="number"
-                        class="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50"
-                        placeholder="phone number"
-                      />
-                    </div>
-                    <div class="relative">
-                      <label class="font-medium text-gray-900">Password</label>
-                      <input
-                        type="password"
-                        class="block w-full px-4 py-4 mt-2 text-xl placeholder-gray-400 bg-gray-200 rounded-lg focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50"
-                        placeholder="Password"
-                      />
-                    </div>
-                    <div class="relative">
-                      <a
-                        href="#_"
-                        class="inline-block w-full px-5 py-4 text-lg font-medium text-center text-white transition duration-200 bg-green-400 rounded-lg hover:bg-green-500 ease"
-                      >
-                        Create Account
-                      </a>
-                      <a
-                        href="#_"
-                        class="inline-block w-full px-5 py-4 mt-3 text-lg font-bold text-center text-gray-900 transition duration-200 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 ease"
-                      >
-                        Sign up with Google
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <section class="p-6 mb-20 md:mb-6 md:py-20 ">
+          <div class="md:flex hidden flex-row items-center justify-center lg:justify-center">
+            <Link to="/">
+              <img className="" src="logo.png" alt="logo" />
+            </Link>
           </div>
+          <section className="py-6 dark:bg-gray-800 dark:text-gray-50 rounded-lg">
+            <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
+              <div className="py-6 md:py-0 md:px-6">
+                <h1 className="text-2xl md:text-4xl font-bold">
+                  Join Our Community &#128526;
+                </h1>
+                <p className="pt-2 pb-4">
+                  You may signup using links below.......
+                </p>
+                <div class="flex flex-row items-center justify-center lg:justify-center">
+                  <button
+                    type="button"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                    class="inline-block p-4 bg-orange-300 text-black font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+                  >
+                    <FaGoogle />
+                  </button>
+                  <button
+                    type="button"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                    class="inline-block p-4 bg-orange-300 text-black  font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+                  >
+                    <FaFacebookF />
+                  </button>
+
+                  <button
+                    type="button"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                    class="inline-block p-4 bg-orange-300 text-black  font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+                  >
+                    <FaLinkedinIn />
+                  </button>
+                </div>
+                <p className="pt-2 pb-4 my-4">
+                  Already registered? click the button below to sign in
+                </p>
+                <div className="flex flex-row items-center justify-center lg:justify-center">
+                  <Link to={"/auth/login"}>
+                    <button
+                      type="button"
+                      className="self-center flex px-8 py-3 text-lg rounded-full focus:ring hover:ring focus:ring-opacity-75 dark:bg-green-400 dark:text-gray-900"
+                    >
+                      Signin
+                    </button>
+                  </Link>
+                </div>
+                <div class="md:flex hidden flex-row items-center justify-start lg:justify-start mt-56">
+                  <button
+                    type="button"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                    class="inline-block p-3 bg-green-400 text-black font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+                  >
+                    <Link to={"/"}>
+                      <FaHome />
+                    </Link>
+                  </button>
+                </div>
+                <span className="hidden md:inline"> Home</span>
+              </div>
+
+              <form
+                novalidate=""
+                className="flex flex-col py-2 md:py-6 space-y-6  md:px-6 ng-untouched ng-pristine ng-valid"
+              >
+                <label className="block">
+                  <span className="mb-1">Full name</span>
+                  <input
+                    type="text"
+                    placeholder="Leroy Jenkins"
+                    className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+                  />
+                </label>
+                <label className="block">
+                  <span className="mb-1">Email address</span>
+                  <input
+                    type="email"
+                    placeholder="leroy@jenkins.com"
+                    className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+                  />
+                </label>
+                <label className="block">
+                  <span className="mb-1">Phone number</span>
+                  <input
+                    type="number"
+                    placeholder="07667890......"
+                    className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+                  />
+                </label>
+                <label className="block">
+                  <span className="mb-1">Password</span>
+                  <input
+                    type="password"
+                    placeholder="********"
+                    className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+                  />
+                </label>
+                <label className="block">
+                  <span className="mb-1">Confirm Password</span>
+                  <input
+                    type="password"
+                    placeholder="********"
+                    className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+                  />
+                </label>
+                <button
+                  type="button"
+                  className="self-center flex px-8 py-3 text-lg rounded-full focus:ring hover:ring focus:ring-opacity-75 dark:bg-green-400 dark:text-gray-900"
+                >
+                  <span className="p-1">
+                    <FaUserPlus />
+                  </span>
+                  Signup
+                </button>
+              </form>
+            </div>
+          </section>
         </section>
       </div>
+      <Footer />
     </>
   );
 }

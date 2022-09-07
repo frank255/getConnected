@@ -1,15 +1,14 @@
 import React from "react";
-import { Outlet } from "@remix-run/react";
+import Footer from "~/components/Footer";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import {
+  FaUserPlus,
   FaGoogle,
   FaLock,
   FaFacebookF,
   FaLinkedinIn,
-  FaRegEnvelope,
-  FaUserCircle,
-  FaKey,
+  FaHome,
 } from "react-icons/fa";
 
 export default function index() {
@@ -17,108 +16,120 @@ export default function index() {
     <>
       <div className="flex flex-col items-center justify-center min-h-screen py-2 bg-gray-100">
         <Helmet>
-          <title>Authentication - getConnected</title>
+          <title>getConnected-Register</title>
           <meta
             name="description"
             content="A platform for connecting people to different Opportunities"
           />
         </Helmet>
-        <div className="flex flex-col items-center justify-center w-full flex-1 px-20  text-center ">
-          <div className="bg-white shadow-2xl flex w-2/3 max-w-4xl rounded-2xl">
-            <div className="w-3/5 p-5">
-              <div className="flex text-left  font-tangerine text-2xl">
-                <img className="h-10" src="favicon.ico" alt="logo" />
-                <span>getConnected</span>
-              </div>
-              <div className="py-10">
-                <h2 className="text-3xl font-bold mb-2 text-black">
-                  Please Sign in
-                </h2>
-                <div className="border-2 w-20 rounded-md border-orange-300 inline-block mb-2"></div>
-                <div className="flex justify-center my-2">
-                  <a
-                    href=""
-                    className="border-2 border-green-400 rounded-full p-3 mx-1"
-                  >
-                    {" "}
-                    <FaFacebookF />{" "}
-                  </a>
-                  <a
-                    href=""
-                    className="border-2 border-green-400 rounded-full p-3 mx-1"
-                  >
-                    {" "}
-                    <FaGoogle />{" "}
-                  </a>
-                  <a
-                    href=""
-                    className="border-2 border-green-400 rounded-full p-3 mx-1"
-                  >
-                    {" "}
-                    <FaLinkedinIn />{" "}
-                  </a>
-                </div>
-                <p className="text-gray-400 my-3">
-                  You may sign in using links above
+
+        <section class="p-6 mb-20 md:mb-6 md:py-20 ">
+          <div class="md:flex hidden flex-row items-center justify-center lg:justify-center">
+            <Link to="/">
+              <img className="" src="logo.png" alt="logo" />
+            </Link>
+          </div>
+          <section className="py-6 dark:bg-gray-800 dark:text-gray-50 rounded-lg">
+            <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
+              <div className="py-6 md:py-0 md:px-6">
+                <h1 className="text-2xl md:text-4xl font-bold">
+                  Welcome back &#128522;
+                </h1>
+                <p className="pt-2 pb-4">
+                  You may signin using links below.......
                 </p>
-                <div className="flex flex-col items-center">
-                  <div className="bg-gray-100 w-64 p-2  flex items-center rounded-md">
-                    <FaUserCircle className="text-gray-400 m-2" />
-                    <input
-                      type="text"
-                      name="username"
-                      placeholder="Username"
-                      className="bg-gray-100 border-gray-100 focus:rounded-md focus:ring-orange-300 text-sm flex-1"
-                    />
-                  </div>
-                  <div className="bg-gray-100 w-64 p-2 mt-3 flex items-center rounded-md">
-                    <FaLock className="text-gray-400 m-2" />
-                    <input
-                      type="password"
-                      name="Password"
-                      placeholder="********"
-                      className="bg-gray-100 focus:rounded-md  border-gray-100 text-sm flex-1"
-                    />
-                  </div>
-                  <div className="flex justify-between w-64 mt-2 text-sm text-gray-400">
-                    <label
-                      htmlFor="checkbox"
-                      classclassName="flex items-center "
-                    >
-                      <input
-                        type="checkbox"
-                        name="remember"
-                        className="text-sm m-1 text-gray-400 rounded-sm h-3 w-3"
-                      />
-                      Remember me
-                    </label>
-                    <a href="" className="">
-                      Forgot password?
-                    </a>
-                  </div>
-                  <button className="font-semibold border-2 border-orange-300 bg-green-400 rounded-full inline-block px-12 py-2 mt-6 hover:bg-orange-300 hover:text-black">
-                    Sign In
+                <div class="flex flex-row items-center justify-center lg:justify-center">
+                  <button
+                    type="button"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                    class="inline-block p-4 bg-orange-300 text-black font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+                  >
+                    <FaGoogle />
+                  </button>
+                  <button
+                    type="button"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                    class="inline-block p-4 bg-orange-300 text-black  font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+                  >
+                    <FaFacebookF />
+                  </button>
+
+                  <button
+                    type="button"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                    class="inline-block p-4 bg-orange-300 text-black  font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+                  >
+                    <FaLinkedinIn />
                   </button>
                 </div>
+                <p className="pt-2 pb-4 my-4">
+                  Not registered? click the button below to sign up
+                </p>
+                <div className="flex flex-row items-center justify-center lg:justify-center">
+                  <Link to={"/auth/register"}>
+                    <button
+                      type="button"
+                      className="self-center flex px-8 py-3 text-lg rounded-full focus:ring hover:ring focus:ring-opacity-75 dark:bg-green-400 dark:text-gray-900"
+                    >
+                      <span className="p-1">
+                        <FaUserPlus />
+                      </span>
+                      Signup
+                    </button>
+                  </Link>
+                </div>
+                <div class="md:flex hidden flex-row items-center justify-start lg:justify-start mt-40">
+                  <button
+                    type="button"
+                    data-mdb-ripple="true"
+                    data-mdb-ripple-color="light"
+                    class="inline-block p-3 bg-green-400 text-black font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-green-400 hover:shadow-lg focus:bg-green-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out mx-1"
+                  >
+                    <Link to={"/"}>
+                      <FaHome />
+                    </Link>
+                  </button>
+                </div>
+                <span className="hidden md:inline"> Home</span>
               </div>
-            </div>
-            <div className="w-2/5 text-white rounded-tr-2xl rounded-br-2xl bg-orange-300 py-36 px-12">
-              <h2 className="text-3xl font-bold mb-2">Hi, There! 👋🏽</h2>
-              <div className="border-2 w-20 border-green-400 inline-block mb-2 rounded-md"></div>
-              <p className="mb-10 text-2xl">
-                Not registered yet? <br /> Kindly click the button below to get
-                registered.
-              </p>
-              <Link to="/auth/register">
-                <button className="font-semibold border-2 border-green-400 rounded-full inline-block px-12 py-2 hover:bg-green-400 hover:text-black">
-                  Sign Up
+
+              <form
+                novalidate=""
+                className="flex flex-col py-2 md:py-6 space-y-6  md:px-6 ng-untouched ng-pristine ng-valid"
+              >
+                <label className="block">
+                  <span className="mb-1">Email address</span>
+                  <input
+                    type="email"
+                    placeholder="leroy@jenkins.com"
+                    className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+                  />
+                </label>
+
+                <label className="block">
+                  <span className="mb-1">Password</span>
+                  <input
+                    type="password"
+                    placeholder="********"
+                    className="block w-full rounded-md shadow-sm focus:ring focus:ring-opacity-75 focus:ring-orange-200 dark:bg-gray-800"
+                  />
+                </label>
+
+                <button
+                  type="button"
+                  className="self-center flex px-8 py-3 text-lg rounded-full focus:ring hover:ring focus:ring-opacity-75 dark:bg-green-400 dark:text-gray-900"
+                >
+                  Signin
                 </button>
-              </Link>
+              </form>
             </div>
-          </div>
-        </div>
-        <Outlet />
+          </section>
+        </section>
       </div>
+      <Footer />
     </>
   );
 }
