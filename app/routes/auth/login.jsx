@@ -33,7 +33,7 @@ export default function index() {
             <div className="grid max-w-6xl grid-cols-1 px-6 mx-auto lg:px-8 md:grid-cols-2 md:divide-x">
               <div className="py-6 md:py-0 md:px-6">
                 <h1 className="text-2xl md:text-4xl font-bold">
-                  Welcome back &#128522;
+                  Welcome back mate &#128522;
                 </h1>
                 <p className="pt-2 pb-4">
                   You may signin using links below.......

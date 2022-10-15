@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["browser-route-module:/Volumes/ROOT/learning/getConnected/app/routes/learning/index.jsx?browser", "../../../../app/routes/learning/index.jsx"],
+  "sourcesContent": ["export { default } from \"/Volumes/ROOT/learning/getConnected/app/routes/learning/index.jsx\";", "import React from 'react'\n\nfunction learing() {\n  return (\n    <div>learing</div>\n  )\n}\n\nexport default learing"],
+  "mappings": ";;;;;;;AAAA;;;ACAA;AAAA,mBAAkB;AAElB,mBAAmB;AACjB,SACE,mDAAC,OAAD,MAAK;AAAA;AAIT,IAAO,mBAAQ;",
+  "names": []
+}
